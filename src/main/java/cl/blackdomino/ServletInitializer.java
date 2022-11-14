@@ -1,4 +1,4 @@
-package blackdominoatelier.Grupo3;
+package cl.blackdomino;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
