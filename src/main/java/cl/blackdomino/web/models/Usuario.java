@@ -1,4 +1,4 @@
-package cl.blackdomino.models;
+package cl.blackdomino.web.models;
 
 public class Usuario {
 	
