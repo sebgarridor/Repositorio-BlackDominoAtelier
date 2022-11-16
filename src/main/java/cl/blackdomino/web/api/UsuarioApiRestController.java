@@ -9,7 +9,7 @@ import cl.blackdomino.web.models.Usuario;
 import cl.blackdomino.web.services.UsuarioServiceImpl;
 
 @RestController
-public class ApiRestController {
+public class UsuarioApiRestController {
 	@Autowired
 	private UsuarioServiceImpl usuarioServiceImpl;
 	
