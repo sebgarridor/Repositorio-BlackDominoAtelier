@@ -24,8 +24,8 @@ public class Administradores {
 	@Size(min = 5, max = 30)
 	private String password;
 
-	private String rol_id;
-	private String usuario_id;
+	private Long rolId;
+	private Long usuarioId;
 
 	@Column(updatable = false)
 	@DateTimeFormat(pattern = "yyyy-mm-dd")
@@ -34,13 +34,13 @@ public class Administradores {
 	@DateTimeFormat(pattern = "yyyy-mm-dd")
 	private Date updateAt;
 
-	public Administradores(Long id, @NotNull @Size(min = 5, max = 30) String password, String rol_id,
-			String usuario_id) {
+	public Administradores(Long id, @NotNull @Size(min = 5, max = 30) String password, Long rolId,
+			Long usuarioId) {
 		super();
 		this.id = id;
 		this.password = password;
-		this.rol_id = rol_id;
-		this.usuario_id = usuario_id;
+		this.rolId = rolId;
+		this.usuarioId = usuarioId;
 	}
 
 	public Administradores() {
@@ -63,20 +63,20 @@ public class Administradores {
 		this.password = password;
 	}
 
-	public String getRol_id() {
-		return rol_id;
+	public Long getRolId() {
+		return rolId;
 	}
 
-	public void setRol_id(String rol_id) {
-		this.rol_id = rol_id;
+	public void setRol_id(Long rolId) {
+		this.rolId = rolId;
 	}
 
-	public String getUsuario_id() {
-		return usuario_id;
+	public Long getUsuarioId() {
+		return usuarioId;
 	}
 
-	public void setUsuario_id(String usuario_id) {
-		this.usuario_id = usuario_id;
+	public void setUsuario_id(Long usuarioId) {
+		this.usuarioId = usuarioId;
 	}
 
 	protected void onCreate() {

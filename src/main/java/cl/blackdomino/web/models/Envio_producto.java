@@ -15,11 +15,10 @@ public class Envio_producto {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@NotNull
-	private int envio_id;
+	private Long envioId;
 	
-	@NotNull
-	private int producto_id;
+
+	private Long productoId;
 	
 	@NotNull
 	private int cant_producto;
@@ -31,12 +30,12 @@ public class Envio_producto {
 		super();
 	}
 
-	public Envio_producto(Long id, @NotNull int envio_id, @NotNull int producto_id, @NotNull int cant_producto,
+	public Envio_producto(Long id, Long envioId, Long productoId, @NotNull int cant_producto,
 			@NotNull int subtotal) {
 		super();
 		this.id = id;
-		this.envio_id = envio_id;
-		this.producto_id = producto_id;
+		this.envioId = envioId;
+		this.productoId = productoId;
 		this.cant_producto = cant_producto;
 		this.subtotal = subtotal;
 	}
@@ -49,20 +48,20 @@ public class Envio_producto {
 		this.id = id;
 	}
 
-	public int getEnvio_id() {
-		return envio_id;
+	public Long getEnvioId() {
+		return envioId;
 	}
 
-	public void setEnvio_id(int envio_id) {
-		this.envio_id = envio_id;
+	public void setEnvioId(Long envioId) {
+		this.envioId = envioId;
 	}
 
-	public int getProducto_id() {
-		return producto_id;
+	public Long getProductoId() {
+		return productoId;
 	}
 
-	public void setProducto_id(int producto_id) {
-		this.producto_id = producto_id;
+	public void setProductoId(Long productoId) {
+		this.productoId = productoId;
 	}
 
 	public int getCant_producto() {

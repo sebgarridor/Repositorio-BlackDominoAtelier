@@ -27,7 +27,7 @@ public class Cliente {
 	@Size(min = 9, max = 10)
 	private String rut;
 	
-	private String usuario_id;
+	private Long usuarioId;
 	
 	@Column(updatable = false)
 	@DateTimeFormat(pattern = "yyyy-mm-dd")
@@ -41,13 +41,13 @@ public class Cliente {
 		super();
 	}
 
-	public Cliente(Long id, @NotNull Boolean empresa, @NotNull @Size(min = 9, max = 10) String rut, String usuario_id,
+	public Cliente(Long id, @NotNull Boolean empresa, @NotNull @Size(min = 9, max = 10) String rut, Long usuarioId,
 			Date createdAt, Date updateAt) {
 		super();
 		this.id = id;
 		this.empresa = empresa;
 		this.rut = rut;
-		this.usuario_id = usuario_id;
+		this.usuarioId = usuarioId;
 		this.createdAt = createdAt;
 		this.updateAt = updateAt;
 	}
@@ -76,12 +76,12 @@ public class Cliente {
 		this.rut = rut;
 	}
 
-	public String getUsuario_id() {
-		return usuario_id;
+	public Long getUsuarioId() {
+		return usuarioId;
 	}
 
-	public void setUsuario_id(String usuario_id) {
-		this.usuario_id = usuario_id;
+	public void setUsuarioId(Long usuarioId) {
+		this.usuarioId = usuarioId;
 	}
 
 	public Date getCreatedAt() {
