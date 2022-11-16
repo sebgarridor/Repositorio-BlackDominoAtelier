@@ -18,59 +18,67 @@ public class Dueno {
 	private Long id;
 	
 	@NotNull
-	private String contrasena;
+	private String password;
 	
-	@NotNull
-	private int rol_id;
 	
-	@NotNull
-	private int usuario_id;
+	private int rolId;
+	
+
+	private int usuarioId;
+
 
 	public Dueno() {
 		super();
 	}
 
-	public Dueno(Long id, @NotNull String contrasena, @NotNull int rol_id, @NotNull int usuario_id) {
+
+	public Dueno(Long id, @NotNull String password, int rolId, int usuarioId) {
 		super();
 		this.id = id;
-		this.contrasena = contrasena;
-		this.rol_id = rol_id;
-		this.usuario_id = usuario_id;
+		this.password = password;
+		this.rolId = rolId;
+		this.usuarioId = usuarioId;
 	}
+
 
 	public Long getId() {
 		return id;
 	}
 
+
 	public void setId(Long id) {
 		this.id = id;
 	}
 
-	public String getContrasena() {
-		return contrasena;
+
+	public String getPassword() {
+		return password;
 	}
 
-	public void setContrasena(String contrasena) {
-		this.contrasena = contrasena;
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
-	public int getRol_id() {
-		return rol_id;
+
+	public int getRolId() {
+		return rolId;
 	}
 
-	public void setRol_id(int rol_id) {
-		this.rol_id = rol_id;
+
+	public void setRolId(int rolId) {
+		this.rolId = rolId;
 	}
 
-	public int getUsuario_id() {
-		return usuario_id;
+
+	public int getUsuarioId() {
+		return usuarioId;
 	}
 
-	public void setUsuario_id(int usuario_id) {
-		this.usuario_id = usuario_id;
+
+	public void setUsuarioId(int usuarioId) {
+		this.usuarioId = usuarioId;
 	}
 	
 	
-	
-
 }

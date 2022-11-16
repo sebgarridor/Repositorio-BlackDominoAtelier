@@ -32,10 +32,8 @@ public class Direccion {
 	@NotNull
 	private String region;
 	
-	@NotNull
 	private String departamento;
 	
-	@NotNull
 	private String codigoPostal;
 
 	public Direccion() {
@@ -43,8 +41,7 @@ public class Direccion {
 	}
 
 	public Direccion(Long id, @NotNull String calle, @NotNull int numero, @NotNull String comuna,
-			@NotNull String ciudad, @NotNull String region, @NotNull String departamento,
-			@NotNull String codigoPostal) {
+			@NotNull String ciudad, @NotNull String region, String departamento, String codigoPostal) {
 		super();
 		this.id = id;
 		this.calle = calle;
@@ -119,5 +116,7 @@ public class Direccion {
 	public void setCodigoPostal(String codigoPostal) {
 		this.codigoPostal = codigoPostal;
 	}
+
+	
 
 }
