@@ -12,8 +12,8 @@ import javax.validation.constraints.NotNull;
 public class Disenos {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@NotNull
 	private Long id;
+	
 	@NotNull
 	private String serigrafia;
 
