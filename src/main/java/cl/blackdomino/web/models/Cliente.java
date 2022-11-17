@@ -23,7 +23,6 @@ public class Cliente {
 	@NotNull
 	private Boolean empresa;
 	
-	@NotNull
 	@Size(min = 9, max = 10)
 	private String rut;
 	
