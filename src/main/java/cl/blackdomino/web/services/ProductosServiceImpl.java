@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import cl.blackdomino.web.models.Productos;
-import cl.blackdomino.web.repositories.DisenosRepository;
 import cl.blackdomino.web.repositories.ProductosRepository;
 
 @Service
