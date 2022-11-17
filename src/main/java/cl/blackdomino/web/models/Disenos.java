@@ -21,6 +21,7 @@ public class Disenos {
 		super();
 	}
 
+
 	public Long getId() {
 		return id;
 	}

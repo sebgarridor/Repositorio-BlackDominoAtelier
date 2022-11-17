@@ -13,17 +13,16 @@ public class Productos {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@NotNull
 	private Long id;
 	@NotNull
 	private String nombre;
 	@NotNull
 	private Integer precio;
-	@NotNull
+	
 	private Long categoria_id;
-	@NotNull
+	
 	private Long diseno_id;
-	@NotNull
+	
 	private Long tallaje_id;
 
 	public Productos() {

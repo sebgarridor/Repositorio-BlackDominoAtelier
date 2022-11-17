@@ -21,10 +21,10 @@ public class Dueno {
 	private String password;
 	
 	
-	private int rolId;
+	private Long rolId;
 	
 
-	private int usuarioId;
+	private Long usuarioId;
 
 
 	public Dueno() {
@@ -32,7 +32,7 @@ public class Dueno {
 	}
 
 
-	public Dueno(Long id, @NotNull String password, int rolId, int usuarioId) {
+	public Dueno(Long id, @NotNull String password, Long rolId, Long usuarioId) {
 		super();
 		this.id = id;
 		this.password = password;
@@ -61,24 +61,26 @@ public class Dueno {
 	}
 
 
-	public int getRolId() {
+	public Long getRolId() {
 		return rolId;
 	}
 
 
-	public void setRolId(int rolId) {
+	public void setRolId(Long rolId) {
 		this.rolId = rolId;
 	}
 
 
-	public int getUsuarioId() {
+	public Long getUsuarioId() {
 		return usuarioId;
 	}
 
 
-	public void setUsuarioId(int usuarioId) {
+	public void setUsuarioId(Long usuarioId) {
 		this.usuarioId = usuarioId;
 	}
+
+
 	
 	
 }

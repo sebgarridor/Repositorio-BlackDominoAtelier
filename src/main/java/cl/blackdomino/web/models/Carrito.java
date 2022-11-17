@@ -18,18 +18,17 @@ public class Carrito {
 	@NotNull
 	private int cantidad;
 	
-	@NotNull
-	private int producto_id;
+	private Long productoId;
 
 	public Carrito() {
 		super();
 	}
 
-	public Carrito(Long id, @NotNull int cantidad, @NotNull int producto_id) {
+	public Carrito(Long id, @NotNull int cantidad, Long productoId) {
 		super();
 		this.id = id;
 		this.cantidad = cantidad;
-		this.producto_id = producto_id;
+		this.productoId = productoId;
 	}
 
 	public Long getId() {
@@ -48,12 +47,12 @@ public class Carrito {
 		this.cantidad = cantidad;
 	}
 
-	public int getProducto_id() {
-		return producto_id;
+	public Long getProductoId() {
+		return productoId;
 	}
 
-	public void setProducto_id(int producto_id) {
-		this.producto_id = producto_id;
+	public void setProductoId(Long productoId) {
+		this.productoId = productoId;
 	}
 	
 	

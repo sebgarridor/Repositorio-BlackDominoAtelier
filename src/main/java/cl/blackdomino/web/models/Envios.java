@@ -23,12 +23,18 @@ public class Envios{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
+	@NotNull
 	private String tipoEnvio;
+	
 	private int costoEnvio;
 	
 	@NotNull
 	@Size(min=3, max=30,message="Error en el ingreso de la region")
 	private String regionEnvio;
+	
+	
+	private int subTotal;
 	
 	private int total;
 	
@@ -53,14 +59,17 @@ public class Envios{
 	
 	
 	
-	public Envios(Long id, String tipoEnvio, int costoEnvio,
+	
+
+		public Envios(Long id, @NotNull String tipoEnvio, int costoEnvio,
 			@NotNull @Size(min = 3, max = 30, message = "Error en el ingreso de la region") String regionEnvio,
-			int total, Long medioPagoId, Long carritoId, Long clienteId, Date createdAt, Date updatedAt) {
+			int subTotal, int total, Long medioPagoId, Long carritoId, Long clienteId, Date createdAt, Date updatedAt) {
 		super();
 		this.id = id;
 		this.tipoEnvio = tipoEnvio;
 		this.costoEnvio = costoEnvio;
 		this.regionEnvio = regionEnvio;
+		this.subTotal = subTotal;
 		this.total = total;
 		this.medioPagoId = medioPagoId;
 		this.carritoId = carritoId;
@@ -73,129 +82,225 @@ public class Envios{
 
 
 
+
+
 		public Long getId() {
-		return id;
-	}
+			return id;
+		}
 
 
 
 
 
-	public void setId(Long id) {
-		this.id = id;
-	}
 
 
+		public void setId(Long id) {
+			this.id = id;
+		}
 
 
 
-	public String getTipoEnvio() {
-		return tipoEnvio;
-	}
 
 
 
 
+		public String getTipoEnvio() {
+			return tipoEnvio;
+		}
 
-	public void setTipoEnvio(String tipoEnvio) {
-		this.tipoEnvio = tipoEnvio;
-	}
 
 
 
 
 
-	public int getCostoEnvio() {
-		return costoEnvio;
-	}
 
+		public void setTipoEnvio(String tipoEnvio) {
+			this.tipoEnvio = tipoEnvio;
+		}
 
 
 
 
-	public void setCostoEnvio(int costoEnvio) {
-		this.costoEnvio = costoEnvio;
-	}
 
 
 
+		public int getCostoEnvio() {
+			return costoEnvio;
+		}
 
 
-	public String getRegionEnvio() {
-		return regionEnvio;
-	}
 
 
 
 
 
-	public void setRegionEnvio(String regionEnvio) {
-		this.regionEnvio = regionEnvio;
-	}
+		public void setCostoEnvio(int costoEnvio) {
+			this.costoEnvio = costoEnvio;
+		}
 
 
 
 
 
-	public int getTotal() {
-		return total;
-	}
 
 
+		public String getRegionEnvio() {
+			return regionEnvio;
+		}
 
 
 
-	public void setTotal(int total) {
-		this.total = total;
-	}
 
 
 
 
+		public void setRegionEnvio(String regionEnvio) {
+			this.regionEnvio = regionEnvio;
+		}
 
-	public Long getMedioPagoId() {
-		return medioPagoId;
-	}
 
 
 
 
 
-	public void setMedioPagoId(Long medioPagoId) {
-		this.medioPagoId = medioPagoId;
-	}
 
+		public int getSubTotal() {
+			return subTotal;
+		}
 
 
 
 
-	public Long getCarritoId() {
-		return carritoId;
-	}
 
 
 
+		public void setSubTotal(int subTotal) {
+			this.subTotal = subTotal;
+		}
 
 
-	public void setCarritoId(Long carritoId) {
-		this.carritoId = carritoId;
-	}
 
 
 
 
 
-	public Long getClienteId() {
-		return clienteId;
-	}
+		public int getTotal() {
+			return total;
+		}
 
 
 
 
 
-	public void setClienteId(Long clienteId) {
-		this.clienteId = clienteId;
-	}
+
+
+		public void setTotal(int total) {
+			this.total = total;
+		}
+
+
+
+
+
+
+
+		public Long getMedioPagoId() {
+			return medioPagoId;
+		}
+
+
+
+
+
+
+
+		public void setMedioPagoId(Long medioPagoId) {
+			this.medioPagoId = medioPagoId;
+		}
+
+
+
+
+
+
+
+		public Long getCarritoId() {
+			return carritoId;
+		}
+
+
+
+
+
+
+
+		public void setCarritoId(Long carritoId) {
+			this.carritoId = carritoId;
+		}
+
+
+
+
+
+
+
+		public Long getClienteId() {
+			return clienteId;
+		}
+
+
+
+
+
+
+
+		public void setClienteId(Long clienteId) {
+			this.clienteId = clienteId;
+		}
+
+
+
+
+
+
+
+		public Date getCreatedAt() {
+			return createdAt;
+		}
+
+
+
+
+
+
+
+		public void setCreatedAt(Date createdAt) {
+			this.createdAt = createdAt;
+		}
+
+
+
+
+
+
+
+		public Date getUpdatedAt() {
+			return updatedAt;
+		}
+
+
+
+
+
+
+
+		public void setUpdatedAt(Date updatedAt) {
+			this.updatedAt = updatedAt;
+		}
+
+
+
+
 
 
 

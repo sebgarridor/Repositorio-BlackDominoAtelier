@@ -20,7 +20,7 @@ public class Usuario {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) 
-	private int id;
+	private Long id;
 	
 	@NotNull
 	private String nombre;
@@ -35,7 +35,7 @@ public class Usuario {
 	private int telefono;
 	
 	
-	private int direccion_id;
+	private Long direccionId;
 	
 	@Column(updatable=false)
 	@DateTimeFormat(pattern="yyyy-MM-dd")
@@ -47,10 +47,10 @@ public class Usuario {
 	public Usuario() {
 		super();
 	}
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getNombre() {
@@ -77,11 +77,11 @@ public class Usuario {
 	public void setTelefono(int telefono) {
 		this.telefono = telefono;
 	}
-	public int getDireccion_id() {
-		return direccion_id;
+	public Long getDireccionId() {
+		return direccionId;
 	}
-	public void setDireccion_id(int direccion_id) {
-		this.direccion_id = direccion_id;
+	public void setDireccionId(Long direccionId) {
+		this.direccionId = direccionId;
 	}
 	
 	@PrePersist
