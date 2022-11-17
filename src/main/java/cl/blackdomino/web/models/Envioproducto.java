@@ -9,7 +9,7 @@ import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name="envio_producto")
-public class Envio_producto {
+public class Envioproducto {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,11 +26,11 @@ public class Envio_producto {
 	@NotNull
 	private int subtotal;
 
-	public Envio_producto() {
+	public Envioproducto() {
 		super();
 	}
 
-	public Envio_producto(Long id, Long envioId, Long productoId, @NotNull int cant_producto,
+	public Envioproducto(Long id, Long envioId, Long productoId, @NotNull int cant_producto,
 			@NotNull int subtotal) {
 		super();
 		this.id = id;
