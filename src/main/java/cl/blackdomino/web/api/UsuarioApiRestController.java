@@ -25,10 +25,11 @@ public class UsuarioApiRestController {
 		 * telefono: 2932391
 		 * 
 		 * 
-		 * 
-		 * 
 		 */
 		return usuarioServiceImpl.guardarUsuario(usuario); // "Usuario Guardado"
+		
+		
+		
 		
 	}
 	
