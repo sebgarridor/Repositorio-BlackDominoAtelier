@@ -49,8 +49,8 @@ public class AdministradorApiRestController {
 		return administradorServiceImpl.obtenerAdministrador(id);
 	}
 
-	// listar todos los usuarios
-	@GetMapping("/listar/usuarios")
+	// listar todos los administradores
+	@GetMapping("/listar/administradores")
 	public List<Administradores> obtenerListaAdministradores() {
 		return administradorServiceImpl.obtenerListaAdministradores();
 	}

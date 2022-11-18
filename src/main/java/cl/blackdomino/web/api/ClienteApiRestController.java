@@ -32,7 +32,7 @@ public class ClienteApiRestController {
 		return clienteServiceImpl.eliminarCliente(id);
 	}
 	
-	@RequestMapping("/obtener/usuario")
+	@RequestMapping("/obtener/cliente")
 	public Cliente obtenerCliente(@RequestParam(value="id",required = true) Long id) {
 		return clienteServiceImpl.obtenerCliente(id);
 	}
