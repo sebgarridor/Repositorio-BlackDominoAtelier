@@ -22,20 +22,19 @@ public class Rol {
 	private Long id;
 
 	@NotNull
-	private String talla;
+	private String Nombre;
 	
-	@JsonIgnore
-	@OneToMany(mappedBy = "rol", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	private Administradores administradores;
+	private String descripcion;
 
 	public Rol() {
 		super();
 	}
 
-	public Rol(Long id, @NotNull String talla) {
+	public Rol(Long id, @NotNull String nombre, String descripcion) {
 		super();
 		this.id = id;
-		this.talla = talla;
+		Nombre = nombre;
+		this.descripcion = descripcion;
 	}
 
 	public Long getId() {
@@ -46,12 +45,23 @@ public class Rol {
 		this.id = id;
 	}
 
-	public String getTalla() {
-		return talla;
+	public String getNombre() {
+		return Nombre;
 	}
 
-	public void setTalla(String talla) {
-		this.talla = talla;
+	public void setNombre(String nombre) {
+		Nombre = nombre;
 	}
 
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+	
+	
+
+	
 }

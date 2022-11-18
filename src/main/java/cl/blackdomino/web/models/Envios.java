@@ -45,10 +45,7 @@ public class Envios {
 
 	private Long carritoId;
 
-	@JsonIgnore
-	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name="cliente_id")
-	private Cliente cliente;
+
 
 	@Column(updatable = false)
 	@DateTimeFormat(pattern = "yyyy_MM-dd")
@@ -61,10 +58,11 @@ public class Envios {
 		super();
 	}
 
+	
+	
 	public Envios(Long id, @NotNull String tipoEnvio, int costoEnvio,
 			@NotNull @Size(min = 3, max = 30, message = "Error en el ingreso de la region") String regionEnvio,
-			int subTotal, int total, Long medioPagoId, Long carritoId, Cliente cliente, Date createdAt,
-			Date updatedAt) {
+			int subTotal, int total, Long medioPagoId, Long carritoId, Date createdAt, Date updatedAt) {
 		super();
 		this.id = id;
 		this.tipoEnvio = tipoEnvio;
@@ -74,98 +72,107 @@ public class Envios {
 		this.total = total;
 		this.medioPagoId = medioPagoId;
 		this.carritoId = carritoId;
-		this.cliente = cliente;
 		this.createdAt = createdAt;
 		this.updatedAt = updatedAt;
 	}
+
+
 
 	public Long getId() {
 		return id;
 	}
 
+
+
 	public void setId(Long id) {
 		this.id = id;
 	}
+
+
 
 	public String getTipoEnvio() {
 		return tipoEnvio;
 	}
 
+
+
 	public void setTipoEnvio(String tipoEnvio) {
 		this.tipoEnvio = tipoEnvio;
 	}
+
+
 
 	public int getCostoEnvio() {
 		return costoEnvio;
 	}
 
+
+
 	public void setCostoEnvio(int costoEnvio) {
 		this.costoEnvio = costoEnvio;
 	}
+
+
 
 	public String getRegionEnvio() {
 		return regionEnvio;
 	}
 
+
+
 	public void setRegionEnvio(String regionEnvio) {
 		this.regionEnvio = regionEnvio;
 	}
+
+
 
 	public int getSubTotal() {
 		return subTotal;
 	}
 
+
+
 	public void setSubTotal(int subTotal) {
 		this.subTotal = subTotal;
 	}
+
+
 
 	public int getTotal() {
 		return total;
 	}
 
+
+
 	public void setTotal(int total) {
 		this.total = total;
 	}
+
+
 
 	public Long getMedioPagoId() {
 		return medioPagoId;
 	}
 
+
+
 	public void setMedioPagoId(Long medioPagoId) {
 		this.medioPagoId = medioPagoId;
 	}
+
+
 
 	public Long getCarritoId() {
 		return carritoId;
 	}
 
+
+
 	public void setCarritoId(Long carritoId) {
 		this.carritoId = carritoId;
 	}
 
-	public Cliente getCliente() {
-		return cliente;
-	}
 
-	public void setCliente(Cliente clienteId) {
-		this.cliente = clienteId;
-	}
-
-	public Date getCreatedAt() {
-		return createdAt;
-	}
-
-	public void setCreatedAt(Date createdAt) {
-		this.createdAt = createdAt;
-	}
-
-	public Date getUpdatedAt() {
-		return updatedAt;
-	}
-
-	public void setUpdatedAt(Date updatedAt) {
-		this.updatedAt = updatedAt;
-	}
 
 	// atributos de control
 	// agrega a la columna la fecha antes de insertar
