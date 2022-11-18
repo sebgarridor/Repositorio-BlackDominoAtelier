@@ -4,15 +4,20 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 import org.springframework.format.annotation.DateTimeFormat;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name="usuario")
@@ -34,8 +39,10 @@ public class Usuario {
 	@NotNull
 	private int telefono;
 	
-	
-	private Long direccionId;
+	@JsonIgnore
+	@OneToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name="direccion_id")
+	private Direccion direccion;
 	
 	@Column(updatable=false)
 	@DateTimeFormat(pattern="yyyy-MM-dd")
@@ -77,11 +84,11 @@ public class Usuario {
 	public void setTelefono(int telefono) {
 		this.telefono = telefono;
 	}
-	public Long getDireccionId() {
-		return direccionId;
+	public Direccion getDireccion() {
+		return direccion;
 	}
-	public void setDireccionId(Long direccionId) {
-		this.direccionId = direccionId;
+	public void setDireccion(Direccion direccion) {
+		this.direccion = direccion;
 	}
 	
 	@PrePersist

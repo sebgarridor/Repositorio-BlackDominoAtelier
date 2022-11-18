@@ -4,14 +4,19 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import org.springframework.format.annotation.DateTimeFormat;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name = "administrador")
@@ -24,8 +29,10 @@ public class Administradores {
 	@Size(min = 5, max = 30)
 	private String password;
 
-	private Long rolId;
-	private Long usuarioId;
+	@JsonIgnore
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name="rol_id")
+	private Rol rol;
 
 	@Column(updatable = false)
 	@DateTimeFormat(pattern = "yyyy-mm-dd")
@@ -34,13 +41,11 @@ public class Administradores {
 	@DateTimeFormat(pattern = "yyyy-mm-dd")
 	private Date updateAt;
 
-	public Administradores(Long id, @NotNull @Size(min = 5, max = 30) String password, Long rolId,
-			Long usuarioId) {
+	public Administradores(Long id, @NotNull @Size(min = 5, max = 30) String password, Rol rol, Long usuarioId) {
 		super();
 		this.id = id;
 		this.password = password;
-		this.rolId = rolId;
-		this.usuarioId = usuarioId;
+		this.rol = rol;
 	}
 
 	public Administradores() {
@@ -63,20 +68,12 @@ public class Administradores {
 		this.password = password;
 	}
 
-	public Long getRolId() {
-		return rolId;
+	public Rol getRol() {
+		return rol;
 	}
 
-	public void setRol_id(Long rolId) {
-		this.rolId = rolId;
-	}
-
-	public Long getUsuarioId() {
-		return usuarioId;
-	}
-
-	public void setUsuario_id(Long usuarioId) {
-		this.usuarioId = usuarioId;
+	public void setRol(Rol rol) {
+		this.rol = rol;
 	}
 
 	protected void onCreate() {
