@@ -8,7 +8,7 @@ import cl.blackdomino.web.models.Productos;
 public interface ProductosService {
 	public Productos guardarProducto(Productos producto);
 	public String eliminarProducto(Long id);
-	public String actualizarProducto(Productos diseno);
+	public String actualizarProducto(Productos producto);
 	public Optional<Productos> obtenerProducto(Long id);
 	public List<Productos> obtenerListaProductos();	
 }
