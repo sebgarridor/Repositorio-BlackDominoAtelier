@@ -4,10 +4,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class DisenosControllers {
-	@RequestMapping("/disenos")
-	public String disenos() {
-		System.out.println("en el método diseños");
-		return "disenos";
+public class ProductoControllers {
+	@RequestMapping("/productos")
+	public String productos() {
+		System.out.println("en el método productos");
+		return "productos";
 	}
 }
+

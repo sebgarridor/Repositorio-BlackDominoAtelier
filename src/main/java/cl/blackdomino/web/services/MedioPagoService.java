@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import cl.blackdomino.web.models.MedioPago;
 
 @Service
-public interface MedioPagosService {
+public interface MedioPagoService {
 
 	//guardamos la data
 		public MedioPago guardarMedioPago(MedioPago medioPago);

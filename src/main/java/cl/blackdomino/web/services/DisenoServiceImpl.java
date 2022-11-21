@@ -6,33 +6,33 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import cl.blackdomino.web.models.Disenos;
-import cl.blackdomino.web.repositories.DisenosRepository;
+import cl.blackdomino.web.models.Diseno;
+import cl.blackdomino.web.repositories.DisenoRepository;
 
 @Service
-public class DisenosServiceImpl implements DisenosService{
+public class DisenoServiceImpl implements DisenoService{
 	
 	
 	@Autowired //inyección
-	private DisenosRepository disenosRepository;
+	private DisenoRepository disenoRepository;
 	
 	
 //--------------------Guardar----------------------------------
 	@Override
-	public Disenos guardarDiseno(Disenos diseno) {
+	public Diseno guardarDiseno(Diseno diseno) {
 		
-		return disenosRepository.save(diseno);
+		return disenoRepository.save(diseno);
 	}
 //--------------------Eliminar----------------------------------
 	@Override
 	public String eliminarDiseno(Long id) {
-		Boolean existe = disenosRepository.existsById(id);
+		Boolean existe = disenoRepository.existsById(id);
 		if (existe) {
-			disenosRepository.deleteById(id);
+			disenoRepository.deleteById(id);
 		} else {
 			return "El diseño no existe";
 		}
-		existe = disenosRepository.existsById(id);
+		existe = disenoRepository.existsById(id);
 		if (existe) {
 			return "El diseño no fue eliminado";
 		}
@@ -41,25 +41,25 @@ public class DisenosServiceImpl implements DisenosService{
 	
 //--------------------Actualizar----------------------------------
 	@Override
-	public String actualizarDiseno(Disenos diseno) {
-		Boolean existe = disenosRepository.existsById(diseno.getId());
+	public String actualizarDiseno(Diseno diseno) {
+		Boolean existe = disenoRepository.existsById(diseno.getId());
 		if (existe) {
-			disenosRepository.save(diseno);
+			disenoRepository.save(diseno);
 			return "Diseño actualizado";
 		}
 		return "Diseño no actualizado";
 	}
 //--------------------Obtener----------------------------------
 	@Override
-	public Optional<Disenos> obtenerDiseno(Long id) {
-		Optional<Disenos> mensaje = disenosRepository.findById(id);
+	public Optional<Diseno> obtenerDiseno(Long id) {
+		Optional<Diseno> mensaje = disenoRepository.findById(id);
 		return mensaje;
 	}
 	
 //--------------------ObtenerLista----------------------------------
 	@Override
-	public List<Disenos> obtenerListaDisenos() {
-		return disenosRepository.findAll();
+	public List<Diseno> obtenerListaDisenos() {
+		return disenoRepository.findAll();
 	}
 
 

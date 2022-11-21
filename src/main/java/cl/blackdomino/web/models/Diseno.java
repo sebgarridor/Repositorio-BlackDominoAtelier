@@ -1,47 +1,42 @@
 package cl.blackdomino.web.models;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
+
 
 @Entity
-@Table(name = "productos")
+@Table(name = "disenos")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Productos {
-	
+@ToString
+public class Diseno {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
 	@NotNull
-	private String nombre;
-	@NotNull
-	private Integer precio;
+	private String serigrafia;
 	
-	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name="categoria_id")
-	private Categorias categoria;
-	
-	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name="diseno_id")
-	private Disenos diseno;
-	
-	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name="tallaje_id")
-	private Tallaje tallaje;
+	@JsonIgnore
+	@OneToMany(mappedBy = "diseno", cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+	private List<Producto> productos;
 
-	
 }

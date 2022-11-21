@@ -37,7 +37,7 @@ public class Tallaje {
 		
 		@JsonIgnore
 		@OneToMany(mappedBy = "tallaje",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
-		private List<Productos> productos;
+		private List<Producto> productos;
 
 
 	

@@ -4,14 +4,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import cl.blackdomino.web.models.MedioPago;
-import cl.blackdomino.web.repositories.MedioPagosRepository;
+import cl.blackdomino.web.repositories.MedioPagoRepository;
 
 @Service
-public class MediosPagosServiceImpl implements MedioPagosService{
+public class MedioPagoServiceImpl implements MedioPagoService{
 
 	
 	@Autowired
-	private MedioPagosRepository medioPagoRepository;
+	private MedioPagoRepository medioPagoRepository;
 
 	@Override
 	public MedioPago guardarMedioPago(MedioPago medioPago) {

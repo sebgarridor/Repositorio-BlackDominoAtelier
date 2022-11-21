@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class CategoriasControllers {
+public class CategoriaControllers {
 	@RequestMapping("/categorias")   
 	public String categorias() {
 		System.out.println("en el método categorias");

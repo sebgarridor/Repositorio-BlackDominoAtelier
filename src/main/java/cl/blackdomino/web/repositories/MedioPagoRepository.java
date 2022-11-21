@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import cl.blackdomino.web.models.MedioPago;
 
 @Repository
-public interface MedioPagosRepository extends JpaRepository<MedioPago, Long>{
+public interface MedioPagoRepository extends JpaRepository<MedioPago, Long>{
 
 }

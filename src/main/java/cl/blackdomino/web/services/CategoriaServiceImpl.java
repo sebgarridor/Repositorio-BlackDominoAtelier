@@ -5,29 +5,29 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import cl.blackdomino.web.models.Categorias;
-import cl.blackdomino.web.repositories.CategoriasRepository;
+import cl.blackdomino.web.models.Categoria;
+import cl.blackdomino.web.repositories.CategoriaRepository;
 
 @Service
-public class CategoriasServiceImpl implements CategoriasService{
+public class CategoriaServiceImpl implements CategoriaService{
 	@Autowired
-	private CategoriasRepository categoriasRepository;
+	private CategoriaRepository categoriaRepository;
 	
 //--------------------Guardar----------------------------------
 	@Override
-	public Categorias guardarCategoria(Categorias categoria) {
-		return categoriasRepository.save(categoria);
+	public Categoria guardarCategoria(Categoria categoria) {
+		return categoriaRepository.save(categoria);
 	}
 //--------------------Eliminar----------------------------------
 	@Override
 	public String eliminarCategoria(Long id) {
-		Boolean existe = categoriasRepository.existsById(id);
+		Boolean existe = categoriaRepository.existsById(id);
 		if (existe) {
-			categoriasRepository.deleteById(id);
+			categoriaRepository.deleteById(id);
 		} else {
 			return "La categoría no existe";
 		}
-		existe = categoriasRepository.existsById(id);
+		existe = categoriaRepository.existsById(id);
 		if (existe) {
 			return "La categoría no fue eliminada";
 		}
@@ -35,24 +35,24 @@ public class CategoriasServiceImpl implements CategoriasService{
 	}
 //--------------------Actualizar----------------------------------
 	@Override
-	public String actualizarCategoria(Categorias categoria) {
-		Boolean existe = categoriasRepository.existsById(categoria.getId());
+	public String actualizarCategoria(Categoria categoria) {
+		Boolean existe = categoriaRepository.existsById(categoria.getId());
 		if (existe) {
-			categoriasRepository.save(categoria);
+			categoriaRepository.save(categoria);
 			return "Categoría Actualizada";
 		}
 		return "Categoría no actualizada";
 	}
 	//--------------------Obtener----------------------------------		
 	@Override
-	public Optional<Categorias> obtenerCategoria(Long id) {
-		Optional<Categorias> mensaje = categoriasRepository.findById(id);
+	public Optional<Categoria> obtenerCategoria(Long id) {
+		Optional<Categoria> mensaje = categoriaRepository.findById(id);
 		return mensaje;
 	}
 	//--------------------ObtenerLista----------------------------------
 	@Override
-	public List<Categorias> obtenerListaCategorias() {
-		return categoriasRepository.findAll();
+	public List<Categoria> obtenerListaCategorias() {
+		return categoriaRepository.findAll();
 	}
 
 }

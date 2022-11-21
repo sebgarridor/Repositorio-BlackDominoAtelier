@@ -6,25 +6,26 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import cl.blackdomino.web.models.Productos;
-import cl.blackdomino.web.repositories.ProductosRepository;
+import cl.blackdomino.web.models.Producto;
+import cl.blackdomino.web.repositories.ProductoRepository;
 
 @Service
-public class ProductosServiceImpl implements ProductosService{
+public class ProductoServiceImpl implements ProductoService{
+
 	@Autowired
-	private ProductosRepository productosRepository;
+	private ProductoRepository productoRepository;
 	//--------------------Guardar----------------------------------
 	@Override
-	public Productos guardarProducto(Productos producto) {
+	public Producto guardarProducto(Producto producto) {
 		
-		return productosRepository.save(producto);
+		return productoRepository.save(producto);
 	}
 	//--------------------Eliminar----------------------------------
 	@Override
 	public String eliminarProducto(Long id) {
-		Boolean existe = productosRepository.existsById(id);
+		Boolean existe = productoRepository.existsById(id);
 		if (existe) {
-			productosRepository.deleteById(id);
+			productoRepository.deleteById(id);
 		} else {
 			return "El producto no existe";
 		}
@@ -33,10 +34,10 @@ public class ProductosServiceImpl implements ProductosService{
 	
 	//--------------------Actualizar----------------------------------
 	@Override
-	public String actualizarProducto(Productos producto) {
-		Boolean existe = productosRepository.existsById(producto.getId());
+	public String actualizarProducto(Producto producto) {
+		Boolean existe = productoRepository.existsById(producto.getId());
 		if (existe) {
-			productosRepository.save(producto);
+			productoRepository.save(producto);
 			return "Producto actualizado";
 		}
 		
@@ -45,15 +46,15 @@ public class ProductosServiceImpl implements ProductosService{
 	
 	//--------------------Obtener----------------------------------
 	@Override
-	public Optional<Productos> obtenerProducto(Long id) {
-		Optional<Productos> mensaje = productosRepository.findById(id);
+	public Optional<Producto> obtenerProducto(Long id) {
+		Optional<Producto> mensaje = productoRepository.findById(id);
 		return mensaje;
 	}
 	
 	//--------------------ObtenerLista----------------------------------
 	@Override
-	public List<Productos> obtenerListaProductos() {
-		return productosRepository.findAll();
+	public List<Producto> obtenerListaProductos() {
+		return productoRepository.findAll();
 	}
 
 	

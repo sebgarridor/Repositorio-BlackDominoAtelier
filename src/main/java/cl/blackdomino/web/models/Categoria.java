@@ -25,7 +25,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 @Table(name = "categorias")
-public class Categorias {
+public class Categoria {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -39,7 +39,7 @@ public class Categorias {
 	
 	@JsonIgnore
 	@OneToMany(mappedBy = "categoria",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
-	private List<Productos> productos;
+	private List<Producto> productos;
 
 
 }

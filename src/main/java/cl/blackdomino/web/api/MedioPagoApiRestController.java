@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 import cl.blackdomino.web.models.MedioPago;
-import cl.blackdomino.web.services.MediosPagosServiceImpl;
+import cl.blackdomino.web.services.MedioPagoServiceImpl;
 
 @RestController
-public class MediosPagoApiRestController {
+public class MedioPagoApiRestController {
 	
 	@Autowired
-	private MediosPagosServiceImpl mpsImpl;
+	private MedioPagoServiceImpl mpsImpl;
 	
 	@RequestMapping("/guardar/medioPago")
 	public MedioPago guardarMedioPago(@RequestBody MedioPago medioPago) {

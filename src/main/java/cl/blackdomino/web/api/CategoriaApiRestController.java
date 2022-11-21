@@ -9,42 +9,42 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import cl.blackdomino.web.models.Categorias;
-import cl.blackdomino.web.services.CategoriasServiceImpl;
+import cl.blackdomino.web.models.Categoria;
+import cl.blackdomino.web.services.CategoriaServiceImpl;
 
 @RestController
-public class CategoriasApiRestController {
+public class CategoriaApiRestController {
 	@Autowired
-	private CategoriasServiceImpl categoriasServiceImpl;
+	private CategoriaServiceImpl categoriaServiceImpl;
 	
 	// -----------------------Guardar--------------------------------------------------------------------------
 	@RequestMapping ("/guardar/categoria")
-	public Categorias guardarCategoria(@RequestBody Categorias categoria) {
+	public Categoria guardarCategoria(@RequestBody Categoria categoria) {
 		// http://localhost:9080/guardar/categorias
-		return categoriasServiceImpl.guardarCategoria(categoria);
+		return categoriaServiceImpl.guardarCategoria(categoria);
 	}
 	// -----------------------Eliminar--------------------------------------------------------------------------
 	@RequestMapping ("/eliminar/categoria")
 	public String eliminarCategoria(@RequestParam(value = "id", required = false) Long id) {
-		return categoriasServiceImpl.eliminarCategoria(id);
+		return categoriaServiceImpl.eliminarCategoria(id);
 	}
 	// -----------------------Actualizar--------------------------------------------------------------------------
 	@RequestMapping ("/actualizar/categoria")
-	public String actualizarCategoria(@RequestBody Categorias categoria) {
+	public String actualizarCategoria(@RequestBody Categoria categoria) {
 		if (categoria.getId()!=null) {
-			categoriasServiceImpl.actualizarCategoria(categoria);
+			categoriaServiceImpl.actualizarCategoria(categoria);
 		}
 		return "La categoría será actualizada";
 	}
 	//-----------------------Obtener--------------------------------------------------------------------------	
 	@RequestMapping ("/obtener/categoria")
-	public Optional<Categorias> obtenerCategoria(@RequestParam(value = "id", required = false) Long id) {
-		Optional<Categorias> mensaje = categoriasServiceImpl.obtenerCategoria(id); 
+	public Optional<Categoria> obtenerCategoria(@RequestParam(value = "id", required = false) Long id) {
+		Optional<Categoria> mensaje = categoriaServiceImpl.obtenerCategoria(id); 
 		return mensaje;
 	}
 	//--------------------ObtenerLista----------------------------------
 	@GetMapping("/listar/categorias")
-	public List<Categorias> obtenerListaCategorias(){
-		return categoriasServiceImpl.obtenerListaCategorias();
+	public List<Categoria> obtenerListaCategorias(){
+		return categoriaServiceImpl.obtenerListaCategorias();
 	}
 }
