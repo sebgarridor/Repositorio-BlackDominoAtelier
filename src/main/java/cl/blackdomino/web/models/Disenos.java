@@ -39,29 +39,4 @@ public class Disenos {
 	@OneToMany(mappedBy = "diseno", cascade = CascadeType.ALL,fetch = FetchType.LAZY)
 	private List<Productos> productos;
 
-	public Disenos() {
-		super();
-	}
-
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getSerigrafia() {
-		return serigrafia;
-	}
-
-	public void setSerigrafia(String serigrafia) {
-		this.serigrafia = serigrafia;
-	}
-
-
-
-
-
 }

@@ -41,64 +41,6 @@ public class DTE {
 	private Date createdAt;
 	
 	
-	public DTE() {
-		super();
-	}
-	
-	
-	
-	public DTE(Long id, String observacion, Long envioId, Date createdAt) {
-		super();
-		this.id = id;
-		this.observacion = observacion;
-		this.envioId = envioId;
-		this.createdAt = createdAt;
-	}
-
-
-	
-
-
-
-
-	public Long getId() {
-		return id;
-	}
-
-
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-
-
-	public String getObservacion() {
-		return observacion;
-	}
-
-
-
-	public void setObservacion(String observacion) {
-		this.observacion = observacion;
-	}
-
-
-
-	public Long getEnvioId() {
-		return envioId;
-	}
-
-
-
-	public void setEnvioId(Long envioId) {
-		this.envioId = envioId;
-	}
-
-
-
-
-
 		//atributos de control
 		//agrega a la columna la fecha antes de insertar
 		@PrePersist
