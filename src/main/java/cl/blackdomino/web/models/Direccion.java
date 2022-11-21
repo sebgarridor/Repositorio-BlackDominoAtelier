@@ -1,5 +1,7 @@
 package cl.blackdomino.web.models;
 
+import java.util.List;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -12,10 +14,19 @@ import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 @Table(name="direcciones")
-
-
 public class Direccion {
 
 	@Id
@@ -44,88 +55,5 @@ public class Direccion {
 	@JsonIgnore
 	@OneToOne(mappedBy = "direccion", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	private Usuario usuario;
-
-	public Direccion() {
-		super();
-	}
-
-	public Direccion(Long id, @NotNull String calle, @NotNull int numero, @NotNull String comuna,
-			@NotNull String ciudad, @NotNull String region, String departamento, String codigoPostal) {
-		super();
-		this.id = id;
-		this.calle = calle;
-		this.numero = numero;
-		this.comuna = comuna;
-		this.ciudad = ciudad;
-		this.region = region;
-		this.departamento = departamento;
-		this.codigoPostal = codigoPostal;
-	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getCalle() {
-		return calle;
-	}
-
-	public void setCalle(String calle) {
-		this.calle = calle;
-	}
-
-	public int getNumero() {
-		return numero;
-	}
-
-	public void setNumero(int numero) {
-		this.numero = numero;
-	}
-
-	public String getComuna() {
-		return comuna;
-	}
-
-	public void setComuna(String comuna) {
-		this.comuna = comuna;
-	}
-
-	public String getCiudad() {
-		return ciudad;
-	}
-
-	public void setCiudad(String ciudad) {
-		this.ciudad = ciudad;
-	}
-
-	public String getRegion() {
-		return region;
-	}
-
-	public void setRegion(String region) {
-		this.region = region;
-	}
-
-	public String getDepartamento() {
-		return departamento;
-	}
-
-	public void setDepartamento(String departamento) {
-		this.departamento = departamento;
-	}
-
-	public String getCodigoPostal() {
-		return codigoPostal;
-	}
-
-	public void setCodigoPostal(String codigoPostal) {
-		this.codigoPostal = codigoPostal;
-	}
-
 	
-
 }
