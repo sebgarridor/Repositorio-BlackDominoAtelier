@@ -1,6 +1,7 @@
 package cl.blackdomino.web.models;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,6 +10,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
@@ -49,6 +52,18 @@ public class Usuario {
 	
 	@NotNull
 	private int telefono;
+	
+	//relación ManyToMany
+	@JsonIgnore
+	@ManyToMany(fetch = FetchType.LAZY)
+	@JoinTable(
+			name="roles_usuarios", //nombre tabla
+			joinColumns= @JoinColumn(name="usuario_id"),
+			inverseJoinColumns = @JoinColumn(name="rol_id")
+			)
+	
+	private List <Rol> roles;
+	
 	
 	@JsonIgnore
 	@OneToOne(fetch = FetchType.LAZY)
