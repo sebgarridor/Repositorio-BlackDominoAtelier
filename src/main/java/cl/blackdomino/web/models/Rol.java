@@ -10,11 +10,19 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 
 
 @Entity
 @Table(name="roles")
-
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Rol {
 
 	@Id
@@ -25,43 +33,6 @@ public class Rol {
 	private String Nombre;
 	
 	private String descripcion;
-
-	public Rol() {
-		super();
-	}
-
-	public Rol(Long id, @NotNull String nombre, String descripcion) {
-		super();
-		this.id = id;
-		Nombre = nombre;
-		this.descripcion = descripcion;
-	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getNombre() {
-		return Nombre;
-	}
-
-	public void setNombre(String nombre) {
-		Nombre = nombre;
-	}
-
-	public String getDescripcion() {
-		return descripcion;
-	}
-
-	public void setDescripcion(String descripcion) {
-		this.descripcion = descripcion;
-	}
-	
-	
 
 	
 }
