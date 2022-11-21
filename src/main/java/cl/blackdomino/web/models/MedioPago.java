@@ -1,5 +1,7 @@
 package cl.blackdomino.web.models;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -8,8 +10,19 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
 @Entity 
 @Table(name="mediosPagos")
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
 public class MedioPago {
 
 	@Id
@@ -22,42 +35,6 @@ public class MedioPago {
 	
 	private String descripcion;
 	
-	public MedioPago() {
-		super();
-	}
-
-	public MedioPago(Long id,
-			@NotNull @Size(min = 3, max = 15, message = "Error en el ingreso del nombre") String nombre,
-			String descripcion) {
-		super();
-		this.id = id;
-		this.nombre = nombre;
-		this.descripcion = descripcion;
-	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getNombre() {
-		return nombre;
-	}
-
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-
-	public String getDescripcion() {
-		return descripcion;
-	}
-
-	public void setDescripcion(String descripcion) {
-		this.descripcion = descripcion;
-	}
 
 	
 
