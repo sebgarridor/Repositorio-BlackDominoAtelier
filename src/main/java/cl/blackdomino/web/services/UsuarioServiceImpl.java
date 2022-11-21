@@ -16,13 +16,13 @@ public class UsuarioServiceImpl implements UsuarioService {
 
 	@Override
 	public Usuario guardarUsuario(Usuario usuario) {
-		// TODO Auto-generated method stub
+		
 		return usuarioRepository.save(usuario);
 	}
 
 	@Override
 	public String eliminarUsuario(Long id) {
-		// TODO Auto-generated method stub
+		
 		Boolean existe  = usuarioRepository.existsById(id);
 		
 		if(existe) {
@@ -56,7 +56,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 
 	@Override
 	public List<Usuario> obtenerListaUsuarios() {
-		// TODO Auto-generated method stub
+		
 		return usuarioRepository.findAll();
 	}
 }

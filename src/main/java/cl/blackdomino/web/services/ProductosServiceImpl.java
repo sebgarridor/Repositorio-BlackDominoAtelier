@@ -16,7 +16,7 @@ public class ProductosServiceImpl implements ProductosService{
 	//--------------------Guardar----------------------------------
 	@Override
 	public Productos guardarProducto(Productos producto) {
-		// TODO Auto-generated method stub
+		
 		return productosRepository.save(producto);
 	}
 	//--------------------Eliminar----------------------------------

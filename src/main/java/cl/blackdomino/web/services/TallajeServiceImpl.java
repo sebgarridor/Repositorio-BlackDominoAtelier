@@ -17,7 +17,7 @@ public class TallajeServiceImpl implements TallajeService {
 	
 	@Override
 	public Tallaje guardarTallaje(Tallaje tallaje) {
-		// TODO Auto-generated method stub
+		
 		return tallajeRepository.save(tallaje);
 	}
 

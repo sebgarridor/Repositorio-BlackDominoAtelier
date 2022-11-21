@@ -16,7 +16,7 @@ public class RolServiceImpl implements RolService{
 	
 	@Override
 	public Rol guardarRol(Rol rol) {
-		// TODO Auto-generated method stub
+		
 		return rolRepository.save(rol);
 	}
 
