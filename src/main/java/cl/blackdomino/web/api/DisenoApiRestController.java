@@ -36,6 +36,8 @@ public class DisenoApiRestController {
 	public String actualizarDiseno(@RequestBody Diseno diseno) {
 		if (diseno.getId() != null) {
 			disenoServiceImpl.actualizarDiseno(diseno);
+			String mensaje = disenoServiceImpl.actualizarDiseno(diseno);
+			return mensaje;
 		}
 		return "El diseño no se actualizará";
 	}
