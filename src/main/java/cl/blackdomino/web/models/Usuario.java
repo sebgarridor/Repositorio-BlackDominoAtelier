@@ -3,6 +3,7 @@ package cl.blackdomino.web.models;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -12,6 +13,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
@@ -63,6 +65,9 @@ public class Usuario {
 			)
 	private List<Rol> roles;
 	
+	@JsonIgnore
+	@OneToMany(mappedBy = "usuario", cascade=CascadeType.ALL, fetch = FetchType.EAGER)
+	private List<Venta> venta;
 	
 	@JsonIgnore
 	@OneToOne(fetch = FetchType.LAZY)

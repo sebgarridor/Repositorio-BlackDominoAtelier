@@ -10,6 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -62,8 +63,13 @@ public class Venta {
 	@JoinTable(
 			name="productos_ventas",
 			joinColumns = @JoinColumn(name="venta_id"),
-			inverseJoinColumns = @JoinColumn(name="producto_id")			
+			inverseJoinColumns = @JoinColumn(name="producto_id")
 			)
 	private List<Producto> productos;
+	
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name="usuario_id")
+	private Usuario usuario;
+	
 	
 }
