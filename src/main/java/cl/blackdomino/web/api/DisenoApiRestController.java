@@ -45,7 +45,6 @@ public class DisenoApiRestController {
 
 	@RequestMapping("/obtener/diseno")
 	public Optional<Diseno> obtenerDiseno(@RequestParam(value = "id", required = false) Long id) {
-
 		Optional<Diseno> mensaje = disenoServiceImpl.obtenerDiseno(id);
 		return mensaje;
 	}
