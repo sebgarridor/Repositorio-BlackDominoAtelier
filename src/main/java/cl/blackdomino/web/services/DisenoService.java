@@ -10,6 +10,6 @@ public interface DisenoService {
 	public Diseno guardarDiseno(Diseno diseno);
 	public String eliminarDiseno(Long id);
 	public String actualizarDiseno(Diseno diseno);
-	public Optional<Diseno> obtenerDiseno (Long id);
+	public Diseno obtenerDiseno (Long id);
 	public List<Diseno> obtenerListaDisenos();
 }

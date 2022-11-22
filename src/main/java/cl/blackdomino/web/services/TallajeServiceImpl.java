@@ -43,8 +43,8 @@ public class TallajeServiceImpl implements TallajeService {
 	}
 
 	@Override
-	public Optional<Tallaje> obtenerTallaje(Long id) {
-		Optional<Tallaje> mensaje = tallajeRepository.findById(id);
+	public Tallaje obtenerTallaje(Long id) {
+		Tallaje mensaje = tallajeRepository.findById(id).get();
 		return mensaje;
 	}
 

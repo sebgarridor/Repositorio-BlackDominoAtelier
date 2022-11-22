@@ -51,8 +51,8 @@ public class DisenoServiceImpl implements DisenoService{
 	}
 //--------------------Obtener----------------------------------
 	@Override
-	public Optional<Diseno> obtenerDiseno(Long id) {
-		Optional<Diseno> mensaje = disenoRepository.findById(id);
+	public Diseno obtenerDiseno(Long id) {
+		Diseno mensaje = disenoRepository.findById(id).get();
 		return mensaje;
 	}
 	

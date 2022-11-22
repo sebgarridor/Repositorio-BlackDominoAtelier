@@ -1,10 +1,8 @@
 package cl.blackdomino.web.services;
-import java.util.List;
-import java.util.Optional;
 
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import cl.blackdomino.web.models.Categoria;
 import cl.blackdomino.web.repositories.CategoriaRepository;
 
@@ -45,8 +43,8 @@ public class CategoriaServiceImpl implements CategoriaService{
 	}
 	//--------------------Obtener----------------------------------		
 	@Override
-	public Optional<Categoria> obtenerCategoria(Long id) {
-		Optional<Categoria> mensaje = categoriaRepository.findById(id);
+	public Categoria obtenerCategoria(Long id) {
+		Categoria mensaje = categoriaRepository.findById(id).get();
 		return mensaje;
 	}
 	//--------------------ObtenerLista----------------------------------

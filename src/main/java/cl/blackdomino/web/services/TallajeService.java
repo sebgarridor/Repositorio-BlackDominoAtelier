@@ -9,7 +9,7 @@ public interface TallajeService {
 	public Tallaje guardarTallaje(Tallaje tallaje);
 	public String eliminarTallaje(Long id);
 	public String actualizarTallaje(Tallaje tallaje);
-	public Optional<Tallaje> obtenerTallaje(Long id);
+	public Tallaje obtenerTallaje(Long id);
 	public List<Tallaje> obtenerListaTallaje();
 
 }
