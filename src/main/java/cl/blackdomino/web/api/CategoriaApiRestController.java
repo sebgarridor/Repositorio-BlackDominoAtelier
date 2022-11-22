@@ -16,37 +16,41 @@ import cl.blackdomino.web.services.CategoriaServiceImpl;
 public class CategoriaApiRestController {
 	@Autowired
 	private CategoriaServiceImpl categoriaServiceImpl;
-	
+
 	// -----------------------Guardar--------------------------------------------------------------------------
-	@RequestMapping ("/guardar/categoria")
+	@RequestMapping("/guardar/categoria")
 	public Categoria guardarCategoria(@RequestBody Categoria categoria) {
 		// http://localhost:9080/guardar/categorias
 		return categoriaServiceImpl.guardarCategoria(categoria);
 	}
+
 	// -----------------------Eliminar--------------------------------------------------------------------------
-	@RequestMapping ("/eliminar/categoria")
+	@RequestMapping("/eliminar/categoria")
 	public String eliminarCategoria(@RequestParam(value = "id", required = false) Long id) {
 		return categoriaServiceImpl.eliminarCategoria(id);
 	}
+
 	// -----------------------Actualizar--------------------------------------------------------------------------
-	@RequestMapping ("/actualizar/categoria")
+	@RequestMapping("/actualizar/categoria")
 	public String actualizarCategoria(@RequestBody Categoria categoria) {
-		if (categoria.getId()!=null) {
+		if (categoria.getId() != null) {
 			categoriaServiceImpl.actualizarCategoria(categoria);
 			String mensaje = categoriaServiceImpl.actualizarCategoria(categoria);
 			return mensaje;
 		}
 		return "La categoría será actualizada";
 	}
-	//-----------------------Obtener--------------------------------------------------------------------------	
-	@RequestMapping ("/obtener/categoria")
+
+	// -----------------------Obtener--------------------------------------------------------------------------
+	@RequestMapping("/obtener/categoria")
 	public Optional<Categoria> obtenerCategoria(@RequestParam(value = "id", required = false) Long id) {
-		Optional<Categoria> mensaje = categoriaServiceImpl.obtenerCategoria(id); 
+		Optional<Categoria> mensaje = categoriaServiceImpl.obtenerCategoria(id);
 		return mensaje;
 	}
-	//--------------------ObtenerLista----------------------------------
+
+	// --------------------ObtenerLista----------------------------------
 	@GetMapping("/listar/categorias")
-	public List<Categoria> obtenerListaCategorias(){
+	public List<Categoria> obtenerListaCategorias() {
 		return categoriaServiceImpl.obtenerListaCategorias();
 	}
 }
