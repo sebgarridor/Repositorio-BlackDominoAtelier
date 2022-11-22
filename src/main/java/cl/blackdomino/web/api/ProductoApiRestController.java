@@ -38,6 +38,8 @@ public class ProductoApiRestController {
 		public String actualizarProducto(@RequestBody Producto producto) {
 			if (producto.getId() != null) {
 				productoServiceImpl.actualizarProducto(producto);
+				String mensaje = productoServiceImpl.actualizarProducto(producto);
+				return mensaje;
 			}
 			return "El producto no se actualizará";
 		}
