@@ -1,16 +1,13 @@
 package cl.blackdomino.web.services;
 
-import org.springframework.stereotype.Service;
-
+import java.util.List;
 
 import cl.blackdomino.web.models.MedioPago;
 
-@Service
 public interface MedioPagoService {
-
-	//guardamos la data
-		public MedioPago guardarMedioPago(MedioPago medioPago);
-		
-		//eliminar la data
-		public String eliminarMedioPago(Long id);
+	public MedioPago guardarMedioPago(MedioPago medioPago);
+	public String eliminarMedioPago(Long id);
+	public String actualizarMedioPago(MedioPago medioPago);
+	public MedioPago obtenerMedioPago(Long id);
+	public List<MedioPago> listaMedioPago();
 }
