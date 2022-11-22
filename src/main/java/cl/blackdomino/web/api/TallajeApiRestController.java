@@ -1,15 +1,12 @@
 package cl.blackdomino.web.api;
 
 import java.util.List;
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
 import cl.blackdomino.web.models.Tallaje;
 import cl.blackdomino.web.services.TallajeServiceImpl;
 
@@ -49,8 +46,8 @@ public class TallajeApiRestController {
 	
 	//obtener
 	@RequestMapping("/obtener/tallaje")
-	public Optional<Tallaje> obtenerTallaje(@RequestParam(value = "id", required = false) Long id) {
-		Optional<Tallaje> mensaje = tallajeServiceImpl.obtenerTallaje(id);
+	public Tallaje obtenerTallaje(@RequestParam(value = "id", required = false) Long id) {
+		Tallaje mensaje = tallajeServiceImpl.obtenerTallaje(id);
 		return mensaje;
 	}
 	//obtenerLista

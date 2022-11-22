@@ -1,7 +1,6 @@
 package cl.blackdomino.web.api;
 
 import java.util.List;
-import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -25,7 +24,7 @@ public class DisenoApiRestController {
 
 	}
 
-	// -----------------------Eliminar--------------------------------------------------------------------------
+// -----------------------Eliminar--------------------------------------------------------------------------
 	@RequestMapping("/eliminar/diseno")
 	public String eliminarDiseno(@RequestParam(value = "id", required = false) Long id) {
 		return disenoServiceImpl.eliminarDiseno(id);
@@ -44,8 +43,8 @@ public class DisenoApiRestController {
 //-----------------------Obtener--------------------------------------------------------------------------
 
 	@RequestMapping("/obtener/diseno")
-	public Optional<Diseno> obtenerDiseno(@RequestParam(value = "id", required = false) Long id) {
-		Optional<Diseno> mensaje = disenoServiceImpl.obtenerDiseno(id);
+	public Diseno obtenerDiseno(@RequestParam(value = "id", required = false) Long id) {
+		Diseno mensaje = disenoServiceImpl.obtenerDiseno(id);
 		return mensaje;
 	}
 

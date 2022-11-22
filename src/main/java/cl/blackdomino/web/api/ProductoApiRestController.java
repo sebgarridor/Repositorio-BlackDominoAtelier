@@ -1,31 +1,52 @@
 package cl.blackdomino.web.api;
 
 import java.util.List;
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import cl.blackdomino.web.models.Categoria;
+import cl.blackdomino.web.models.Diseno;
 import cl.blackdomino.web.models.Producto;
+import cl.blackdomino.web.models.Tallaje;
+import cl.blackdomino.web.services.CategoriaServiceImpl;
+import cl.blackdomino.web.services.DisenoServiceImpl;
 import cl.blackdomino.web.services.ProductoServiceImpl;
+import cl.blackdomino.web.services.TallajeServiceImpl;
 
 @RestController
 public class ProductoApiRestController {
 	@Autowired
 	private ProductoServiceImpl productoServiceImpl;
+	@Autowired
+	private CategoriaServiceImpl categoriaServiveImpl;
+	@Autowired
+	private TallajeServiceImpl tallajeServiveImpl;
+	@Autowired
+	private DisenoServiceImpl disenoServiveImpl;
 
 // -----------------------Guardar--------------------------------------------------------------------------
 	@RequestMapping("/guardar/producto")
-	public Producto guardarProducto(@RequestBody Producto producto) {
+	public Producto guardarProducto(@RequestBody Producto producto,
+			@RequestParam(value = "categoriaId", required = true) Long CategoriaId,
+			@RequestParam(value = "tallajeId", required = true) Long TallajeId,
+			@RequestParam(value = "disenoId", required = true)Long DisenoId) {
+		Categoria categoria = categoriaServiveImpl.obtenerCategoria(CategoriaId);
+		producto.setCategoria(categoria);
+		Tallaje tallaje = tallajeServiveImpl.obtenerTallaje(TallajeId);
+		producto.setTallaje(tallaje);
+		Diseno diseno = disenoServiveImpl.obtenerDiseno(DisenoId);
+		producto.setDiseno(diseno);
 		// http://localhost:9080/guardar/productos
 		/*
 		 * nombre: "Totebag evangelion negra" precio: "10000"
 		 *
 		 */
-		return productoServiceImpl.guardarProducto(producto); //
+		return productoServiceImpl.guardarProducto(producto);
+		
+		//
 
 	}
 
@@ -48,8 +69,8 @@ public class ProductoApiRestController {
 
 // -----------------------Obtener--------------------------------------------------------------------------
 	@RequestMapping("/obtener/producto")
-	public Optional<Producto> obtenerProducto(@RequestParam(value = "id", required = false) Long id) {
-		Optional<Producto> mensaje = productoServiceImpl.obtenerProducto(id);
+	public Producto obtenerProducto(@RequestParam(value = "id", required = false) Long id) {
+		Producto mensaje = productoServiceImpl.obtenerProducto(id);
 		return mensaje;
 	}
 

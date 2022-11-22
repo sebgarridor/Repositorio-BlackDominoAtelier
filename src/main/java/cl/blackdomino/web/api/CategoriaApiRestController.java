@@ -1,8 +1,6 @@
 package cl.blackdomino.web.api;
 
 import java.util.List;
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -11,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import cl.blackdomino.web.models.Categoria;
 import cl.blackdomino.web.services.CategoriaServiceImpl;
+
 
 @RestController
 public class CategoriaApiRestController {
@@ -43,9 +42,8 @@ public class CategoriaApiRestController {
 
 	// -----------------------Obtener--------------------------------------------------------------------------
 	@RequestMapping("/obtener/categoria")
-	public Optional<Categoria> obtenerCategoria(@RequestParam(value = "id", required = false) Long id) {
-		Optional<Categoria> mensaje = categoriaServiceImpl.obtenerCategoria(id);
-		return mensaje;
+	public Categoria obtenerCategoria(@RequestParam(value="id",required = true) Long id) {
+		return categoriaServiceImpl.obtenerCategoria(id);
 	}
 
 	// --------------------ObtenerLista----------------------------------
