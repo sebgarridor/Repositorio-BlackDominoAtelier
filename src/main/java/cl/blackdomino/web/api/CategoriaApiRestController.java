@@ -33,6 +33,8 @@ public class CategoriaApiRestController {
 	public String actualizarCategoria(@RequestBody Categoria categoria) {
 		if (categoria.getId()!=null) {
 			categoriaServiceImpl.actualizarCategoria(categoria);
+			String mensaje = categoriaServiceImpl.actualizarCategoria(categoria);
+			return mensaje;
 		}
 		return "La categoría será actualizada";
 	}
