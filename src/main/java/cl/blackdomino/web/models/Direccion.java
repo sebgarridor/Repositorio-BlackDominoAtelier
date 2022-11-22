@@ -1,6 +1,6 @@
 package cl.blackdomino.web.models;
 
-import java.util.List;
+
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;

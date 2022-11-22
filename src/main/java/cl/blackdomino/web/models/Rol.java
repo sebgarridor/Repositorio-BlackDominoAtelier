@@ -13,6 +13,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -34,12 +35,15 @@ public class Rol {
 	private Long id;
 
 	@NotNull
-	private String Nombre;
+	private String nombre;
 	
 	private String descripcion;
 	
 	//Relación ManyToMany
+	@JsonIgnore
 	@ManyToMany(mappedBy = "roles",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
 	private List<Usuario> usuarios;
+
+	//hacer referencia nombres tablas
 	
 }

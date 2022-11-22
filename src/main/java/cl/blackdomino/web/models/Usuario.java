@@ -59,10 +59,9 @@ public class Usuario {
 	@JoinTable(
 			name="roles_usuarios", //nombre tabla
 			joinColumns= @JoinColumn(name="usuario_id"),
-			inverseJoinColumns = @JoinColumn(name="rol_id")
+			inverseJoinColumns= @JoinColumn(name="rol_id")
 			)
-	
-	private List <Rol> roles;
+	private List<Rol> roles;
 	
 	
 	@JsonIgnore

@@ -10,6 +10,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.PrePersist;
+import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 
 import org.springframework.format.annotation.DateTimeFormat;
@@ -35,8 +37,8 @@ public class ProductosVentas {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	
-	private Integer cantidad_producto;
-	private Integer subtotal;
+	private int cantidadProducto;
+	private int subtotal;
 	
 	@Column(updatable = false)
 	@DateTimeFormat(pattern="yyy-MM-dd")
@@ -48,12 +50,23 @@ public class ProductosVentas {
 	
 	//1 ManyToOne
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name="Producto_id")
+	@JoinColumn(name="producto_id")
 	private Producto producto;
 	
 	//2 ManyToOne
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name="Venta_id")
+	@JoinColumn(name="venta_id")
 	private Venta venta;
 	
+	//atributos de control
+	//agrega a la columna la fecha antes de insertar
+	@PrePersist
+	protected void onCreate(){
+	this.createdAt = new Date();
+	}
+	//fecha en la que se actualiza
+	@PreUpdate
+	protected void onUpdate(){
+	this.updatedAt = new Date();
+	}
 }
