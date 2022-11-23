@@ -27,10 +27,6 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-
-
-
-
 public class ProductosVentas {
 	
 	@Id
@@ -38,6 +34,7 @@ public class ProductosVentas {
 	private Long id;
 	
 	private int cantidadProducto;
+	
 	private int subtotal;
 	
 	@Column(updatable = false)

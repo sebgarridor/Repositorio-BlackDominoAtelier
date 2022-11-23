@@ -52,7 +52,6 @@ public class Usuario {
 	@NotNull
 	private String correo;
 	
-	@NotNull
 	private int telefono;
 	
 	//relación ManyToMany

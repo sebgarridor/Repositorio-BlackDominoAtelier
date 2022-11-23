@@ -27,6 +27,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 public class Diseno {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;

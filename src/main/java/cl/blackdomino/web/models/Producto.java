@@ -30,8 +30,10 @@ public class Producto {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+
 	@NotNull
 	private String nombre;
+	
 	@NotNull
 	private Integer precio;
 	
