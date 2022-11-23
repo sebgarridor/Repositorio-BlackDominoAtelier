@@ -1,7 +1,7 @@
 package cl.blackdomino.web.services;
 
 import java.util.List;
-import java.util.Optional;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -28,6 +28,10 @@ public class TallajeServiceImpl implements TallajeService {
 			tallajeRepository.deleteById(id);
 		} else {
 			return "El tallaje no existe";
+		}
+		existe = tallajeRepository.existsById(id);
+		if(existe){
+			return "El tallaje no fue eliminado";
 		}
 		return "El tallaje fue eliminado";
 	}

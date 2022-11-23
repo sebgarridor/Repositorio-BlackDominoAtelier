@@ -1,7 +1,7 @@
 package cl.blackdomino.web.services;
 
 import java.util.List;
-import java.util.Optional;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,6 +12,7 @@ import cl.blackdomino.web.repositories.DireccionRepository;
 
 @Service
 public class DireccionServiceImpl implements DireccionService{
+
 	@Autowired //inyección
 	private DireccionRepository direccionRepository;
 	
@@ -28,6 +29,7 @@ public class DireccionServiceImpl implements DireccionService{
 			direccionRepository.deleteById(id);
 		} else {
 			return "La Direccion no existe";
+		
 		}
 		return "La Direccion fue eliminada";
 	}
@@ -43,8 +45,8 @@ public class DireccionServiceImpl implements DireccionService{
 	}
 
 	@Override
-	public Optional<Direccion> obtenerDireccion(Long id) {
-		Optional<Direccion> mensaje = direccionRepository.findById(id);
+	public Direccion obtenerDireccion(Long id) {
+		Direccion mensaje = direccionRepository.findById(id).get();
 		return mensaje;
 	}
 

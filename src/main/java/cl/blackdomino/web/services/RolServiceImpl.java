@@ -1,7 +1,7 @@
 package cl.blackdomino.web.services;
 
 import java.util.List;
-import java.util.Optional;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,6 +11,7 @@ import cl.blackdomino.web.repositories.RolRepository;
 
 @Service
 public class RolServiceImpl implements RolService{
+
 	@Autowired //inyección
 	private RolRepository rolRepository;
 	
@@ -28,6 +29,10 @@ public class RolServiceImpl implements RolService{
 		} else {
 			return "El rol no existe";
 		}
+		existe = rolRepository.existsById(id);
+		if(existe){
+			return "Rol no eliminado";
+		}
 		return "El rol fue eliminado";
 	}
 
@@ -42,8 +47,8 @@ public class RolServiceImpl implements RolService{
 	}
 
 	@Override
-	public Optional<Rol> obtenerRol(Long id) {
-		Optional<Rol> mensaje = rolRepository.findById(id);
+	public Rol obtenerRol(Long id) {
+		Rol mensaje = rolRepository.findById(id).get();
 		return mensaje;
 	}
 

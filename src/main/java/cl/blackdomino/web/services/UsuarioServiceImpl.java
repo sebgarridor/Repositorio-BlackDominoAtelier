@@ -45,7 +45,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 			usuarioRepository.save(usuario);
 			return "Usuario actualizado";
 		}
-		return "Usuario creado";
+		return "Usuario no actualizado";
 	}
 
 	@Override

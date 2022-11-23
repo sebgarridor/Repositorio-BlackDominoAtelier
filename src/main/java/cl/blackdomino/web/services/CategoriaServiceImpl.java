@@ -8,6 +8,7 @@ import cl.blackdomino.web.repositories.CategoriaRepository;
 
 @Service
 public class CategoriaServiceImpl implements CategoriaService{
+	
 	@Autowired
 	private CategoriaRepository categoriaRepository;
 	

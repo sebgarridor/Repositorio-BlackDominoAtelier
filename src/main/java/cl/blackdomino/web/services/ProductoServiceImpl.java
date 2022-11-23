@@ -26,6 +26,10 @@ public class ProductoServiceImpl implements ProductoService{
 		} else {
 			return "El producto no existe";
 		}
+		existe = productoRepository.existsById(id);
+		if(existe){
+			return "El producto no fue eliminado";
+		}
 		return "El producto fue eliminado";
 	}
 	
