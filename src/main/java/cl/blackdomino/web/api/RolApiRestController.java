@@ -48,8 +48,8 @@ public class RolApiRestController {
 	
 	//obtener
 	@RequestMapping("/obtener/roles")
-	public Optional<Rol> obtenerRol(@RequestParam(value = "id", required = false) Long id) {
-		Optional<Rol> mensaje = rolServiceImpl.obtenerRol(id);
+	public Rol obtenerRol(@RequestParam(value = "id", required = false) Long id) {
+		Rol mensaje = rolServiceImpl.obtenerRol(id);
 		return mensaje;
 	}
 	//obtenerLista

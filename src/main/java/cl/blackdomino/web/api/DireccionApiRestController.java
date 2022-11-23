@@ -48,8 +48,8 @@ public class DireccionApiRestController {
 	
 	//obtener
 	@RequestMapping("/obtener/direcciones")
-	public Optional<Direccion> obtenerDireccion(@RequestParam(value = "id", required = false) Long id) {
-		Optional<Direccion> mensaje = direccionServiceImpl.obtenerDireccion(id);
+	public Direccion obtenerDireccion(@RequestParam(value = "id", required = false) Long id) {
+		Direccion mensaje = direccionServiceImpl.obtenerDireccion(id);
 		return mensaje;
 	}
 	//obtenerLista
