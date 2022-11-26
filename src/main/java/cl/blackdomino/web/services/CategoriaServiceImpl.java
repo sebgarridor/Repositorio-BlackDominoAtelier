@@ -23,6 +23,7 @@ public class CategoriaServiceImpl implements CategoriaService{
 		Boolean existe = categoriaRepository.existsById(id);
 		if (existe) {
 			categoriaRepository.deleteById(id);
+
 		} else {
 			return "La categoría no existe";
 		}
