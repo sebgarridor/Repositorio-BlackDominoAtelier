@@ -7,5 +7,5 @@ import cl.blackdomino.web.models.Usuario;
 
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
-
+	Usuario findUserByCorreo(String correo);
 }

@@ -50,7 +50,12 @@ public class Usuario {
 	private String apellido;
 	
 	@NotNull
+	@Column
 	private String correo;
+	
+	@NotNull
+	@Column
+	private String password;
 	
 	private int telefono;
 	
