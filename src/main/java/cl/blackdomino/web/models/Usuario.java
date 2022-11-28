@@ -43,10 +43,10 @@ public class Usuario {
 	@GeneratedValue(strategy = GenerationType.IDENTITY) 
 	private Long id;
 	
-	@NotNull
+
 	private String nombre;
 	
-	@NotNull
+
 	private String apellido;
 	
 	@NotNull
@@ -57,7 +57,7 @@ public class Usuario {
 	@Column
 	private String password;
 	
-	private int telefono;
+	private Integer telefono;
 	
 	//relación ManyToMany
 	@JsonIgnore
