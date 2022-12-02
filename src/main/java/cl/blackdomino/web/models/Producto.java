@@ -37,6 +37,9 @@ public class Producto {
 	@NotNull
 	private Integer precio;
 	
+	@NotNull
+	private Integer cantidad;
+	
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name="categoria_id")
 	private Categoria categoria;
