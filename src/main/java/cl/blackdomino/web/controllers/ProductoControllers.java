@@ -15,7 +15,7 @@ public class ProductoControllers {
 	}
 
 	// http://localhost:9080/producto/polerones
-	@GetMapping("/poleras")
+	@GetMapping("/polerones")
 	public String mostrarPolerones() {
 		return "polerones.jsp";
 	}
@@ -33,8 +33,15 @@ public class ProductoControllers {
 	}
 
 	@GetMapping("/tallaje")
+	// http://localhost:9080/producto/tallaje
 	public String mostrartallas() {
 		return "tallaje.jsp";
+	}
+	
+	@GetMapping("/colecciones")
+	// http://localhost:9080/producto/colecciones
+	public String mostrarcolecciones() {
+		return "colecciones.jsp";
 	}
 
 }
