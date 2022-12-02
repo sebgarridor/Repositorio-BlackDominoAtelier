@@ -25,12 +25,16 @@ public class ProductoControllers {
 	public String mostrarTotes() {
 		return "totebag.jsp";
 	}
-	
+
 	// http://localhost:9080/producto/bandoleras
-		@GetMapping("/bandoleras")
-		public String mostrarBandoleras() {
-			return "bandoleras.jsp";
-		}
-	
+	@GetMapping("/bandoleras")
+	public String mostrarBandoleras() {
+		return "bandoleras.jsp";
+	}
+
+	@GetMapping("/tallaje")
+	public String mostrartallas() {
+		return "tallaje.jsp";
+	}
 
 }
