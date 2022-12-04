@@ -16,11 +16,9 @@ public class DisenoServiceImpl implements DisenoService{
 	@Autowired //inyección
 	private DisenoRepository disenoRepository;
 	
-	
 //--------------------Guardar----------------------------------
 	@Override
 	public Diseno guardarDiseno(Diseno diseno) {
-		
 		return disenoRepository.save(diseno);
 	}
 //--------------------Eliminar----------------------------------
@@ -38,7 +36,6 @@ public class DisenoServiceImpl implements DisenoService{
 		}
 		return "El diseño fue eliminado";
 	}
-	
 //--------------------Actualizar----------------------------------
 	@Override
 	public String actualizarDiseno(Diseno diseno) {
@@ -55,7 +52,6 @@ public class DisenoServiceImpl implements DisenoService{
 		Diseno mensaje = disenoRepository.findById(id).get();
 		return mensaje;
 	}
-	
 //--------------------ObtenerLista----------------------------------
 	@Override
 	public List<Diseno> obtenerListaDisenos() {

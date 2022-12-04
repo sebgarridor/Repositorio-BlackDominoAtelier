@@ -16,40 +16,43 @@ public class DireccionServiceImpl implements DireccionService{
 	@Autowired //inyección
 	private DireccionRepository direccionRepository;
 	
+//--------------------Guardar----------------------------------
 	@Override
 	public Direccion guardarDireccion(Direccion direccion) {
-		
 		return direccionRepository.save(direccion);
 	}
-
+//--------------------Eliminar----------------------------------
 	@Override
 	public String eliminarDireccion(Long id) {
 		Boolean existe = direccionRepository.existsById(id);
 		if(existe) {
 			direccionRepository.deleteById(id);
 		} else {
-			return "La Direccion no existe";
-		
+			return "La Dirección no existe";
 		}
-		return "La Direccion fue eliminada";
+		existe = direccionRepository.existsById(id);
+		if(existe) {
+			return "La dirección no fue eliminada";
+		}
+		return "La Dirección fue eliminada";
 	}
-
+//--------------------Actualizar----------------------------------
 	@Override
 	public String actualizarDireccion(Direccion direccion) {
 		Boolean existe = direccionRepository.existsById(direccion.getId());
 		if (existe) {
 			direccionRepository.save(direccion);
-			return "Direccion actualizada";
+			return "Dirección actualizada";
 		}
-		return "Direccion no actualizada";
+		return "Dirección no actualizada";
 	}
-
+//--------------------Obtener----------------------------------
 	@Override
 	public Direccion obtenerDireccion(Long id) {
 		Direccion mensaje = direccionRepository.findById(id).get();
 		return mensaje;
 	}
-
+//--------------------ObtenerLista----------------------------------
 	@Override
 	public List<Direccion> obtenerListaDireccion() {
 		return direccionRepository.findAll();

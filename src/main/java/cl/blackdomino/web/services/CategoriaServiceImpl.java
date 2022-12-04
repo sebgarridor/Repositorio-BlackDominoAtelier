@@ -23,7 +23,6 @@ public class CategoriaServiceImpl implements CategoriaService{
 		Boolean existe = categoriaRepository.existsById(id);
 		if (existe) {
 			categoriaRepository.deleteById(id);
-
 		} else {
 			return "La categoría no existe";
 		}
@@ -43,13 +42,13 @@ public class CategoriaServiceImpl implements CategoriaService{
 		}
 		return "Categoría no actualizada";
 	}
-	//--------------------Obtener----------------------------------		
+//--------------------Obtener----------------------------------		
 	@Override
 	public Categoria obtenerCategoria(Long id) {
 		Categoria mensaje = categoriaRepository.findById(id).get();
 		return mensaje;
 	}
-	//--------------------ObtenerLista----------------------------------
+//--------------------ObtenerLista----------------------------------
 	@Override
 	public List<Categoria> obtenerListaCategorias() {
 		return categoriaRepository.findAll();

@@ -14,11 +14,12 @@ public class VentaServiceImpl implements VentaService{
     @Autowired
     private VentaRepository ventaRepository;
 
+//--------------------Guardar----------------------------------
     @Override
     public Venta guardarVenta(Venta venta) {
         return ventaRepository.save(venta);
     }
-
+//--------------------Eliminar----------------------------------
     @Override
     public String eliminarVenta(Long id) {
         Boolean existe = ventaRepository.existsById(id);
@@ -33,7 +34,7 @@ public class VentaServiceImpl implements VentaService{
         }
         return "La venta fue eliminada";
     }
-
+//--------------------Actualizar----------------------------------
     @Override
     public String actualizarVenta(Venta venta) {
         Boolean existe = ventaRepository.existsById(venta.getId());
@@ -44,13 +45,13 @@ public class VentaServiceImpl implements VentaService{
         }
         return "La venta fue actualizada";
     }
-
+//--------------------Obtener----------------------------------	
     @Override
     public Venta obtenerVenta(Long id) {
         Venta mensaje = ventaRepository.findById(id).get();
     return mensaje;
     }
-
+//--------------------ObtenerLista----------------------------------
     @Override
     public List<Venta> listadoVenta() {
         return ventaRepository.findAll();

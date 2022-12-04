@@ -15,36 +15,30 @@ public class MedioPagoServiceImpl implements MedioPagoService{
 	@Autowired
 	private MedioPagoRepository medioPagoRepository;
 
+//--------------------Guardar----------------------------------
 	@Override
 	public MedioPago guardarMedioPago(MedioPago medioPago) {
-		
 		return medioPagoRepository.save(medioPago);
 	}
-
+//--------------------Eliminar----------------------------------
 	@Override
 	public String eliminarMedioPago(Long id) {
 		// verificamos primero si existe
-				Boolean existe = medioPagoRepository.existsById(id);
+		Boolean existe = medioPagoRepository.existsById(id);
+		if(existe) {	
+			//lo eliminamos
+			medioPagoRepository.deleteById(id);	
+		}else {	
+			return "Ese medio de pago no existe";
+		}
+		existe = medioPagoRepository.existsById(id);
+		if(existe){
+			return "El medio de pago no fue eliminado";
+		}
 				
-				if(existe) {
-					
-					//lo eliminamos
-					medioPagoRepository.deleteById(id);
-					
-				}else {
-					
-					return "Ese medio de pago no existe";
-				}
-
-				existe = medioPagoRepository.existsById(id);
-
-				if(existe){
-					return "El medio de pago no fue eliminado";
-				}
-				
-				return "El medio de pago fue eliminado";
+		return "El medio de pago fue eliminado";
 	}
-
+//--------------------Actualizar----------------------------------
 	@Override
 	public String actualizarMedioPago(MedioPago medioPago) {
 		Boolean existe = medioPagoRepository.existsById(medioPago.getId());
@@ -54,16 +48,15 @@ public class MedioPagoServiceImpl implements MedioPagoService{
 		}
 		return "Medio de pago no actualizado";
 	}
-
+//--------------------Obtener----------------------------------	
 	@Override
 	public MedioPago obtenerMedioPago(Long id) {
 		MedioPago mensaje = medioPagoRepository.findById(id).get();
 		return mensaje;
 	}
-
+//--------------------ObtenerLista----------------------------------
 	@Override
 	public List<MedioPago> listaMedioPago() {
-		
 		return medioPagoRepository.findAll();
 	}
 }

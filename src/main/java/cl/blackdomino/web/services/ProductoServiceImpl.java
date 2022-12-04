@@ -11,13 +11,13 @@ public class ProductoServiceImpl implements ProductoService{
 
 	@Autowired
 	private ProductoRepository productoRepository;
-	//--------------------Guardar----------------------------------
+	
+//--------------------Guardar----------------------------------
 	@Override
 	public Producto guardarProducto(Producto producto) {
-		
 		return productoRepository.save(producto);
 	}
-	//--------------------Eliminar----------------------------------
+//--------------------Eliminar----------------------------------
 	@Override
 	public String eliminarProducto(Long id) {
 		Boolean existe = productoRepository.existsById(id);
@@ -32,8 +32,7 @@ public class ProductoServiceImpl implements ProductoService{
 		}
 		return "El producto fue eliminado";
 	}
-	
-	//--------------------Actualizar----------------------------------
+//--------------------Actualizar----------------------------------
 	@Override
 	public String actualizarProducto(Producto producto) {
 		Boolean existe = productoRepository.existsById(producto.getId());
@@ -41,18 +40,15 @@ public class ProductoServiceImpl implements ProductoService{
 			productoRepository.save(producto);
 			return "Producto actualizado";
 		}
-		
 		return "Producto no actualizado";
 	}
-	
-	//--------------------Obtener----------------------------------
+//--------------------Obtener----------------------------------
 	@Override
 	public Producto obtenerProducto(Long id) {
 		Producto mensaje = productoRepository.findById(id).get();
 		return mensaje;
 	}
-	
-	//--------------------ObtenerLista----------------------------------
+//--------------------ObtenerLista----------------------------------
 	@Override
 	public List<Producto> obtenerListaProductos() {
 		return productoRepository.findAll();

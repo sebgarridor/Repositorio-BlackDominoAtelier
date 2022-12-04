@@ -14,11 +14,12 @@ public class ProductosVentasServiceImpl implements ProductosVentasService{
     @Autowired
     private ProductosVentasRepository pvRepository;
 
+//--------------------Guardar---------------------------------- 
     @Override
     public ProductosVentas guardarPV(ProductosVentas pd) {
         return pvRepository.save(pd);
     }
-
+//--------------------Eliminar----------------------------------
     @Override
     public String eliminarPV(Long id) {
         Boolean existe = pvRepository.existsById(id);
@@ -31,7 +32,7 @@ public class ProductosVentasServiceImpl implements ProductosVentasService{
         }
         return "El producto venta fue eliminado";
     }
-
+//--------------------Actualizar----------------------------------
     @Override
     public String actualizarPV(ProductosVentas pd) {
         Boolean existe = pvRepository.existsById(pd.getId());
@@ -42,13 +43,13 @@ public class ProductosVentasServiceImpl implements ProductosVentasService{
         }
         return "El producto venta fue actualizado";
     }
-
+//--------------------Obtener----------------------------------	
     @Override
     public ProductosVentas obtenerPV(Long id) {
         ProductosVentas mensaje = pvRepository.findById(id).get();
         return mensaje;
     }
-
+//--------------------ObtenerLista----------------------------------
     @Override
     public List<ProductosVentas> listadoPV() {
         return pvRepository.findAll();

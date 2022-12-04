@@ -1,6 +1,8 @@
 package cl.blackdomino.web.services;
 
+
 import java.util.List;
+
 import cl.blackdomino.web.models.Categoria;
 
 public interface CategoriaService {

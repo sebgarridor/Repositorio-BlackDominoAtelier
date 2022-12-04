@@ -15,12 +15,12 @@ public class RolServiceImpl implements RolService{
 	@Autowired //inyección
 	private RolRepository rolRepository;
 	
+//--------------------Guardar----------------------------------
 	@Override
-	public Rol guardarRol(Rol rol) {
-		
+	public Rol guardarRol(Rol rol) {	
 		return rolRepository.save(rol);
 	}
-
+//--------------------Eliminar----------------------------------
 	@Override
 	public String eliminarRol(Long id) {
 		Boolean existe = rolRepository.existsById(id);
@@ -35,7 +35,7 @@ public class RolServiceImpl implements RolService{
 		}
 		return "El rol fue eliminado";
 	}
-
+//--------------------Actualizar----------------------------------
 	@Override
 	public String actualizarRol(Rol rol) {
 		Boolean existe = rolRepository.existsById(rol.getId());
@@ -45,13 +45,13 @@ public class RolServiceImpl implements RolService{
 		}
 		return "Rol no actualizado";
 	}
-
+//--------------------Obtener----------------------------------	
 	@Override
 	public Rol obtenerRol(Long id) {
 		Rol mensaje = rolRepository.findById(id).get();
 		return mensaje;
 	}
-
+//--------------------ObtenerLista----------------------------------
 	@Override
 	public List<Rol> obtenerListaRol() {
 		return rolRepository.findAll();

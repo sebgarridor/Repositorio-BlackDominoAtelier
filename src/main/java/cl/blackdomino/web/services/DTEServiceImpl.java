@@ -14,11 +14,12 @@ public class DTEServiceImpl implements DTEService{
     @Autowired
     private DTERepository dteRepository;
 
+//--------------------Guardar----------------------------------
     @Override
     public DTE guardarDTE(DTE dte) {
         return dteRepository.save(dte);
     }
-
+//--------------------Eliminar----------------------------------
     @Override
     public String eliminarDTE(Long id) {
         Boolean existe = dteRepository.existsById(id);
@@ -33,7 +34,7 @@ public class DTEServiceImpl implements DTEService{
         }
         return "DTE fue eliminado";
     }
-
+//--------------------Actualizar----------------------------------
     @Override
     public String actualizarDTE(DTE dte) {
         Boolean existe = dteRepository.existsById(dte.getId());
@@ -44,13 +45,13 @@ public class DTEServiceImpl implements DTEService{
         }
         return "El DTE fue actualiazdo";
     }
-
+//--------------------Obtener----------------------------------	
     @Override
     public DTE obtenerDTE(Long id) {
         DTE mensaje = dteRepository.findById(id).get();
         return mensaje;
     }
-
+//--------------------ObtenerLista----------------------------------
     @Override
     public List<DTE> listadoDTE() {
         return dteRepository.findAll();

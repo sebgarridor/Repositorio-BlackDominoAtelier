@@ -14,11 +14,12 @@ public class EstadoServiceImpl implements EstadoService{
     @Autowired
     private EstadoRepository estadoRepository;
 
+//--------------------Guardar----------------------------------
     @Override
     public Estado guardarEstado(Estado estado) {
         return estadoRepository.save(estado);
     }
-
+//--------------------Eliminar----------------------------------
     @Override
     public String eliminarEstado(Long id) {
         Boolean existe = estadoRepository.existsById(id);
@@ -27,13 +28,13 @@ public class EstadoServiceImpl implements EstadoService{
         }else{
             return "El estado no existe";
         }
-        Boolean existe2 = estadoRepository.existsById(id);
-        if(existe2){
+        existe = estadoRepository.existsById(id);
+        if(existe){
             return "El estado no fue eliminado";
         }
         return "El estado fue eliminado";
     }
-
+//--------------------Actualizar----------------------------------
     @Override
     public String actualizarEstado(Estado estado) {
         Boolean existe = estadoRepository.existsById(estado.getId());
@@ -43,16 +44,15 @@ public class EstadoServiceImpl implements EstadoService{
         }
         return "El estado no se actualizó";
     }
-
+//--------------------Obtener----------------------------------	
     @Override
     public Estado obtenerEstado(Long id) {
         Estado mensaje = estadoRepository.findById(id).get();
         return mensaje;
     }
-
+//--------------------ObtenerLista----------------------------------
     @Override
     public List<Estado> listadoEstado() {
-        
         return estadoRepository.findAll();
     }
     

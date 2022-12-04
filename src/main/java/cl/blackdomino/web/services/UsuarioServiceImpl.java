@@ -14,17 +14,15 @@ public class UsuarioServiceImpl implements UsuarioService {
 	@Autowired // inyección
 	private UsuarioRepository usuarioRepository;
 
+//--------------------Guardar----------------------------------
 	@Override
 	public Usuario guardarUsuario(Usuario usuario) {
-		
 		return usuarioRepository.save(usuario);
 	}
-
+//--------------------Eliminar----------------------------------
 	@Override
 	public String eliminarUsuario(Long id) {
-		
 		Boolean existe  = usuarioRepository.existsById(id);
-		
 		if(existe) {
 			usuarioRepository.deleteById(id);
 		}else {
@@ -37,7 +35,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 		}
 		return "El usuario fue eliminado";
 		}
-
+//--------------------Actualizar----------------------------------
 	@Override
 	public String actualizarUsuario(Usuario usuario) {
 		Boolean existe = usuarioRepository.existsById(usuario.getId());
@@ -47,16 +45,15 @@ public class UsuarioServiceImpl implements UsuarioService {
 		}
 		return "Usuario no actualizado";
 	}
-
+//--------------------Obtener----------------------------------	
 	@Override
 	public Usuario obtenerUsuario(Long id) {
 		Usuario user = usuarioRepository.findById(id).get();
 		return user;
 	}
-
+//--------------------ObtenerLista----------------------------------
 	@Override
 	public List<Usuario> obtenerListaUsuarios() {
-		
 		return usuarioRepository.findAll();
 	}
 }
