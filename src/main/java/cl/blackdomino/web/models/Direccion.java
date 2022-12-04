@@ -10,7 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
+
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -33,19 +33,19 @@ public class Direccion {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@NotNull
+
 	private String calle;
 	
-	@NotNull
-	private int numero;
+
+	private Integer numero;
 	
-	@NotNull
+
 	private String comuna;
 	
-	@NotNull
+
 	private String ciudad;
 	
-	@NotNull
+
 	private String region;
 	
 	private String departamento;

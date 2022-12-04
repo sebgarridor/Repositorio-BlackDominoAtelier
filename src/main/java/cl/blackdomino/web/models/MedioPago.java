@@ -10,8 +10,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -34,8 +32,6 @@ public class MedioPago {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@NotNull
-	@Size(min=3, max=15,message="Error en el ingreso del nombre")
 	private String nombre;
 	
 	private String descripcion;
@@ -44,7 +40,7 @@ public class MedioPago {
 	@OneToOne(fetch=FetchType.LAZY,mappedBy="mediopago",cascade=CascadeType.ALL)
 	private Venta venta;
 
-	//colocar nombres referenciales en minuscula sin guion
+	
 	
 
 }

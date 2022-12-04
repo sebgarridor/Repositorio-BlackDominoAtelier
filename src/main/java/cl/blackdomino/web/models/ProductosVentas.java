@@ -33,9 +33,9 @@ public class ProductosVentas {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	
-	private int cantidadProducto;
+	private Integer cantidadProducto;
 	
-	private int subtotal;
+	private Integer subtotal;
 	
 	@Column(updatable = false)
 	@DateTimeFormat(pattern="yyy-MM-dd")

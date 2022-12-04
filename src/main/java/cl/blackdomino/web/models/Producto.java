@@ -12,7 +12,6 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -31,13 +30,12 @@ public class Producto {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@NotNull
+
 	private String nombre;
 	
-	@NotNull
+
 	private Integer precio;
-	
-	@NotNull
+
 	private Integer cantidad;
 	
 	@ManyToOne(fetch = FetchType.EAGER)

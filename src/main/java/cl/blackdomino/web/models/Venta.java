@@ -13,7 +13,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
+
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -36,17 +36,17 @@ public class Venta {
 	@GeneratedValue(strategy = GenerationType.IDENTITY) 
 	private Long id;
 	
-	@NotNull
+
 	private String tipoVenta;
 	
-	@NotNull
+
 	private String regionEnvio;
 	
-	private int costoEnvio;
+	private Integer costoEnvio;
 	
-	private int iva;
+	private Integer iva;
 	
-	private int totalVenta;
+	private Integer totalVenta;
 	
 	@OneToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="dte_id")

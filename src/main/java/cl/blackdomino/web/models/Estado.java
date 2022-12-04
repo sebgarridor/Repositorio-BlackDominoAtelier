@@ -13,7 +13,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
+
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -38,7 +38,7 @@ public class Estado {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@NotNull
+
 	private String nombre;
 
 	@JsonIgnore

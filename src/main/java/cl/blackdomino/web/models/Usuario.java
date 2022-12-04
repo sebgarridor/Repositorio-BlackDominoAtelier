@@ -18,7 +18,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
+
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -49,12 +49,11 @@ public class Usuario {
 
 	private String apellido;
 	
-	@NotNull
-	@Column
+	
+	
 	private String correo;
 	
-	@NotNull
-	@Column
+
 	private String password;
 	
 	private Integer telefono;
