@@ -1,7 +1,7 @@
 package cl.blackdomino.web.api;
 
 import java.util.List;
-import java.util.Optional;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,7 +18,7 @@ public class RolApiRestController {
 	@Autowired
 	private RolServiceImpl rolServiceImpl;
 	
-	@RequestMapping ("guardar/roles")
+	@RequestMapping ("/guardar/rol")
 	public Rol guardarRol(@RequestBody Rol rol) {
 		// http://localhost:9080/guardar/rol
 		
@@ -31,13 +31,13 @@ public class RolApiRestController {
 	}
 	//eliminar
 	
-	@RequestMapping("/eliminar/roles")
+	@RequestMapping("/eliminar/rol")
 	public String eliminarRol(@RequestParam(value = "id", required = false) Long id) {
 		return rolServiceImpl.eliminarRol(id);
 	}
 	
 	//actualizar
-	@RequestMapping("/actualizar/roles")
+	@RequestMapping("/actualizar/rol")
 	public String actualizarRol(@RequestBody Rol rol) {
 		if (rol.getId() != null) {
 			String mensaje = rolServiceImpl.actualizarRol(rol);
@@ -47,7 +47,7 @@ public class RolApiRestController {
 	}
 	
 	//obtener
-	@RequestMapping("/obtener/roles")
+	@RequestMapping("/obtener/rol")
 	public Rol obtenerRol(@RequestParam(value = "id", required = false) Long id) {
 		Rol mensaje = rolServiceImpl.obtenerRol(id);
 		return mensaje;

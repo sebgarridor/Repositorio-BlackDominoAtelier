@@ -48,8 +48,12 @@ public class RolServiceImpl implements RolService{
 //--------------------Obtener----------------------------------	
 	@Override
 	public Rol obtenerRol(Long id) {
-		Rol mensaje = rolRepository.findById(id).get();
+		Boolean existe = rolRepository.existsById(id);
+		if(existe) {
+			Rol mensaje = rolRepository.findById(id).get();
 		return mensaje;
+		}
+		return null;
 	}
 //--------------------ObtenerLista----------------------------------
 	@Override

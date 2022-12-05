@@ -2,13 +2,16 @@ package cl.blackdomino.web.models;
 
 
 
+import java.util.List;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.OneToMany;
+
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -37,8 +40,8 @@ public class MedioPago {
 	private String descripcion;
 	
 	@JsonIgnore
-	@OneToOne(fetch=FetchType.LAZY,mappedBy="mediopago",cascade=CascadeType.ALL)
-	private Venta venta;
+	@OneToMany(fetch=FetchType.LAZY,mappedBy="mediopago",cascade=CascadeType.ALL)
+	private List<Venta> venta;
 
 	
 	

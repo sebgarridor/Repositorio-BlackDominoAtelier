@@ -43,13 +43,17 @@ public class DTEServiceImpl implements DTEService{
         }else{
             return "No existe el DTE";
         }
-        return "El DTE fue actualiazdo";
+        return "El DTE fue actualizado";
     }
 //--------------------Obtener----------------------------------	
     @Override
     public DTE obtenerDTE(Long id) {
-        DTE mensaje = dteRepository.findById(id).get();
+    	Boolean existe = dteRepository.existsById(id);
+    	if(existe) {
+    		DTE mensaje = dteRepository.findById(id).get();
         return mensaje;
+    	}
+        return null;
     }
 //--------------------ObtenerLista----------------------------------
     @Override

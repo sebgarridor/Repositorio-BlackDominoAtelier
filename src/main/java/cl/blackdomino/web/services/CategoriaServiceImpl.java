@@ -45,8 +45,12 @@ public class CategoriaServiceImpl implements CategoriaService{
 //--------------------Obtener----------------------------------		
 	@Override
 	public Categoria obtenerCategoria(Long id) {
-		Categoria mensaje = categoriaRepository.findById(id).get();
-		return mensaje;
+		Boolean existe = categoriaRepository.existsById(id);
+		if(existe) {
+			Categoria mensaje = categoriaRepository.findById(id).get();
+			return mensaje;
+		}
+		return null;
 	}
 //--------------------ObtenerLista----------------------------------
 	@Override

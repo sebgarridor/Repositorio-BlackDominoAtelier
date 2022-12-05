@@ -51,8 +51,13 @@ public class MedioPagoServiceImpl implements MedioPagoService{
 //--------------------Obtener----------------------------------	
 	@Override
 	public MedioPago obtenerMedioPago(Long id) {
+		Boolean existe = medioPagoRepository.existsById(id);
+		if(existe) {
+			
 		MedioPago mensaje = medioPagoRepository.findById(id).get();
 		return mensaje;
+		}
+		return null;
 	}
 //--------------------ObtenerLista----------------------------------
 	@Override

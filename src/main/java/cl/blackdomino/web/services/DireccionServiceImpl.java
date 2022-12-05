@@ -49,8 +49,12 @@ public class DireccionServiceImpl implements DireccionService{
 //--------------------Obtener----------------------------------
 	@Override
 	public Direccion obtenerDireccion(Long id) {
-		Direccion mensaje = direccionRepository.findById(id).get();
+		Boolean existe = direccionRepository.existsById(id);
+		if(existe) {
+			Direccion mensaje = direccionRepository.findById(id).get();
 		return mensaje;
+		}
+		return null;
 	}
 //--------------------ObtenerLista----------------------------------
 	@Override

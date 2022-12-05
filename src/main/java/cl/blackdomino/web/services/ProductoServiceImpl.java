@@ -45,8 +45,12 @@ public class ProductoServiceImpl implements ProductoService{
 //--------------------Obtener----------------------------------
 	@Override
 	public Producto obtenerProducto(Long id) {
-		Producto mensaje = productoRepository.findById(id).get();
+		Boolean existe = productoRepository.existsById(id);
+		if(existe) {
+			Producto mensaje = productoRepository.findById(id).get();
 		return mensaje;
+		}
+		return null;
 	}
 //--------------------ObtenerLista----------------------------------
 	@Override

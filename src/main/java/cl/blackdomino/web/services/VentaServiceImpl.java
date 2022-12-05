@@ -48,8 +48,12 @@ public class VentaServiceImpl implements VentaService{
 //--------------------Obtener----------------------------------	
     @Override
     public Venta obtenerVenta(Long id) {
-        Venta mensaje = ventaRepository.findById(id).get();
-    return mensaje;
+    	Boolean existe = ventaRepository.existsById(id);
+    	if(existe) {
+    	Venta mensaje = ventaRepository.findById(id).get();
+    return mensaje;	
+    	}
+        return null;
     }
 //--------------------ObtenerLista----------------------------------
     @Override

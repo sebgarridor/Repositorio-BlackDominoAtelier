@@ -48,8 +48,12 @@ public class TallajeServiceImpl implements TallajeService {
 //--------------------Obtener----------------------------------	
 	@Override
 	public Tallaje obtenerTallaje(Long id) {
-		Tallaje mensaje = tallajeRepository.findById(id).get();
+		Boolean existe = tallajeRepository.existsById(id);
+		if(existe) {
+			Tallaje mensaje = tallajeRepository.findById(id).get();
 		return mensaje;
+		}
+		return null;
 	}
 //--------------------ObtenerLista----------------------------------
 	@Override

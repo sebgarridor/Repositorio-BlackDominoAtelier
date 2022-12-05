@@ -18,7 +18,7 @@ public class DireccionApiRestController {
 	@Autowired
 	private DireccionServiceImpl direccionServiceImpl;
 	
-	@RequestMapping ("guardar/direcciones")
+	@RequestMapping ("/guardar/direccion")
 	public Direccion guardarDireccion(@RequestBody Direccion direccion) {
 		// http://localhost:9080/guardar/Direccion
 		
@@ -31,13 +31,13 @@ public class DireccionApiRestController {
 	}
 	//eliminar
 	
-	@RequestMapping("/eliminar/direcciones")
+	@RequestMapping("/eliminar/direccion")
 	public String eliminarDireccion(@RequestParam(value = "id", required = false) Long id) {
 		return direccionServiceImpl.eliminarDireccion(id);
 	}
 	
 	//actualizar
-	@RequestMapping("/actualizar/direcciones")
+	@RequestMapping("/actualizar/direccion")
 	public String actualizarDireccion(@RequestBody Direccion direccion) {
 		if (direccion.getId() != null) {
 			String mensaje = direccionServiceImpl.actualizarDireccion(direccion);
@@ -47,7 +47,7 @@ public class DireccionApiRestController {
 	}
 	
 	//obtener
-	@RequestMapping("/obtener/direcciones")
+	@RequestMapping("/obtener/direccion")
 	public Direccion obtenerDireccion(@RequestParam(value = "id", required = false) Long id) {
 		Direccion mensaje = direccionServiceImpl.obtenerDireccion(id);
 		return mensaje;

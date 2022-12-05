@@ -11,7 +11,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
+
+
 import javax.persistence.Table;
 
 
@@ -35,7 +36,6 @@ public class Venta {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) 
 	private Long id;
-	
 
 	private String tipoVenta;
 	
@@ -48,15 +48,15 @@ public class Venta {
 	
 	private Integer totalVenta;
 	
-	@OneToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="dte_id")
 	private DTE dte;
 
-	@OneToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="medio_pago_id")
 	private MedioPago mediopago;
 
-	@OneToOne(fetch=FetchType.LAZY)
+	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="estado_id")
 	private Estado estado;
 

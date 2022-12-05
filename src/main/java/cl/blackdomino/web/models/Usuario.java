@@ -58,6 +58,7 @@ public class Usuario {
 	
 	private Integer telefono;
 	
+	
 	//relación ManyToMany
 	@JsonIgnore
 	@ManyToMany(fetch = FetchType.LAZY)

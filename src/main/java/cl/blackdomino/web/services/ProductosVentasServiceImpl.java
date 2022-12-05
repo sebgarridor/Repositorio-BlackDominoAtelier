@@ -46,8 +46,12 @@ public class ProductosVentasServiceImpl implements ProductosVentasService{
 //--------------------Obtener----------------------------------	
     @Override
     public ProductosVentas obtenerPV(Long id) {
-        ProductosVentas mensaje = pvRepository.findById(id).get();
-        return mensaje;
+    	Boolean existe = pvRepository.existsById(id);
+    	if(existe) {
+    	 ProductosVentas mensaje = pvRepository.findById(id).get();
+        return mensaje;	
+    	}
+       return null;
     }
 //--------------------ObtenerLista----------------------------------
     @Override

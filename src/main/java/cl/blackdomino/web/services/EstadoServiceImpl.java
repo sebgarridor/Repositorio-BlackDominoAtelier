@@ -47,8 +47,12 @@ public class EstadoServiceImpl implements EstadoService{
 //--------------------Obtener----------------------------------	
     @Override
     public Estado obtenerEstado(Long id) {
-        Estado mensaje = estadoRepository.findById(id).get();
-        return mensaje;
+    	Boolean existe = estadoRepository.existsById(id);
+    	if(existe) {
+    	Estado mensaje = estadoRepository.findById(id).get();
+        return mensaje;	
+    	}
+        return null;
     }
 //--------------------ObtenerLista----------------------------------
     @Override

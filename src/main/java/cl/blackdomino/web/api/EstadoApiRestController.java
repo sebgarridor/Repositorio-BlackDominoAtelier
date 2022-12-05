@@ -1,5 +1,7 @@
 package cl.blackdomino.web.api;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -35,6 +37,19 @@ public class EstadoApiRestController {
 			String mensaje = estadoServiceImpl.actualizarEstado(estado);
 			return mensaje;
 		}
-		return "Estado actualizado";
+		return "Estado no actualizado";
 	}
+	
+	//obtener
+	@RequestMapping("/obtener/estado")
+	public Estado obtenerEstado(@RequestParam(value="id",required=false) Long id) {
+		return estadoServiceImpl.obtenerEstado(id);
+	}
+	
+	//listado
+	@RequestMapping("/listado/estado")
+	public List<Estado> lisatdoEstado(){
+		return estadoServiceImpl.listadoEstado();
+	}
+	
 }

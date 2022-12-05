@@ -48,8 +48,12 @@ public class UsuarioServiceImpl implements UsuarioService {
 //--------------------Obtener----------------------------------	
 	@Override
 	public Usuario obtenerUsuario(Long id) {
+		Boolean existe = usuarioRepository.existsById(id);
+		if(existe) {
 		Usuario user = usuarioRepository.findById(id).get();
-		return user;
+		return user;	
+		}
+		return null;
 	}
 //--------------------ObtenerLista----------------------------------
 	@Override

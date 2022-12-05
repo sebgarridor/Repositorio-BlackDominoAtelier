@@ -52,7 +52,7 @@ public class Direccion {
 	
 	private String codigoPostal;
 	
-	@JsonIgnore
+	
 	@OneToOne(mappedBy = "direccion", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	private Usuario usuario;
 	

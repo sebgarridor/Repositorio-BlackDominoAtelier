@@ -1,6 +1,7 @@
 package cl.blackdomino.web.models;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -9,7 +10,8 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.OneToMany;
+
 import javax.persistence.PrePersist;
 import javax.persistence.Table;
 
@@ -40,8 +42,8 @@ public class DTE {
 	private String observacion;
 	
 	@JsonIgnore
-	@OneToOne(mappedBy="dte",cascade=CascadeType.ALL,fetch=FetchType.LAZY)
-	private Venta venta;
+	@OneToMany(mappedBy="dte",cascade=CascadeType.ALL,fetch=FetchType.LAZY)
+	private List<Venta> venta;
 	
 	@Column(updatable=false)
 	@DateTimeFormat(pattern="yyyy_MM-dd")

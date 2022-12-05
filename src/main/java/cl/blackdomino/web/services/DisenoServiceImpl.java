@@ -49,8 +49,12 @@ public class DisenoServiceImpl implements DisenoService{
 //--------------------Obtener----------------------------------
 	@Override
 	public Diseno obtenerDiseno(Long id) {
+		Boolean existe = disenoRepository.existsById(id);
+		if(existe) {
 		Diseno mensaje = disenoRepository.findById(id).get();
-		return mensaje;
+		return mensaje;	
+		}
+		return null;
 	}
 //--------------------ObtenerLista----------------------------------
 	@Override
