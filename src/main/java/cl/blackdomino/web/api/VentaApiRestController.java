@@ -70,7 +70,9 @@ public class VentaApiRestController {
 	//Obtener
 	@RequestMapping("/obtener/venta")
 	public Venta obtenerVenta(@RequestParam(value="id", required = true)Long id) {
-		return ventaServiceImpl.obtenerVenta(id);
+		Venta mensaje = ventaServiceImpl.obtenerVenta(id);
+		System.out.println(mensaje.getId());
+		return mensaje;
 	}
 	
 	//Obtener Lista
