@@ -9,8 +9,8 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>blackdominoatelier</groupId>
-	<artifactId>Grupo3</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>blackdomino</artifactId>
+	<version>1</version>
 	<packaging>war</packaging>
 	<name>Grupo3</name>
 	<description>Proyecto Integrador para Black Domino Atelier</description>

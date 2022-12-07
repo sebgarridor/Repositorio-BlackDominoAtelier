@@ -1,4 +1,4 @@
-package blackdominoatelier.Grupo3;
+package cl.blackdomino;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
