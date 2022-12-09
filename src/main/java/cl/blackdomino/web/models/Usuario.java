@@ -50,10 +50,10 @@ public class Usuario {
 	private String apellido;
 	
 	
-	
+	@Column
 	private String correo;
 	
-
+	@Column
 	private String password;
 	
 	private Integer telefono;
