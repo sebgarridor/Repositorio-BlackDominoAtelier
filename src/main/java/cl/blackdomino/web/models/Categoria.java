@@ -34,7 +34,7 @@ public class Categoria {
 	private Long id;
 	
 
-	private String nombre;
+	private String Producto;
 	
 	
 	private String descripcion;
@@ -42,6 +42,6 @@ public class Categoria {
 	@JsonIgnore
 	@OneToMany(mappedBy = "categoria",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
 	private List<Producto> productos;
-
+	
 
 }
