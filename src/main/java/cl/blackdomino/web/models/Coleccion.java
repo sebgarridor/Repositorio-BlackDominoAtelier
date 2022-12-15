@@ -14,38 +14,35 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 
 @Entity
+@Table(name = "colecciones")
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
-@ToString
-@Table(name = "categorias")
-public class Categoria {
+@NoArgsConstructor
+public class Coleccion {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-
-	private String nombre;
-	
-	
-	private String descripcion;
-	
-	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name="coleccion_id")
-	private Coleccion coleccion;
+	private String coleccion;
 	
 	@JsonIgnore
-	@OneToMany(mappedBy = "categoria",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+	@OneToMany(mappedBy = "coleccion",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+	private List <Diseno> disenos;
+	
+	@JsonIgnore
+	@OneToMany(mappedBy = "coleccion",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+	private List <Categoria> categorias;
+	
+	@JsonIgnore
+	@OneToMany(mappedBy = "coleccion",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
 	private List<Producto> productos;
-
-
 }

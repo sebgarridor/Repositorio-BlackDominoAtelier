@@ -49,6 +49,10 @@ public class Producto {
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name="tallaje_id")
 	private Tallaje tallaje;
+	
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name="coleccion_id")
+	private Coleccion coleccion;
 
 	//ManyToMany
 	@JsonIgnore
