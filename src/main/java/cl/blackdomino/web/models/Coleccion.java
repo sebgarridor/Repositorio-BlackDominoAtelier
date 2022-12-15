@@ -37,10 +37,7 @@ public class Coleccion {
 	@JsonIgnore
 	@OneToMany(mappedBy = "coleccion",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
 	private List <Diseno> disenos;
-	
-	@JsonIgnore
-	@OneToMany(mappedBy = "coleccion",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
-	private List <Categoria> categorias;
+
 	
 	@JsonIgnore
 	@OneToMany(mappedBy = "coleccion",cascade = CascadeType.ALL,fetch = FetchType.LAZY)

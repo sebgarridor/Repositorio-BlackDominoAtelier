@@ -39,10 +39,6 @@ public class Categoria {
 	
 	private String descripcion;
 	
-	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name="coleccion_id")
-	private Coleccion coleccion;
-	
 	@JsonIgnore
 	@OneToMany(mappedBy = "categoria",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
 	private List<Producto> productos;
