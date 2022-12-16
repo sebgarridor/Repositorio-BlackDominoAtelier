@@ -2,6 +2,7 @@ package cl.blackdomino.web.services;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import cl.blackdomino.web.models.Coleccion;
@@ -9,6 +10,7 @@ import cl.blackdomino.web.repositories.ColeccionRepository;
 
 @Service
 public class ColeccionServiceImpl implements ColeccionService {
+	@Autowired
 	private ColeccionRepository coleccionRepository;
 
 	@Override
