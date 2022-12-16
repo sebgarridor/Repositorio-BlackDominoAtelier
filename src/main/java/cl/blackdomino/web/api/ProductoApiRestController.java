@@ -8,10 +8,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import cl.blackdomino.web.models.Categoria;
+import cl.blackdomino.web.models.Coleccion;
 import cl.blackdomino.web.models.Diseno;
 import cl.blackdomino.web.models.Producto;
 import cl.blackdomino.web.models.Tallaje;
 import cl.blackdomino.web.services.CategoriaServiceImpl;
+import cl.blackdomino.web.services.ColeccionServiceImpl;
 import cl.blackdomino.web.services.DisenoServiceImpl;
 import cl.blackdomino.web.services.ProductoServiceImpl;
 import cl.blackdomino.web.services.TallajeServiceImpl;
@@ -26,19 +28,25 @@ public class ProductoApiRestController {
 	private TallajeServiceImpl tallajeServiveImpl;
 	@Autowired
 	private DisenoServiceImpl disenoServiveImpl;
+	
+	@Autowired
+	private ColeccionServiceImpl coleccionServiceImpl;
 
 // -----------------------Guardar--------------------------------------------------------------------------
 	@RequestMapping("/guardar/producto")
 	public Producto guardarProducto(@RequestBody Producto producto,
 			@RequestParam(value = "categoriaId", required = true) Long CategoriaId,
 			@RequestParam(value = "tallajeId", required = true) Long TallajeId,
-			@RequestParam(value = "disenoId", required = true)Long DisenoId) {
+			@RequestParam(value = "disenoId", required = true)Long DisenoId,
+			@RequestParam(value = "coleccionId", required =true)Long ColeccionId) {
 		Categoria categoria = categoriaServiveImpl.obtenerCategoria(CategoriaId);
 		producto.setCategoria(categoria);
 		Tallaje tallaje = tallajeServiveImpl.obtenerTallaje(TallajeId);
 		producto.setTallaje(tallaje);
 		Diseno diseno = disenoServiveImpl.obtenerDiseno(DisenoId);
 		producto.setDiseno(diseno);
+		Coleccion coleccion = coleccionServiceImpl.obtenerColeccion(ColeccionId);
+		producto.setColeccion(coleccion);
 		// http://localhost:9080/guardar/productos
 		/*
 		 * nombre: "Totebag evangelion negra" precio: "10000"
