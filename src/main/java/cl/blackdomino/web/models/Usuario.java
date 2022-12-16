@@ -47,7 +47,7 @@
 	private String nombre;
 	
 	@NotNull
-	private String apellido;
+	private String apellidos;
 	
 	@NotNull
 	private String rut;

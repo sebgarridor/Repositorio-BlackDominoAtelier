@@ -32,10 +32,7 @@
 	private Long id;
 
 	@NotNull
-	private String calle;
-
-	@NotNull
-	private Integer numero;
+	private String direccion;
 
 	@NotNull
 	private String comuna;
