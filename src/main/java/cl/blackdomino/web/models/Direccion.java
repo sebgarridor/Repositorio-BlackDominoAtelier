@@ -45,7 +45,6 @@
 
 	private String departamento;
 
-	private String codigoPostal;
 
 	@OneToOne(mappedBy = "direccion", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	private Usuario usuario;
