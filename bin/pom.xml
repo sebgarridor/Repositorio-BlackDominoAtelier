@@ -9,8 +9,8 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>blackdominoatelier</groupId>
-	<artifactId>Grupo3</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>blackdomino</artifactId>
+	<version>1</version>
 	<packaging>war</packaging>
 	<name>Grupo3</name>
 	<description>Proyecto Integrador para Black Domino Atelier</description>
@@ -66,13 +66,30 @@
 			<artifactId>jbcrypt</artifactId>
 			<version>0.4</version>
 		</dependency>
-		<!-- <dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
-		-->	
-		
-	
+		<dependency>
+       		<groupId>org.projectlombok</groupId>
+       		<artifactId>lombok</artifactId>
+       		<optional>true</optional>
+		</dependency>
+		<dependency>
+        		<groupId>io.jsonwebtoken</groupId>
+        		<artifactId>jjwt</artifactId>
+        		<version>0.9.1</version>
+		</dependency>
+		<dependency>
+        		<groupId>com.mysql</groupId>
+        		<artifactId>mysql-connector-j</artifactId>
+        		<scope>runtime</scope>
+		</dependency>
+		<dependency>
+        		<groupId>org.springframework.security</groupId>
+        		<artifactId>spring-security-test</artifactId>
+        		<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<build>

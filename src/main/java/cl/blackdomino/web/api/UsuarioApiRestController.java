@@ -22,7 +22,7 @@ public class UsuarioApiRestController {
 	@Autowired
 	private DireccionServiceImpl dsImpl;
 	
-	@RequestMapping ("/guardar/usuario")
+/*@RequestMapping ("/guardar/usuario")
 	public Usuario guardarUsuario(@RequestBody Usuario usuario,
 		@RequestParam(value="direccionId",required=true) Long DireccionId) {
 		Direccion direccion = dsImpl.obtenerDireccion(DireccionId);
@@ -31,7 +31,7 @@ public class UsuarioApiRestController {
 		
 		return usuarioServiceImpl.guardarUsuario(usuario); // "Usuario Guardado"
 				
-	}
+	}*/
 	
 	@RequestMapping("/eliminar/usuario")
 	public String eliminarUsuario(@RequestParam(value="id",required = false)Long id) {

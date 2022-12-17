@@ -19,7 +19,7 @@ import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 
-
+import org.springframework.data.annotation.Transient;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -56,7 +56,10 @@ public class Usuario {
 	@Column
 	private String password;
 	
-	private Integer telefono;
+	@Transient
+	private String password2;
+	
+	private String telefono;
 	
 	
 	//relación ManyToMany

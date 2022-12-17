@@ -8,4 +8,7 @@ import cl.blackdomino.web.models.Usuario;
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
 	
+	//creamos findby para encontrar correo
+	Usuario findByCorreo(String correo);
+	
 }

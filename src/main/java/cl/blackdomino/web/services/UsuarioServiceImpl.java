@@ -2,6 +2,7 @@ package cl.blackdomino.web.services;
 
 import java.util.List;
 
+import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,11 +15,72 @@ public class UsuarioServiceImpl implements UsuarioService {
 	@Autowired // inyección
 	private UsuarioRepository usuarioRepository;
 
-//--------------------Guardar----------------------------------
+//--------------------Guardar (Registro)----------------------------------
 	@Override
-	public Usuario guardarUsuario(Usuario usuario) {
-		return usuarioRepository.save(usuario);
+	public Boolean guardarUsuario(Usuario usuario) {
+		
+		//validar el usuario ( si existe igual correo)
+		//lo llamamos(instanciamos)
+		Usuario retornoUsuario = usuarioRepository.findByCorreo(usuario.getCorreo());
+		
+		//si no existe lo registramos
+		if(retornoUsuario == null) {
+			
+			//encriptamos contraseña
+			String passHashed = BCrypt.hashpw(usuario.getPassword(), BCrypt.gensalt());
+			
+			//reemplazamos valor
+			usuario.setPassword(passHashed);
+			
+			//guardamos el usuario
+			usuarioRepository.save(usuario);
+			
+			return true;
+		}else {
+			return false;
+		}
+		
+		
 	}
+	
+	//--------------------Ingreso(Login)----------------------------------
+	@Override
+	public Boolean ingresoUsuario(String correo, String password) {
+		
+//en una instancia de usuario buscamos correo para saber si existe el usuario
+		Usuario usuario = usuarioRepository.findByCorreo(correo);
+		
+		//verificamos si existe ese usuario
+		if(usuario != null) {//si existe el usuario
+			
+			//primero comparamos contraseñas
+			boolean resultadoPwd = BCrypt.checkpw(password, usuario.getPassword());
+			 
+			if(resultadoPwd) {//si son iguales
+				return true;
+				
+			}else {//si son distintas
+				return false;
+				
+				
+			}
+			
+		}else {//no existe el correo en la base de datos
+			return false;
+			
+		}
+		
+	}
+	
+	
+	//--------------------Obtener correo----------------------------------
+	@Override
+	public Usuario obtenerCorreoUsuario(String correo) {
+		return usuarioRepository.findByCorreo(correo);
+	}
+	
+	
+	
 //--------------------Eliminar----------------------------------
 	@Override
 	public String eliminarUsuario(Long id) {
