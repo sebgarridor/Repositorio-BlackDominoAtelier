@@ -1,0 +1,146 @@
+/* *Aplicado a la página en general */
+
+* {
+    color: white;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: #202020;
+}
+
+/* *Primer div con imagen y descripción */
+#imagenproducto {
+    width: 400px;
+    margin: auto;
+    display: block;
+
+}
+
+/* *Select */
+.form-select {
+
+    color: white;
+    background: #202020 url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='white' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right .75rem center/8px 10px !important;
+    width: 350px;
+}
+
+/* *contador */
+input[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.number-input {
+    border: 1px solid #ddd;
+    display: inline-flex;
+    width: 260px;
+}
+
+.number-input {
+    box-sizing: border-box;
+    border-radius: 5px;
+    height: 38px;
+}
+
+.number-input button {
+    outline: none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 20rem;
+    cursor: pointer;
+    margin: 0;
+    position: relative;
+}
+
+.number-input button:after {
+    display: inline-block;
+    position: absolute;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: '\f077';
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.number-input button.plus:after {
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.number-input input[type=number] {
+    font-family: sans-serif;
+    max-width: 10rem;
+    padding: .5rem;
+    border: solid #ddd;
+    border-width: 0 2px;
+    font-size: 1.5rem;
+    height: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+#bordecontador {
+    background: transparent;
+    border: none;
+}
+
+button.minus {
+    border-right: solid;
+    border-width: 2px;
+}
+
+button.plus {
+    border-left: solid;
+    border-width: 2px;
+}
+
+#contadorYbutton {
+    display: flex;
+}
+
+#carroboton {
+    background-color: #92478C;
+    border: none;
+    border-radius: 5px;
+    width: 258px;
+    height: 36px;
+
+}
+
+/* *carrusel */
+.carruselimg {
+    width: 300px;
+    height: 350px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.flexdisplay {
+    display: flex;
+    justify-content: center;
+}
+
+/* *Aplicado generalmente */
+.textleft {
+    text-align: left;
+}
+
+.texto {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+    color: white;
+}
+
+.destacado {
+    color: #92478C;
+}

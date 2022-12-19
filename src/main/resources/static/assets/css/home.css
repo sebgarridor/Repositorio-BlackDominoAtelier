@@ -1,0 +1,103 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    color: white;
+}
+body{
+    background-color: #202020;
+}
+.noti{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    background-color: #92478C;
+    margin-bottom: 0px;
+}
+footer{
+    background-color: #161616;
+}
+.col{
+    text-align: left;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    }
+div{
+    text-align: center;
+}
+.textofooter{
+    margin-top: 50px;
+}
+a{
+    color: white;
+}
+.fotoprincipal{
+    margin-top: 70px;
+    margin-bottom: 70px;
+    width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.navbar-brand{
+    color: white;
+
+}
+.separacion{
+    margin-right: 140px;
+}
+#icono1{
+    padding-left: 50px;
+}
+#icono2{
+    padding-left: 20px;
+}
+
+h1{
+    font-family: Bokor;
+}
+h5{
+    font-family: Zen Kaku Gothic New;
+}
+
+.card{
+    background-color: #2D2D2D;
+    border-color: #202020;
+}
+.card-body{
+    background-color: #2D2D2D;
+}
+nav{
+    font-family: Bokor;
+}
+.enlacenavbar{
+    font-size: 40px;
+}
+
+.fontbokor{
+    font-family: Bokor;
+}
+.fotodrop{
+    height: 425px;
+}
+.show{
+    background-color: #161616;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+.dropdown-menu.show{
+    width: 1410px;
+}
+
+
+.imagenLink {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+

@@ -1,0 +1,153 @@
+/* todo  toda la página*/
+* {
+    margin: 0px;
+    padding: 0px;
+    color: white;
+}
+
+body {
+    background: #202020;
+}
+
+div {
+    text-align: center;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+/* todo termina arreglos generales */
+
+.noti {
+    text-align: center;
+    background-color: #92478C;
+    margin: 0;
+    padding: 0.3rem;
+    font-size: medium;
+}
+
+.fontbokor {
+    font-family: Bokor;
+}
+
+.fontZenKaku {
+    font-family: Zen Kaku Gothic New;
+}
+
+
+/* inicio navbar */
+.fotoprincipal {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    width: 25rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#navbarSupportedContent {
+    justify-content: center;
+    width: 100%;
+}
+
+.dropdown-menu.show {
+    width: 100%;
+    background-color: #2D2D2D;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    border: none;
+    border-radius: 0%;
+}
+
+.card {
+    background-color: #2D2D2D;
+    border-color: #202020;
+    border-radius: 0%;
+}
+
+#fontsize {
+    font-size: 230%;
+}
+
+.margin_a {
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+/* fin navbar */
+
+
+/*Inicio footer css*/
+footer {
+    background-color: #161616;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 3%;
+    padding-bottom: 1%;
+}
+
+
+.FT {
+    font-family: "Roboto", Bold;
+    text-align: start;
+}
+
+.logo {
+    flex-flow: row wrap;
+
+}
+
+.rrss {
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+
+
+.footer_bloques {
+    margin: 2%;
+    font-size: medium;
+    text-align: start;
+    font-family: "Roboto", Light;
+    text-decoration: none;
+    color: rgb(255, 255, 255)
+}
+
+
+
+a:hover {
+
+    color: #92478C;
+    transition: 0.5s;
+}
+
+/*Fin footer css*/
+
+/* ? probando elementos */
+
+
+
+
+
+
+/* ?terminé de probar */
+
+/* *celular */
+@media screen and (max-width:480px) {
+    .fotoprincipal {
+        width: 12rem;
+    }
+
+    .footer_bloques {
+        font-size: 85%;
+    }
+}
+
+/* *tablet */
+@media screen and (min-width:481px) and (max-width:1023px) {
+    .fotoprincipal {
+        width: 18rem;
+    }
+}

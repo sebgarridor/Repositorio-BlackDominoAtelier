@@ -1,0 +1,46 @@
+/* Versión Escritorio */
+
+@media (min-width: 825px) and (max-width: 2440px) {
+
+    .tableta {
+        display: none;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+}
+
+
+/* Versión Tableta */
+
+@media (min-width: 535px) and (max-width: 824px) {
+
+
+    .escritorio {
+        display: none;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+
+}
+
+/* Versione Mobile */
+
+@media (min-width: 200px) and (max-width: 534px) {
+
+    .escritorio {
+        display: none;
+    }
+    
+    .tableta {
+        display: none;
+    }
+
+
+
+}

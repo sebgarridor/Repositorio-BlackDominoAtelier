@@ -1,0 +1,248 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    color: white;
+}
+
+body {
+    background-color: #202020;
+}
+
+.noti {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    background-color: #92478C;
+    margin-bottom: 0px;
+}
+
+
+footer {
+    background-color: #161616;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+div {
+    text-align: center;
+}
+
+.textofooter{
+    margin-top: 50px;
+}
+
+.fotoprincipal{
+    margin-top: 70px;
+    margin-bottom: 70px;
+    width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+h1{
+    font-family: Bokor;
+}
+
+h2{
+    font-family: Zen Kaku Gothic New;
+}
+h5{
+    font-family: Zen Kaku Gothic New;
+}
+
+.containerprincipal {
+    margin-top: 15rem;
+}
+
+#estadocompra{
+    margin-top: 5rem;
+    font-family: Zen Kaku Gothic New;
+    text-align: center;
+    font-size: 1.6em;    
+    justify-content: center;
+}
+
+#carrodecompras{
+    text-align: start;
+    margin-top: 5rem;
+
+
+}
+
+#titulocarro {
+    display:block;
+    text-align: start;
+}
+
+
+.card-text {
+    color: #ffffff;
+}
+
+#card-costoestimado {
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    border-radius:10px;
+    margin-bottom: 3rem;
+
+}
+#costo-estimado {
+    color: #92478C;
+    text-align: left;
+    margin-left: 0rem;
+    padding: 1rem;
+    
+}
+
+#card-productos {
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
+}
+
+#select-region {
+    margin-left: 1rem;
+    width: 92%;
+    margin-top: 1rem;
+    background-color: transparent;
+    color:#FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
+}
+
+#calcular-envio-button {
+    font-family: Zen Kaku Gothic New;
+    width: 92%;
+    font-size: 1.2rem;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+
+    background-color: transparent;
+    border: 1px solid #92478C;
+    border-radius: 10px;
+}
+#calcular-envio-button:hover{
+    font-family: Zen Kaku Gothic New;
+    background-color: #92478C;
+    color: #161616;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+#card-revisionpedido {
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    border-radius:10px;
+
+}
+
+p {
+    font-family: Zen Kaku Gothic New;
+    font-size: 1rem;
+}
+
+#fila1 {
+    border-bottom: 1px solid #FFFFFF;
+}
+
+#select-cantidad {
+    margin-left: 1.2rem;
+    width: 4rem;
+    margin-top: 2rem;
+    background-color: transparent;
+    color:#FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
+}
+
+#continuarpago-buttons{
+    background-color: transparent;;
+}
+
+#continuarpago {
+    font-size: 1.2rem;
+    padding: 0.3rem;
+    background-color: #92478C;
+    border: 1px solid #92478C;
+    border-radius: 10px;
+    width: 100%;
+    margin-top: 3rem;
+    
+
+
+}
+
+#seguircomprando {
+    width: 100%;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;    
+    background-color: transparent;
+    border: 1px solid #92478C;
+    border-radius: 10px;
+}
+
+footer{
+    background-color: #161616;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 12%;
+    padding-right: 12%;
+    padding-top: 3%;
+    padding-bottom: 1rem;
+}
+
+.FT{
+    font-family: "Roboto", Bold;
+    text-align: start;
+}
+
+.logo {
+    flex-flow: row wrap;
+
+}
+
+.rrss{
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+
+.rrss img {
+    margin: 1%;
+}
+
+.footer_bloques {
+    margin: 2%;
+    font-size: medium;
+    text-align: start;
+    font-family: "Roboto", Light;
+}
+
+.footer_bloques a {
+    text-decoration: none;
+    color: rgb(255, 255, 255)
+}
+
+
+.footer_bloques a:hover {
+    text-decoration: none;
+    color: #92478C;
+    transition: 0.5s;
+}
+
+.noti {
+    justify-content: center;
+    background-color: #92478C;
+    margin: 0;
+    padding: 0.3rem;
+    font-size: medium;
+}

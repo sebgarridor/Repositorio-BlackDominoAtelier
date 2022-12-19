@@ -1,0 +1,23 @@
+#divcentral{
+    padding-left: 5em;
+    padding-right: 5em;
+}
+
+#logoblanco{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 9.375em;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#fila1 {
+    border-bottom: 1px solid #FFFFFF;
+
+    
+}
+
+h4 span {
+    color: #92478C;
+    font-family: Zen Kaku Gothic New;
+}
