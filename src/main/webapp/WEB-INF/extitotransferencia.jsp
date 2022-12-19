@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>    
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %> 
 <!DOCTYPE html>
 <html lang="es">
 
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Black Domino Atelier</title>
     <link rel="stylesheet" href="assets/css/navbarYfooter.css">
-    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/exitotarjeta.css">
 </head>
 
 <body>
@@ -123,165 +123,157 @@
     </nav>
 
     <!-- Esto es el fin del navbar-->
+	<br><br><br><br><br>
+    <div class="container" id="divcentral">
+        <div class="container" id="estadocompra">
+            <h4><span>Carro > Proceso de pago > Revisión del pedido > </span><strong> Éxito</strong>  </h4>
+        
+        </div>
+        <div class="container" id="gracias" style="margin-top: 3rem;">
+            <p style="text-align: left;">Pedido #xxxxx</p>
+            <h4 style="text-align: left; margin-top: -1rem;">Gracias {nombrecliente} por tu compra!</h4>
+        </div>
+        <div class="card" style="width: 100; margin-top: 3rem; margin-bottom: 4rem;">
+            <div class="card-body">
+                <h5 class="card-text" style="text-align: left;">¡Estamos muy contentos de que hayas comprado en Black
+                    Domino Atelier!</h5>
+                <p style="text-align: left;">Una vez tu compra sea procesada y confirmadapor nosotros comenzaremos con el proceso de
+                    confección de tu pedido. Debes tener en cuenta de que este periodo puede tomar hasta una semana
+                    dependiendo de qué tan grande sea el pedido. Dado que elegiste un método de transferencia electrónica,
+                    tus productos serán confeccionados una vez hayas enviado el comprobante de depósito a alguno de nuestros medios digitales
+                    , ya sea Instagram (@blackdomino.atelier) o correo (blackdominoatelier@gmail.com).
+                </p>
+                <h5 style="color: #92478C;">Datos de depósito</h5>
+                <p><strong>Banco:</strong> Banco Estado</p>
+                <p><strong>Número de cuenta:</strong> 1234 56789</p>
+                <p><strong>Tipo de cuenta:</strong> Cuenta Rut</p>
+                <p><strong>Nombre:</strong> asd123</p>
+                <p><strong>Rut</strong> 123456-7</p>
+                <p>Comprobante a <strong>blackdominoatelier@gmail.com</strong> </p>
+                <p></p>
+                <p style="text-align: left;">Con respeto al envío: si elegiste un método de envío a domicilio o sucursal
+                    de retiro, te enviaremos a tu mail un código de seguimiento cuando hayamos enviado el pedido.</p>
+                <p style="text-align: left;">Si elegiste el método de retiro en metro Ciudad del Niño, nos pondremos en
+                    contacto contigo para coordinar el día y el horario para que puedas pasar a retirar tu(s)
+                    productos(s).</p>
+            </div>
+            <div class="card-body">
+                <h4 style="text-align: left; color: #92478C; margin-bottom: 2rem;">Resumen de tu compra</h4>
+                <div class="container text-center">
+                    <div class="row" id="fila1">
+                        <div class="col">
+                            <p>Producto</p>
+                        </div>
+                        <div class="col">
 
-	<br>
-  <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active" data-bs-interval="10000">
-        <img src="assets/img/slider01img.jpg" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item" data-bs-interval="2000">
-        <img src="assets/img/slider02img.jpg" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="assets/img/slider03img.jpg" class="d-block w-100" alt="...">
-      </div>
+                        </div>
+                        <div class="col">
+                            <p>Cantidad</p>
+                        </div>
+                        <div class="col">
+                            <p>Precio unitario</p>
+                        </div>
+                        <div class="col">
+                            <p>Subtotal</p>
+                        </div>
+
+                    </div>
+                    <div class="row" id="fila2">
+                        <div class="col">
+                            <img src="/assets/img/Poleras sin fondo/AKIRA sin fondo1.png" alt="Card image cap"
+                                style="width: 5rem;">
+                        </div>
+                        <div class="col">
+                            <p style="margin-bottom: 0.05rem; margin-top: 1rem; color:#92478C ;">Akira Tee</p>
+                            <p style="margin-bottom: 0.05rem;">Talla: M</p>
+                            <p>Manga corta</p>
+
+                        </div>
+                        <div class="col">
+                            <p style="margin-top:2.5rem;">1</p>
+                        </div>
+                        <div class="col">
+                            <p style="margin-top:2.5rem;">$10.000CLP</p>
+                        </div>
+                        <div class="col">
+                            <p style="margin-top:2.5rem;">$10.000CLP</p>
+                        </div>
+                    </div>
+                    <div class="row" id="fila2">
+                        <div class="col">
+                            <img src="/assets/img/Polerones polo/Poleron Naruto.png" alt="Card image cap"
+                                style="width: 5rem;">
+                        </div>
+                        <div class="col">
+                            <p style="margin-bottom: 0.05rem; margin-top: 1rem; color:#92478C ;">Polerón polo Naruto</p>
+                            <p style="margin-bottom: 0.05rem;">Talla: XL</p>
+                            
+
+                        </div>
+                        <div class="col">
+                            <p style="margin-top:2.5rem;">2</p>
+                        </div>
+                        <div class="col">
+                            <p style="margin-top:2.5rem;">$10.000CLP</p>
+                        </div>
+                        <div class="col">
+                            <p style="margin-top:2.5rem;">$20.000CLP</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <hr>
+            <div class="container" id="totalcompra">
+                <h4>Total de tu compra incluyendo envío</h4>
+                <p>$30.000CLP</p>
+            </div>
+            <hr>
+            <div class="card-body">
+                <h4 style="text-align: left; color: #92478C; margin-bottom: 2rem;">Información del cliente</h4>
+                <div class="container">
+                    <div class="row">
+                      <div class="col" style="text-align: left;">
+                        <h5>Información de contacto</h5>
+                        <p>sebgarridor@gmail.com</p>
+                      </div>
+                      <div class="col" style="text-align: left;">
+                        <h5>Método de pago</h5>
+                        <p>Transferencia Electrónica - <b>$30.000CLP</b></p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col" style="text-align: left;">
+                        <h5>Dirección de envío</h5>
+                        <p>Sebastián Garrido</p>
+                        <p  style="margin-top: -0.8rem;">Alameda 123</p>
+                        <p style="margin-top: -0.8rem;">Santiago, RM</p>
+                        <p style="margin-top: -0.8rem;">9 3531 7521</p>
+                      </div>
+                      <div class="col" style="text-align: left;">
+                        <h5>Dirección de facturación</h5>
+                        <p>Sebastián Garrido</p>
+                        <p style="margin-top: -0.8rem;">Alameda 123</p>
+                        <p style="margin-top: -0.8rem;">Santiago, RM</p>
+                        <p style="margin-top: -0.8rem;">9 3531 7521</p>
+
+                      </div>
+
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <h5>Método de envío</h5>
+                        <p>Retiro en Metro Ciudad del Niño</p>
+                      </div>
+                    </div>
+                  </div>
+                
+            </div>
+            
+
+        </div>
+
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-  <br>
-  <div class="seccionmedio">
-    <h1>Destacados</h1>
-    <br>
-    <div class="container ">
 
-      <div class="row">
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top" src="assets/img/destacados_1.jpeg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Totebag Eva-01</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top" src="assets/img/destacados_2.jpeg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Bandolera Akira</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top" src="assets/img/destacados_3.jpeg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Polerón Misato Eva-01</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <br>
-    <br>
-
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top" src="assets/img/destacados_4.jpeg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Bandolera Eva-01</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top" src="assets/img/destacados_5.jpeg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Gen'ei Ryodan Tee</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top" src="assets/img/destacados_6.jpeg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Hisoka Tee</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-  <br>
-  <div class="seccionmedio">
-    <h1 style="text-align: center ;">Novedades</h1>
-    <br>
-    <div class="container ">
-
-      <div class="row">
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top card_color" src="assets/img/Poleras sin fondo/AKIRA sin fondo1.png"
-              alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Akira Tee</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top card_color" src="assets/img/Poleras sin fondo/Chrollo Lucifer sin fondo.png"
-              alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Chrollo Lucifer Tee</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top card_color" src="assets/img/JUNJI sin fondo figma.png" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Junji Ito Tee</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <br>
-    <br>
-
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top card_color" src="assets/img/poleron Dragonball.png" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Polerón Dragon Ball</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top card_color" src="assets/img/Bandolera EVA-01.png" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Bandolera EVA-01</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top card_color" src="assets/img/polerón Eren titán.png" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Polerón Eren Titán</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <br>
-	
     <!--Inicio Footer-->
     <footer class="escritorio">
         <div class="logo footer_bloques">

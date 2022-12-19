@@ -1,6 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>    
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>  
 <!DOCTYPE html>
 <html lang="es">
 
@@ -21,12 +21,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Black Domino Atelier</title>
     <link rel="stylesheet" href="assets/css/navbarYfooter.css">
-    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/preguntasfrecuentes.css">
 </head>
 
 <body>
     <!-- Esto es el inicio del navbar-->
-    <h6 class="noti">Env�o delivery - Starken</h6>
+    <h6 class="noti">Envío delivery - Starken</h6>
     <header>
         <div>
             <img class="fotoprincipal" src="assets/img/Logo_Color_Png.png">
@@ -76,7 +76,7 @@
                                             <div class="card"
                                                 style="width: 15rem; border-radius: 0%; border-color: #202020; ">
                                                 <a href="/polerones"> <img class="card-img-top "
-                                                        style="background-color: #202020;" src="assets/img/poler�n Eren tit�n.png" alt="Card image cap">
+                                                        style="background-color: #202020;" src="assets/img/polerón Eren titán.png" alt="Card image cap">
                                                     <div style="background-color:#2D2D2D;">
                                                 </a>
                                                 <h5 class="card-title fontZenKaku">Polerones</h5>
@@ -123,165 +123,62 @@
     </nav>
 
     <!-- Esto es el fin del navbar-->
-
-	<br>
-  <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active" data-bs-interval="10000">
-        <img src="assets/img/slider01img.jpg" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item" data-bs-interval="2000">
-        <img src="assets/img/slider02img.jpg" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="assets/img/slider03img.jpg" class="d-block w-100" alt="...">
-      </div>
+ <br><br><br><br><br>
+  <div class="container" id="divcentral">
+    <div class="container-fluid">
+      <h1 class="fontbokor">Preguntas Frecuentes</h1>
+      <img id="logoblanco" src="assets/img/Symbol_White_Png.png" alt="logo">
+      <br><br>
+      <p>Nunca está de más aclarar las dudas más consultadas por nuestros clientes, si tienes otra pregunta que no
+        aparece aquí no dudes en preguntarnos directamente a nuestro Instagram @blackdomino.atelier o a nuestro correo
+        blackdominoatelier@gmail.com</p>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-  <br>
-  <div class="seccionmedio">
-    <h1>Destacados</h1>
-    <br>
-    <div class="container ">
-
-      <div class="row">
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top" src="assets/img/destacados_1.jpeg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Totebag Eva-01</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top" src="assets/img/destacados_2.jpeg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Bandolera Akira</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top" src="assets/img/destacados_3.jpeg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Poler�n Misato Eva-01</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <br>
-    <br>
+    <br><br><br><br><br>
 
     <div class="container">
-      <div class="row">
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top" src="assets/img/destacados_4.jpeg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Bandolera Eva-01</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top" src="assets/img/destacados_5.jpeg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Gen'ei Ryodan Tee</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top" src="assets/img/destacados_6.jpeg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Hisoka Tee</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+      <br><br><br><br>
+      <h3 class="text-start">¿Qué técnica utilizan para estampar?</h3>
+      <br><br>
+      <p>Para estampar nuestras poleras usamos la técnica artesanal de serigrafía. Utilizamos pintura al agua sobre
+        poleras 100% algodón.</p>
+      <br><br>
+      <h3 class="text-start">¿Hacen diseños a pedido?</h3>
+      <br><br>
+      <p>No, actualmente sólo trabajamos en base a un catálogo que puedes encontrar en la sección ‘Productos’ y
+        ‘Colecciones’.</p>
+      <br><br>
+      <h3 class="text-start">Me equivoqué de talla, ¿Qué puedo hacer?</h3>
+      <br><br>
+      <p>Tienes un plazo de 10 días desde que recibes el producto para realizar el cambio. Esto aplica siempre y cuando
+        esté nuevo, en impecables condiciones y en su respectivo empaque. Para hacer efectiva la devolución, contáctanos
+        a través de nuestro Instagram o correo electrónico.</p>
+      <br><br>
+      <h3 class="text-start">¿Cuánto se demora mi pedido online?</h3>
+      <br><br>
+      <p>Al recibir el comprobante de transferencia tu pedido se demora entre 5 a 7 días háblies para el envío o entrega
+        en metro.</p>
+      <br><br>
+      <h3 class="text-start">¿Hacen pedidos por mayor?</h3>
+      <br><br>
+      <p>Actualmente tenemos cupos disponibles para compras por mayor. Envíanos un correo a blackdominoatelier@gmail.com
+        para más información.</p>
+      <br><br>
+      <h3 class="text-start">¿Trabajan con stock?</h3>
+      <br><br>
+      <p>No, gran parte de nuestros productos se realizan en base a pedido, a excepción de poleras con entrega inmediata
+        que pueden ser publicadas a través de nuestro Instagram.</p>
+      <br><br>
+      <h3 class="text-start">¿Trabajan con tallas más grandes?</h3>
+      <br><br>
+      <p>Sí, trabajamos con tallas grandes como 2XL - 3XL para nuestras poleras. Sin embargo, estas tallas tienen un
+        valor adicional de $2000CLP por prenda.</p>
+      <br><br>
 
+    </div>
+    <br><br><br><br><br>
   </div>
   <br>
-  <div class="seccionmedio">
-    <h1 style="text-align: center ;">Novedades</h1>
-    <br>
-    <div class="container ">
 
-      <div class="row">
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top card_color" src="assets/img/Poleras sin fondo/AKIRA sin fondo1.png"
-              alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Akira Tee</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top card_color" src="assets/img/Poleras sin fondo/Chrollo Lucifer sin fondo.png"
-              alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Chrollo Lucifer Tee</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top card_color" src="assets/img/JUNJI sin fondo figma.png" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Junji Ito Tee</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <br>
-    <br>
-
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top card_color" src="assets/img/poleron Dragonball.png" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Poler�n Dragon Ball</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top card_color" src="assets/img/Bandolera EVA-01.png" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Bandolera EVA-01</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top card_color" src="assets/img/poler�n Eren tit�n.png" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Poler�n Eren Tit�n</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <br>
-	
     <!--Inicio Footer-->
     <footer class="escritorio">
         <div class="logo footer_bloques">
@@ -297,20 +194,20 @@
 
         <div class="footer_bloques">
             <h5 class="FT">Sobre Nosotros</h5>
-            <p>Las mejores serigraf�as <br> desde 2013.</p>
+            <p>Las mejores serigrafías <br> desde 2013.</p>
         </div>
         <div class="footer_bloques">
             <h5>Ayuda</h5>
             <p>
                 <a href="/preguntasfrecuentes">Preguntas frecuentes</a><br>
-                <a href="/comocomprar">C�mo comprar</a><br>
+                <a href="/comocomprar">Cómo comprar</a><br>
                 <a href="/tallaje">Tallaje</a><br>
             </p>
         </div>
         <div class="footer_bloques">
             <h5 class="FT">Horario</h5>
             <p><b>Lunes a Viernes</b> <br> 11:30 hrs.<br>
-                <b>S�bado</b> <br> 11:00 a 16:00 hrs.
+                <b>Sábado</b> <br> 11:00 a 16:00 hrs.
             </p>
         </div>
         <div class="footer_bloques">
@@ -329,7 +226,7 @@
         </div>
     </footer>
     <div>
-        <h6 class="noti">�2022 Squirr3l - Todos los derechos reservados </h6>
+        <h6 class="noti">©2022 Squirr3l - Todos los derechos reservados </h6>
     </div>
     <!--Fin Footer-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"

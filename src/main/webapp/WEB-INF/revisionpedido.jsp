@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -19,9 +19,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Black Domino Atelier</title>
+    <title>Revisión</title>
     <link rel="stylesheet" href="assets/css/navbarYfooter.css">
-    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/revisionpedido.css">
 </head>
 
 <body>
@@ -123,165 +123,110 @@
     </nav>
 
     <!-- Esto es el fin del navbar-->
+	  <br><br><br><br><br>
+    <div class="container" id="divcentral">
+        <div class="container" id="estadocompra">
+            <h4><span>Carro > Proceso de pago ></span> <strong>Revisión del pedido > </strong> Éxito </h4>
 
-	<br>
-  <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active" data-bs-interval="10000">
-        <img src="assets/img/slider01img.jpg" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item" data-bs-interval="2000">
-        <img src="assets/img/slider02img.jpg" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="assets/img/slider03img.jpg" class="d-block w-100" alt="...">
-      </div>
+        </div>
+        <div class="card" style="width: 100; margin-top: 3rem; margin-bottom: 4rem; padding: 2rem;">
+            <div class="card-body">
+                <h4 style="text-align: left; color: #92478C; margin-bottom: 2rem;">Resumen de tu compra</h4>
+                <div class="container text-center">
+                    <div class="row" id="fila1">
+                        <div class="col">
+                            <p>Producto</p>
+                        </div>
+                        <div class="col">
+
+                        </div>
+                        <div class="col">
+                            <p>Cantidad</p>
+                        </div>
+                        <div class="col">
+                            <p>Precio unitario</p>
+                        </div>
+                        <div class="col">
+                            <p>Subtotal</p>
+                        </div>
+
+                    </div>
+                    <div class="row" id="fila2">
+                        <div class="col">
+                            <img src="/assets/img/Poleras sin fondo/AKIRA sin fondo1.png" alt="Card image cap"
+                                style="width: 5rem;">
+                        </div>
+                        <div class="col">
+                            <p style="margin-bottom: 0.05rem; margin-top: 1rem; color:#92478C ;">Akira Tee</p>
+                            <p style="margin-bottom: 0.05rem;">Talla: M</p>
+                            <p>Manga corta</p>
+
+                        </div>
+                        <div class="col">
+                            <p style="margin-top:2.5rem;">1</p>
+                        </div>
+                        <div class="col">
+                            <p style="margin-top:2.5rem;">$10.000CLP</p>
+                        </div>
+                        <div class="col">
+                            <p style="margin-top:2.5rem;">$10.000CLP</p>
+                        </div>
+                    </div>
+                    <div class="row" id="fila2">
+                        <div class="col">
+                            <img src="/assets/img/Polerones polo/Poleron Naruto.png" alt="Card image cap"
+                                style="width: 5rem;">
+                        </div>
+                        <div class="col">
+                            <p style="margin-bottom: 0.05rem; margin-top: 1rem; color:#92478C ;">Polerón polo Naruto</p>
+                            <p style="margin-bottom: 0.05rem;">Talla: XL</p>
+
+
+                        </div>
+                        <div class="col">
+                            <p style="margin-top:2.5rem;">2</p>
+                        </div>
+                        <div class="col">
+                            <p style="margin-top:2.5rem;">$10.000CLP</p>
+                        </div>
+                        <div class="col">
+                            <p style="margin-top:2.5rem;">$20.000CLP</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <hr>
+            <div class="container" id="envio" style="text-align: left;">
+                <h4 style="text-align: left; color: #92478C; margin-bottom: 2rem;">Envío</h4>
+                <p>Dirección:</p>
+                <p>Ciudad:</p>
+                <p>Comuna:</p>
+                <p>Región:</p>
+                <p>Sucursal <small><i>(opcional)</i></small>:</p>
+            </div>
+            
+            <hr>
+            <div class="container" id="totalcompra">
+                <p>Total productos: $00.000CLP</p>
+                <p>Total envío: $00.000CLP</p>
+                <h4>Total compra: $30.000CLP</h4>
+                <br>
+                <button type="submit" id="pagar-button" onclick="location.href = '/exitotarjeta';">Pagar</button>
+            </div>
+            <hr>
+
+
+        </div>
+
+
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-  <br>
-  <div class="seccionmedio">
-    <h1>Destacados</h1>
-    <br>
-    <div class="container ">
 
-      <div class="row">
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top" src="assets/img/destacados_1.jpeg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Totebag Eva-01</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top" src="assets/img/destacados_2.jpeg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Bandolera Akira</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top" src="assets/img/destacados_3.jpeg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Polerón Misato Eva-01</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <br>
-    <br>
-
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top" src="assets/img/destacados_4.jpeg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Bandolera Eva-01</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top" src="assets/img/destacados_5.jpeg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Gen'ei Ryodan Tee</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top" src="assets/img/destacados_6.jpeg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Hisoka Tee</h5>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
 
-  </div>
-  <br>
-  <div class="seccionmedio">
-    <h1 style="text-align: center ;">Novedades</h1>
-    <br>
-    <div class="container ">
 
-      <div class="row">
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top card_color" src="assets/img/Poleras sin fondo/AKIRA sin fondo1.png"
-              alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Akira Tee</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top card_color" src="assets/img/Poleras sin fondo/Chrollo Lucifer sin fondo.png"
-              alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Chrollo Lucifer Tee</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top card_color" src="assets/img/JUNJI sin fondo figma.png" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Junji Ito Tee</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <br>
-    <br>
-
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top card_color" src="assets/img/poleron Dragonball.png" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Polerón Dragon Ball</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top card_color" src="assets/img/Bandolera EVA-01.png" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Bandolera EVA-01</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top card_color" src="assets/img/polerón Eren titán.png" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Polerón Eren Titán</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <br>
 	
+
     <!--Inicio Footer-->
     <footer class="escritorio">
         <div class="logo footer_bloques">

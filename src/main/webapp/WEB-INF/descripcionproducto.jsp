@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>    
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %> 
 <!DOCTYPE html>
 <html lang="es">
 
@@ -19,9 +19,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Black Domino Atelier</title>
+    <title>Descripción producto</title>
     <link rel="stylesheet" href="assets/css/navbarYfooter.css">
-    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/descripcionproducto.css">
 </head>
 
 <body>
@@ -123,165 +123,156 @@
     </nav>
 
     <!-- Esto es el fin del navbar-->
+	 <div class="row align-items-center">
+    <div class="col">
+      <img id="imagenproducto" src="/assets/img/Poleras sin fondo/AKIRA sin fondo1.png" alt="foto">
+    </div>
+    <div class="col">
+      <!-- *TEXTO -->
+      <div class="texto">
+        <h1 class="textleft destacado">Akira Tee</h1>
+        <h4 class="textleft">$10.000 CLP</h4>
+        <h5 class="textleft">Descripción</h5>
+        <p class="textleft">Polera negra talla a elección, estampada a través de los métodos artesanales
+          serigrafía.
+        <p>Manga larga +$3.000 CLP</p>
+        <p>Tallas 2XL - 3XL: +$2000 CLP</p>
 
-	<br>
-  <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active" data-bs-interval="10000">
-        <img src="assets/img/slider01img.jpg" class="d-block w-100" alt="...">
+        </p>
       </div>
-      <div class="carousel-item" data-bs-interval="2000">
-        <img src="assets/img/slider02img.jpg" class="d-block w-100" alt="...">
+
+      <!-- * SELECTOR POLERA -->
+      <div class="texto">
+        <h4 class="textleft">Tipo polera</h4>
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Seleccion el tipo de polera</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+      <br>
+      <!-- * SELECTOR TALLA -->
+      <div class="texto">
+        <h4 class="textleft">Talla</h4>
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Seleccion su talla</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+      <br><br>
+
+      <!-- *CONTADOR -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+      <!-- *DIV QUE CONTIENE CONTADOR Y BUTTON -->
+      <div id="contadorYbutton">
+        <div class="number-input texto">
+          <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+          <input class="quantity" id="bordecontador" min="1" name="quantity" value="1" type="number">
+          <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+        </div>
+
+        <!-- * BOTON AÑADIR AL CARRO -->
+        <div>
+          <a href="/productoscarrito"><button id="carroboton">Añadir al carro</button></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <br><br><br><br><br>
+  <!-- *SECCIÓN DESTACADOS -->
+  <h3 class="destacado text-center">También te puede interesar</h3>
+
+  <!-- *CARRUSEL -->
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class=" flexdisplay">
+          <div class="text-center">
+            <img class="carruselimg d-block" src="assets/img/Poleras sin fondo/AKIRA sin fondo1.png" alt="foto">
+            <h3 class="destacado">Akira</h3>
+            <h5>$10.000 CLP</h5>
+            <button id="carroboton">Ver opciones</button>
+          </div>
+          <div class="text-center">
+            <img class="carruselimg d-block" src="assets/img/Bandolera EVA-01.png" alt="foto">
+            <h3 class="destacado">Eva</h3>
+            <h5>$10.000 CLP</h5>
+            <button id="carroboton">Ver opciones</button>
+          </div>
+          <div class="text-center">
+            <img class="carruselimg d-block" src="assets/img/Poleras sin fondo/Chrollo Lucifer sin fondo.png"
+              alt="foto">
+            <h3 class="destacado">Chrollo Lucifer</h3>
+            <h5>$10.000 CLP</h5>
+            <button id="carroboton">Ver opciones</button>
+          </div>
+
+        </div>
       </div>
       <div class="carousel-item">
-        <img src="assets/img/slider03img.jpg" class="d-block w-100" alt="...">
+        <div class="flexdisplay">
+          <div class="text-center">
+            <img class="carruselimg d-block" src="assets/img/JUNJI sin fondo figma.png" alt="foto">
+            <h3 class="destacado">Junji</h3>
+            <h5>$10.000 CLP</h5>
+            <button id="carroboton">Ver opciones</button>
+          </div>
+          <div class="text-center">
+            <img class="carruselimg d-block" src="assets/img/poleron Dragonball.png" alt="foto">
+            <h3 class="destacado">Dragonball</h3>
+            <h5>$10.000 CLP</h5>
+            <button id="carroboton">Ver opciones</button>
+          </div>
+          <div class="text-center">
+            <img class="carruselimg d-block" src="assets/img/polerón Eren titán.png" alt="foto">
+            <h3 class="destacado">Eren</h3>
+            <h5>$10.000 CLP</h5>
+            <button id="carroboton">Ver opciones</button>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="flexdisplay">
+          <div class="text-center">
+            <img class="carruselimg d-block" src="assets/img/Bandolera EVA-01.png" alt="foto">
+            <h3 class="destacado">Eva</h3>
+            <h5>$10.000 CLP</h5>
+            <button id="carroboton">Ver opciones</button>
+          </div>
+          <div class="text-center">
+            <img class="carruselimg d-block" src="assets/img/JUNJI sin fondo figma.png" alt="foto">
+            <h3 class="destacado">Junji</h3>
+            <h5>$10.000 CLP</h5>
+            <button id="carroboton">Ver opciones</button>
+          </div>
+          <div class="text-center">
+            <img class="carruselimg d-block" src="assets/img/polerón Eren titán.png" alt="foto">
+            <h3 class="destacado">Eren</h3>
+            <h5>$10.000 CLP</h5>
+            <button id="carroboton">Ver opciones</button>
+          </div>
+        </div>
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-  <br>
-  <div class="seccionmedio">
-    <h1>Destacados</h1>
-    <br>
-    <div class="container ">
 
-      <div class="row">
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top" src="assets/img/destacados_1.jpeg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Totebag Eva-01</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top" src="assets/img/destacados_2.jpeg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Bandolera Akira</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top" src="assets/img/destacados_3.jpeg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Polerón Misato Eva-01</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <br>
-    <br>
 
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top" src="assets/img/destacados_4.jpeg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Bandolera Eva-01</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top" src="assets/img/destacados_5.jpeg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Gen'ei Ryodan Tee</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top" src="assets/img/destacados_6.jpeg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Hisoka Tee</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <br><br><br><br>
 
-  </div>
-  <br>
-  <div class="seccionmedio">
-    <h1 style="text-align: center ;">Novedades</h1>
-    <br>
-    <div class="container ">
-
-      <div class="row">
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top card_color" src="assets/img/Poleras sin fondo/AKIRA sin fondo1.png"
-              alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Akira Tee</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top card_color" src="assets/img/Poleras sin fondo/Chrollo Lucifer sin fondo.png"
-              alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Chrollo Lucifer Tee</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top card_color" src="assets/img/JUNJI sin fondo figma.png" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Junji Ito Tee</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <br>
-    <br>
-
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top card_color" src="assets/img/poleron Dragonball.png" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Polerón Dragon Ball</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top card_color" src="assets/img/Bandolera EVA-01.png" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Bandolera EVA-01</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top card_color" src="assets/img/polerón Eren titán.png" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Polerón Eren Titán</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <br>
-	
     <!--Inicio Footer-->
     <footer class="escritorio">
         <div class="logo footer_bloques">
