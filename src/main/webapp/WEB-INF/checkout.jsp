@@ -137,15 +137,15 @@
             <div class="row">
               <h5 style="text-align:left; margin-left: 1%; color: #92478C;" class="card-title">Contacto</h5>
               <div class="col-6">
-               <form method="post">
+               <form method="post" action="/revisionpedido">
                   <div class="form-group text-start">
                     <label for="text-email" style="margin-bottom: 0.5rem;">E-mail</label>
-                    <input type="text" class="form-control" id="text-email" placeholder="Ingrese E-mail" style="margin-top:0.5rem; margin-bottom: 0.5rem;     color: white;
+                    <input type="email" name="correo" class="form-control" id="text-email" placeholder="Ingrese E-mail" style="margin-top:0.5rem; margin-bottom: 0.5rem;     color: white;
     background: transparent;">
                   </div>
                   <div class="form-group text-start">
                     <label for="text-rut" style="margin-bottom: 0.5rem;">Rut</label>
-                    <input type="text" class="form-control" id="text-rut" placeholder="Ingrese Rut" style="margin-top:0.5rem; margin-bottom: 0.5rem;     color: white;
+                    <input type="text" name="rut" class="form-control" id="text-rut" placeholder="Ingrese Rut" style="margin-top:0.5rem; margin-bottom: 0.5rem;     color: white;
     background: transparent;">
                   </div>
                 
@@ -154,7 +154,7 @@
                 <!--  -->
                   <div class="form-group text-start">
                     <label for="text-telefono" style="margin-bottom: 0.5rem;">Teléfono</label>
-                    <input type="text" class="form-control" id="text-telefono" placeholder="Ingrese Teléfono" style="margin-top:0.5rem; margin-bottom: 0.5rem;     color: white;
+                    <input type="text" name="telefono" class="form-control" id="text-telefono" placeholder="Ingrese Teléfono" style="margin-top:0.5rem; margin-bottom: 0.5rem;     color: white;
     background: transparent;">
                   </div>
              
@@ -167,20 +167,21 @@
                
                   <div class="form-group text-start">
                     <label for="text-nombre" style="margin-bottom: 0.5rem; ">Nombre</label>
-                    <input type="text" class="form-control" id="text-nombre" placeholder="Ingrese Nombre" style="margin-top:0.5rem; margin-bottom: 0.5rem;     color: white;
+                    <input type="text" name="nombre" class="form-control" id="text-nombre" placeholder="Ingrese Nombre" style="margin-top:0.5rem; margin-bottom: 0.5rem;     color: white;
     background: transparent;">
                   </div>
                   <div class="form-group text-start">
                     <label for="text-direccion" style="margin-bottom: 0.5rem;">Dirección</label>
-                    <input type="text" class="form-control" id="text-direccion" placeholder="Ingrese Dirección" style="margin-top:0.5rem; margin-bottom: 0.5rem;     color: white;
+                    <input type="text" name="direccion" class="form-control" id="text-direccion" placeholder="Ingrese Dirección" style="margin-top:0.5rem; margin-bottom: 0.5rem;     color: white;
     background: transparent;">
                   </div>
                   <div class="text-start">
-                    <label class="text-start" for="form-select" style="margin-bottom: 0.5rem;">Región</label>
-                    <select class="form-select" aria-label="Default select example"
+                   <label for="form-select" style="margin-bottom: 0.5rem;">Región</label>
+                    <select class="form-select" aria-label="lista de regiones" name="regionSeleccionada" id="regionSeleccionada"
                       style="margin-top:0.5rem; margin-bottom: 0.5rem; width: 100%;">
                       <option selected>Seleccione Región</option>
-                      <option value="1">One</option>
+                      <c:forEach var="region" items="${listaSelRegion}">
+                      <option value="${region.id}">${region.region}</option></c:forEach>
                     </select>
                   </div>
                   <div class="form-check text-start">
@@ -204,11 +205,12 @@
     background: transparent;">
                   </div>
                   <div class="text-start">
-                    <label for="form-select " style="margin-bottom: 0.5rem;">Comuna</label>
-                    <select class="form-select" aria-label="Default select example"
-                      style="margin-top:0.5rem; margin-bottom: 0.5rem;  width: 100%;">
+                   <label for="form-select" style="margin-bottom: 0.5rem;">Comuna</label>
+                    <select class="form-select" aria-label="lista de comunas" name="comunaSeleccionada" id="comunaSeleccionada"
+                      style="margin-top:0.5rem; margin-bottom: 0.5rem; width: 100%;">
                       <option selected>Seleccione Comuna</option>
-                      <option value="1">One</option>
+                      <c:forEach var="comuna" items="${listaSelComuna}">
+                      <option value="${comuna.id}">${comuna.comuna}</option></c:forEach>
                     </select>
                   </div>
                
@@ -232,17 +234,16 @@
                   </div>
                   <div class="text-start">
                     <label for="form-select" style="margin-bottom: 0.5rem;">Región</label>
-                    <select class="form-select" aria-label="Default select example"
-                      style="margin-top:0.5rem; margin-bottom: 0.5rem;  width: 100%;">
+                    <select class="form-select" aria-label="lista de regiones" name="regionSeleccionada" id="regionSeleccionada"
+                      style="margin-top:0.5rem; margin-bottom: 0.5rem; width: 100%;">
                       <option selected>Seleccione Región</option>
-                      <option value="1">One</option>
+                      <c:forEach var="region" items="${listaSelRegion}">
+                      <option value="${region.id}">${region.region}</option></c:forEach>
                     </select>
                   </div>
-              
-
               </div>
               <div class="col-6">
-                <form>
+            
                   <div class="form-group text-start">
                     <label for="formGroupExampleInput" style="margin-bottom: 0.5rem;">Apellidos</label>
                     <input type="text" class="form-control" id="text-apellidos" placeholder="Ingrese Apellidos" style="margin-top:0.5rem; margin-bottom: 0.5rem;    color: white;
@@ -255,13 +256,14 @@
                   </div>
                   <div class="text-start">
                     <label for="form-select" style="margin-bottom: 0.5rem;">Comuna</label>
-                    <select class="form-select" aria-label="Default select example"
+                    <select class="form-select" aria-label="lista de comunas" name="comunaSeleccionada" id="comunaSeleccionada"
                       style="margin-top:0.5rem; margin-bottom: 0.5rem; width: 100%;">
                       <option selected>Seleccione Comuna</option>
-                      <option value="1">One</option>
+                      <c:forEach var="comuna" items="${listaSelComuna}">
+                      <option value="${comuna.id}">${comuna.comuna}</option></c:forEach>
                     </select>
                   </div>
-                </form>
+              
               </div>
             </div>
             <hr>
@@ -274,7 +276,7 @@
                     instrucciones especiales para su pedido</label>
                   <textarea class="form-control" style="    color: white;
     background: transparent;" id="exampleFormControlTextarea1" rows="3"></textarea>
-    </form>
+  
                 </div>
               </div>
             </div>
@@ -311,8 +313,8 @@
 
 
               <br>
-              <button type="submit" id="revisarcompra-button" onclick="location.href = '/revisionpedido';">Revisar la
-                compra</button>
+              <button type="submit" id="revisarcompra-button">Revisar la
+                compra</button></form>
               <br>
               <button id="editarcarrito-button" onclick="location.href = '/productoscarrito';">Editar
                 carrito</button>

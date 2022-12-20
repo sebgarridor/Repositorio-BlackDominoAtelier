@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %> 
 <!DOCTYPE html>
 <html lang="es">
 
@@ -19,9 +19,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Revisión</title>
+    <title>Black Domino Atelier</title>
     <link rel="stylesheet" href="assets/css/navbarYfooter.css">
-    <link rel="stylesheet" href="assets/css/revisionpedido.css">
+    
 </head>
 
 <body>
@@ -123,108 +123,100 @@
     </nav>
 
     <!-- Esto es el fin del navbar-->
-	
- <br><br><br><br><br>
-    <div class="container" id="divcentral">
-        <div class="container" id="estadocompra">
-            <h4><span>Carro > Proceso de pago ></span> <strong>Revisión del pedido > </strong> Éxito </h4>
-
+	<div class="seccionmedio">
+    <h1 class="encabezado">Coleccion Bungo Stray Dogs</h1>
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-4 my-5">
+          <div class="card">
+            <img class="card-img-top card_color" src="assets/img/Poleras sin fondo/Dazai Osamu SF.png"
+              alt="Card image cap">
+          </div>
+          <div class="product_card_body my-3">
+            <h5 class="card-title product_title">Dazai Osamu Tee</h5>
+            <h6 class="product_price my-2">$28.990</h6>
+            <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
+          </div>
         </div>
-        <div class="card" style="width: 100; margin-top: 3rem; margin-bottom: 4rem; padding: 2rem;">
-            <div class="card-body">
-                <h4 style="text-align: left; color: #92478C; margin-bottom: 2rem;">Resumen de tu compra</h4>
-                <div class="container text-center">
-                    <div class="row" id="fila1">
-                        <div class="col">
-                            <p>Producto</p>
-                        </div>
-                        <div class="col">
-
-                        </div>
-                        <div class="col">
-                            <p>Cantidad</p>
-                        </div>
-                        <div class="col">
-                            <p>Precio unitario</p>
-                        </div>
-                        <div class="col">
-                            <p>Subtotal</p>
-                        </div>
-
-                    </div>
-                    <div class="row" id="fila2">
-                        <div class="col">
-                            <img src="/assets/img/Poleras sin fondo/AKIRA sin fondo1.png" alt="Card image cap"
-                                style="width: 5rem;">
-                        </div>
-                        <div class="col">
-                            <p style="margin-bottom: 0.05rem; margin-top: 1rem; color:#92478C ;">Akira Tee</p>
-                            <p style="margin-bottom: 0.05rem;">Talla: M</p>
-                            <p>Manga corta</p>
-
-                        </div>
-                        <div class="col">
-                            <p style="margin-top:2.5rem;">1</p>
-                        </div>
-                        <div class="col">
-                            <p style="margin-top:2.5rem;">$10.000CLP</p>
-                        </div>
-                        <div class="col">
-                            <p style="margin-top:2.5rem;">$10.000CLP</p>
-                        </div>
-                    </div>
-                    <div class="row" id="fila2">
-                        <div class="col">
-                            <img src="/assets/img/Polerones polo/Poleron Naruto.png" alt="Card image cap"
-                                style="width: 5rem;">
-                        </div>
-                        <div class="col">
-                            <p style="margin-bottom: 0.05rem; margin-top: 1rem; color:#92478C ;">Polerón polo Naruto</p>
-                            <p style="margin-bottom: 0.05rem;">Talla: XL</p>
-
-
-                        </div>
-                        <div class="col">
-                            <p style="margin-top:2.5rem;">2</p>
-                        </div>
-                        <div class="col">
-                            <p style="margin-top:2.5rem;">$10.000CLP</p>
-                        </div>
-                        <div class="col">
-                            <p style="margin-top:2.5rem;">$20.000CLP</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <hr>
-            <div class="container" id="envio" style="text-align: left;">
-                <h4 style="text-align: left; color: #92478C; margin-bottom: 2rem;">Envío</h4>
-                <p>Dirección:</p>
-                <p>Ciudad:</p>
-                <p>Comuna:</p>
-                <p>Región:</p>
-                <p>Sucursal <small><i>(opcional)</i></small>:</p>
-            </div>
-            
-            <hr>
-            <div class="container" id="totalcompra">
-                <p>Total productos: $00.000CLP</p>
-                <p>Total envío: $00.000CLP</p>
-                <h4>Total compra: $30.000CLP</h4>
-                <br>
-                <button type="submit" id="pagar-button" onclick="location.href = '/exitotarjeta';">Pagar</button>
-            </div>
-            <hr>
-
-
+        <div class="col-sm-12 col-md-6 col-lg-4 my-5">
+          <div class="card">
+            <img class="card-img-top card_color" src="assets/img/Hoodies/polerón Canguro Dazai Osamu.png"
+              alt="Card image cap">
+          </div>
+          <div class="product_card_body my-3">
+            <h5 class="card-title product_title">Dazai Osamu Hoodie</h5>
+            <h6 class="product_price my-2">$28.990</h6>
+            <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
+          </div>
         </div>
-
-
+        <div class="col-sm-12 col-md-6 col-lg-4 my-5">
+          <div class="card">
+            <img class="card-img-top card_color" src="assets/img/Polerones polo/Poleron Dazai Osamu.png"
+              alt="Card image cap">
+          </div>
+          <div class="product_card_body my-3">
+            <h5 class="card-title product_title">Dazai Osamu Crewneck</h5>
+            <h6 class="product_price my-2">$28.990</h6>
+            <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
+          </div>
+        </div>
+        
+      </div>
     </div>
 
+
+    <br>
+    <!--Inicio Footer-->
+    <footer class="escritorio">
+      <div class="logo footer_bloques">
+        <img class="imgconfig" src="./assets/img/Symbol_White_135px.png" alt="">
+        <div class="rrss">
+          <a href=""><img class="imgconfig" src="./assets/img/iconmail.png" alt=""></a>
+          <a href="https://www.instagram.com/blackdomino.atelier/"><img class="imgconfig"
+              src="./assets/img/instagramIcon.png" alt="ig logo"></a>
+          <a href="https://www.facebook.com/people/Blacky-Domino/100079510762644/"><img class="imgconfig"
+              src="./assets/img/facebookicon.png" alt="fb logo"></a>
+        </div>
+      </div>
+
+      <div class="footer_bloques">
+        <h5 class="FT">Sobre Nosotros</h5>
+        <p>Las mejores serigrafías <br> desde 2013.</p>
+      </div>
+      <div class="footer_bloques">
+        <h5>Ayuda</h5>
+        <p>
+          <a href="/preguntasfrecuentes.html">Preguntas frecuentes</a><br>
+          <a href="/comocomprar.html">Cómo comprar</a><br>
+          <a href="/Tallaje.html">Tallaje</a><br>
+        </p>
+      </div>
+      <div class="footer_bloques">
+        <h5 class="FT">Horario</h5>
+        <p><b>Lunes a Viernes</b> <br> 11:30 hrs.<br>
+          <b>Sábado</b> <br> 11:00 a 16:00 hrs.
+        </p>
+      </div>
+      <div class="footer_bloques">
+        <h5 class="FT">Productos</h5>
+        <p>
+          <a href="/Bandoleras.html"> Bandoleras</a><br>
+          <a href="/Totebag.html"> Totebags</a><br>
+          <a href="/poleras.html"> Poleras</a><br>
+          <a href="polerones.html"> Polerones</a><br>
+          <a href="/colecciones.html"> Colecciones</a>
+        </p>
+      </div>
+      <div class="footer_bloques">
+        <img class="imgconfig" src="./assets/img/webpay.png" alt="webpay"> <br>
+        <img class="imgconfig" src="./assets/img/khipu.png" alt="khipu">
+      </div>
+    </footer>
+    <div>
+      <h6 class="noti">©2022 Squirr3l - Todos los derechos reservados </h6>
     </div>
-	
+
     <!--Inicio Footer-->
     <footer class="escritorio">
         <div class="logo footer_bloques">
@@ -245,9 +237,9 @@
         <div class="footer_bloques">
             <h5>Ayuda</h5>
             <p>
-                <a href="/preguntasfrecuentes.html">Preguntas frecuentes</a><br>
-                <a href="/comocomprar.html">Cómo comprar</a><br>
-                <a href="/Tallaje.html">Tallaje</a><br>
+                <a href="/preguntasfrecuentes">Preguntas frecuentes</a><br>
+                <a href="/comocomprar">Cómo comprar</a><br>
+                <a href="/tallaje">Tallaje</a><br>
             </p>
         </div>
         <div class="footer_bloques">
@@ -259,11 +251,11 @@
         <div class="footer_bloques">
             <h5 class="FT">Productos</h5>
             <p>
-                <a href="/Bandoleras.html"> Bandoleras</a><br>
-                <a href="/Totebag.html"> Totebags</a><br>
-                <a href="/poleras.html"> Poleras</a><br>
-                <a href="polerones.html"> Polerones</a><br>
-                <a href="/colecciones.html"> Colecciones</a>
+                <a href="/bandoleras"> Bandoleras</a><br>
+                <a href="/totebag"> Totebags</a><br>
+                <a href="/poleras"> Poleras</a><br>
+                <a href="polerones"> Polerones</a><br>
+                <a href="/colecciones"> Colecciones</a>
             </p>
         </div>
         <div class="footer_bloques">
@@ -274,7 +266,6 @@
     <div>
         <h6 class="noti">©2022 Squirr3l - Todos los derechos reservados </h6>
     </div>
-
     <!--Fin Footer-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
