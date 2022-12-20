@@ -95,45 +95,142 @@ public class ProductoController {
 		return "colecciones.jsp";
 	}
 	
-	@GetMapping("/colecciones_akira")
+	@GetMapping("/colecciones/akira")
 	// http://localhost:8080/colecciones_akira
 	public String mostrarColeccionAkira() {
 		return "colecciones_akira.jsp";
 	}
 	
-	@GetMapping("/colecciones_berserk")
+	@GetMapping("/colecciones/berserk")
 	// http://localhost:8080/colecciones_berserk
 	public String mostrarColeccionBerserk() {
 		return "colecciones_berserk.jsp";
 	}
 	
-	@GetMapping("/colecciones_bleach")
+	@GetMapping("/colecciones/bleach")
 	// http://localhost:8080/colecciones_bleach
 	public String mostrarColeccionBleach() {
 		return "colecciones_bleach.jsp";
 	}
 	
-	@GetMapping("/colecciones_bungo")
-	// http://localhost:8080/colecciones_bungo
+	@GetMapping("/colecciones/bungo")
+	// http://localhost:8080/colecciones/bungo
 	public String mostrarColeccionBungo() {
 		return "colecciones_bungo.jsp";
 	}
 	
-	@GetMapping("/colecciones_chainsawman")
-	// http://localhost:8080/colecciones_chainsawman
+	@GetMapping("/colecciones/chainsawman")
+	// http://localhost:8080/colecciones/chainsawman
 	public String mostrarColeccionChainsaw() {
 		return "colecciones_chainsawman.jsp";
 	}
 	
-	@GetMapping("/colecciones_dedede")
-	// http://localhost:8080/colecciones_dedede
+	@GetMapping("/colecciones/dedede")
+	// http://localhost:8080/colecciones/dedede
 	public String mostrarColeccionDedede() {
 		return "colecciones_dedede.jsp";
 	}
 	
-	@GetMapping("/colecciones_dragonballz")
-	// http://localhost:8080/colecciones_dedede
+	@GetMapping("/colecciones/dragonballz")
+	// http://localhost:8080/colecciones/dedede
 	public String mostrarColeccionDragon() {
 		return "colecciones_dedede.jsp";
 	}
+	
+	@GetMapping("/colecciones/evangelion")
+	// http://localhost:8080/colecciones/evangelion
+	public String mostrarColeccionEvangelion() {
+		return "colecciones_evangelion.jsp";
+	}
+	
+	@GetMapping("/colecciones/fireforce")
+	// http://localhost:8080/colecciones/fireforce
+	public String mostrarColeccionfireforce() {
+		return "colecciones_fireforce.jsp";
+	}
+	
+	@GetMapping("/colecciones/fma")
+	// http://localhost:8080/colecciones/fma
+	public String mostrarColeccionfma() {
+		return "colecciones_fma.jsp";
+	}
+	
+	@GetMapping("/colecciones/hxh")
+	// http://localhost:8080/colecciones/hxh
+	public String mostrarColeccionhxh() {
+		return "colecciones_hxh.jsp";
+	}
+	
+	@GetMapping("/colecciones/jujutsukaizen")
+	// http://localhost:8080/colecciones/jujutsukaizen
+	public String mostrarColeccionJujutsukaizen() {
+		return "colecciones_jujustsukaizen.jsp";
+	}
+	
+	@GetMapping("/colecciones/junbjiito")
+	// http://localhost:8080/colecciones/jujutsukaizen
+	public String mostrarColeccionJunjiito() {
+		return "colecciones_junjiito.jsp";
+	}
+	
+	@GetMapping("/colecciones/kimetsu")
+	// http://localhost:8080/colecciones/kimestu
+	public String mostrarColeccionKimetsu() {
+		return "colecciones_kimetsu.jsp";
+	}
+	
+	@GetMapping("/colecciones/mieruko")
+	// http://localhost:8080/colecciones/jujutsukaizen
+	public String mostrarColeccionMieruko() {
+		return "colecciones_mieruko.jsp";
+	}
+	
+	@GetMapping("/colecciones/mobpsycho")
+	// http://localhost:8080/colecciones/jujutsukaizen
+	public String mostrarColeccionMobpsycho() {
+		return "colecciones_mobpsycho.jsp";
+	}
+	
+	@GetMapping("/colecciones/mydressupdarling")
+	// http://localhost:8080/colecciones/mydressupdarling
+	public String mostrarColeccionMydressupdarling() {
+		return "colecciones_mydressupdarling.jsp";
+	}
+	
+	@GetMapping("/colecciones/naruto")
+	// http://localhost:8080/colecciones/naruto
+	public String mostrarColeccionNaruto() {
+		return "colecciones_naruto.jsp";
+	}
+	
+	@GetMapping("/colecciones/oyasumipunpun")
+	// http://localhost:8080/colecciones/oyasumipunpun
+	public String mostrarColeccionpunpun() {
+		return "colecciones_punpun.jsp";
+	}
+	
+	@GetMapping("/colecciones/sakura")
+	// http://localhost:8080/colecciones/sakura
+	public String mostrarColeccionSakura() {
+		return "colecciones_sakura.jsp";
+	}
+	
+	@GetMapping("/colecciones/shingeki")
+	// http://localhost:8080/colecciones/shingeki
+	public String mostrarColeccionShingeki() {
+		return "colecciones_shingeki.jsp";
+	}
+	
+	@GetMapping("/colecciones/souleater")
+	// http://localhost:8080/colecciones/souleater
+	public String mostrarColeccionSouleater() {
+		return "colecciones_souleater.jsp";
+	}
+	
+	@GetMapping("/colecciones/tokyoghoul")
+	// http://localhost:8080/colecciones/tokyoghoul
+	public String mostrarColeccionTokyoghoul() {
+		return "colecciones_tokyoghoul.jsp";
+	}
+	
 }

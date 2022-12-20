@@ -1,12 +1,17 @@
 	package cl.blackdomino.web.models;
 	
-	import javax.persistence.CascadeType;
+	import java.util.List;
+
+import javax.persistence.CascadeType;
 	import javax.persistence.Entity;
 	import javax.persistence.FetchType;
 	import javax.persistence.GeneratedValue;
 	import javax.persistence.GenerationType;
 	import javax.persistence.Id;
-	import javax.persistence.OneToOne;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToOne;
 	import javax.persistence.Table;
 	import javax.validation.constraints.NotNull;
 	
@@ -35,13 +40,16 @@
 	private String direccion;
 
 	@NotNull
-	private String comuna;
-
-	@NotNull
 	private String ciudad;
 
-	@NotNull
-	private String region;
+	@JsonIgnore
+	@ManyToMany(fetch = FetchType.LAZY)
+	@JoinTable(
+			name="direcciones_comunas", //nombre tabla
+			joinColumns= @JoinColumn(name="direccion_id"),
+			inverseJoinColumns= @JoinColumn(name="comuna_id")
+			)
+	private List<Comuna> comunas;
 
 	private String departamento;
 
