@@ -16,8 +16,10 @@ import cl.blackdomino.web.models.Direccion;
 import cl.blackdomino.web.models.Region;
 import cl.blackdomino.web.models.Usuario;
 import cl.blackdomino.web.services.ComunaServiceImpl;
+import cl.blackdomino.web.services.DireccionServiceImpl;
 import cl.blackdomino.web.services.ProductoServiceImpl;
 import cl.blackdomino.web.services.RegionServiceImpl;
+import cl.blackdomino.web.services.UsuarioServiceImpl;
 
 @Controller
 @RequestMapping("")
@@ -30,6 +32,12 @@ public class VentaController {
 
 	@Autowired
 	RegionServiceImpl regionServiceImpl;
+	
+	@Autowired
+	DireccionServiceImpl direccionServiceImpl;
+	
+	@Autowired
+	UsuarioServiceImpl usuarioServiceImpl;
 
 	@GetMapping("")
 	public String compraProducto() {
@@ -51,51 +59,43 @@ public class VentaController {
 	@GetMapping("/checkout")
 	public String mostrarChekout(Model model) {
 		// lista para el selector
-		List<Comuna> listaSelComuna = comunaServiceImpl.obtenerComunas();
-		model.addAttribute("listaSelComuna", listaSelComuna);
 		List<Region> listaSelRegion = regionServiceImpl.obtenerRegiones();
 		model.addAttribute("listaSelRegion", listaSelRegion);
+		List<Comuna> listaSelComuna = comunaServiceImpl.obtenerComunas();
+		model.addAttribute("listaSelComuna", listaSelComuna);
+		
+		model.addAttribute("listaSelComuna", listaSelComuna);
+		model.addAttribute("listaSelRegion", listaSelRegion);
+		
 		return "checkout.jsp";
 	}
 
 	@PostMapping("/checkout")
-	public String checkout(@RequestParam("rut") String rut, @RequestParam("correo") String correo,
-			@RequestParam("telefono") Integer telefono, @RequestParam("nombre") String nombre,
-			@RequestParam("apellido") String apellido, @RequestParam("direccion") Direccion direccion,
-			@RequestParam("ciudad") String ciudad, @RequestParam("region") String region,
-			@RequestParam("comuna") String comuna, Model model) throws IOException {
+	public String checkout(@RequestParam("rut") String rut, 
+			@RequestParam("correo") String correo,
+			@RequestParam("telefono") Integer telefono, 
+			@RequestParam("nombre") String nombre,
+			@RequestParam("apellido") String apellido,
+			@RequestParam("ciudad") String ciudad,
+			@RequestParam("region") Long id_region,
+			@RequestParam("comuna") Long id_comuna,
+			Model model) {
+		
 		Usuario usuario = new Usuario();
 		usuario.setNombre(nombre);
 		usuario.setApellidos(apellido);
 		usuario.setCorreo(correo);
 		usuario.setTelefono(telefono);
 		usuario.setRut(rut);
-		usuario.setDireccion(direccion);
-		return "checkout.jsp";
+		usuarioServiceImpl.guardarUsuario(usuario);
 		
-	}
-	
-	@PostMapping("/checkout1")
-	public String comuna(@RequestParam("comunaSeleccionada") Long id, Model model) {
-		List<Comuna> listaComunas= new ArrayList<Comuna>();
-		Comuna comuna = comunaServiceImpl.obtenerComuna(id);
-		listaComunas.add(comuna);
-		model.addAttribute("comunas", listaComunas);
-		List<Comuna> listaSelComuna= comunaServiceImpl.obtenerComunas();
-		model.addAttribute("listaSelComuna", listaSelComuna);
-		return "";
-	}
-	
-	@PostMapping("/checkout2")
-	public String region(@RequestParam("regionSeleccionada") Long id, Model model) {
-		List<Region> listaRegiones= new ArrayList<Region>();
-		Region region = regionServiceImpl.obtenerRegion(id);
-		listaRegiones.add(region);
-		model.addAttribute("regiones", listaRegiones);
-		List<Region> listaSelRegion= regionServiceImpl.obtenerRegiones();
-		model.addAttribute("listaSelComuna", listaSelRegion);
-		return "";
-	}
+		Comuna comuna = comunaServiceImpl.obtenerComuna(id_comuna);
+		Direccion direccion = new Direccion();
+		direccion.setCiudad(ciudad);
+		direccion.setComuna(comuna);
+		direccionServiceImpl.guardarDireccion(direccion);	
+			return "checkout.jsp";
+		 }
 
 	@GetMapping("/descripcionproducto")
 	public String mostrarDescProd() {
