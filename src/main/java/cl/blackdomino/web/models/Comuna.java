@@ -9,8 +9,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
@@ -39,7 +39,7 @@ public class Comuna {
 	private Region region;
 	
 	@JsonIgnore
-	@ManyToMany(mappedBy = "comunas",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+	@OneToMany(mappedBy = "comuna",cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private List<Direccion> direccion;
 	
 	
