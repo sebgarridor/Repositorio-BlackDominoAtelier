@@ -22,6 +22,7 @@
     <title>Descripción producto</title>
     <link rel="stylesheet" href="assets/css/navbarYfooter.css">
     <link rel="stylesheet" href="assets/css/descripcionproducto.css">
+    <!--  <link rel="stylesheet" href="assets/js/jquery.js">-->
 </head>
 
 <body>
@@ -142,24 +143,25 @@
       </div>
 
       <!-- * SELECTOR POLERA -->
+      <form action="/productoscarrito" method="post">
       <div class="texto">
         <h4 class="textleft">Tipo polera</h4>
-        <select class="form-select" aria-label="Default select example">
-          <option selected>Seleccion el tipo de polera</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
+        <select class="form-select" aria-label="lista de categorias" name="categoria">
+          <option selected>Seleccione el tipo de polera</option>
+          <c:forEach var="categoria" items="${listaSelCategoria}">
+		<option value="${categoria.id}">${categoria.producto}</option>
+		</c:forEach>
         </select>
       </div>
       <br>
       <!-- * SELECTOR TALLA -->
       <div class="texto">
         <h4 class="textleft">Talla</h4>
-        <select class="form-select" aria-label="Default select example">
-          <option selected>Seleccion su talla</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
+        <select class="form-select" aria-label="lista de tallas" name="tallaje">
+          <option selected>Seleccione la talla</option>
+          	<c:forEach var="tallaje" items="${listaSelTallaje}">
+			<option value="${tallaje.id}">${tallaje.talla}</option>
+			</c:forEach>
         </select>
       </div>
       <br><br>
@@ -170,15 +172,18 @@
         crossorigin="anonymous" />
       <!-- *DIV QUE CONTIENE CONTADOR Y BUTTON -->
       <div id="contadorYbutton">
-        <div class="number-input texto">
+        
+
+        <!-- * BOTON AÑADIR AL CARRO -->
+        <div>
+         <button type="submit" id="carroboton">Añadir al carro</button>
+          </form>
+          
+          <div class="number-input texto">
           <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
           <input class="quantity" id="bordecontador" min="1" name="quantity" value="1" type="number">
           <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
         </div>
-
-        <!-- * BOTON AÑADIR AL CARRO -->
-        <div>
-          <a href="/productoscarrito"><button id="carroboton">Añadir al carro</button></a>
         </div>
       </div>
 

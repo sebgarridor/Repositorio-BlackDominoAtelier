@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -28,7 +29,10 @@
 <title>Black Domino Atelier</title>
 <link rel="stylesheet" href="assets/css/navbarYfooter.css">
 <link rel="stylesheet" href="assets/css/checkout.css">
-<link rel="stylesheet" href="assets/js/jquery.js">
+<!--  <script src="jquery.js" type="text/javascript"> </script>-->
+
+
+
 </head>
 
 <body>
@@ -152,7 +156,7 @@
 							<h5 style="text-align: left; margin-left: 1%; color: #92478C;"
 								class="card-title">Contacto</h5>
 							<div class="col-6">
-									<form action="/revisionpedido" method="get">
+									<form action="/checkout" method="post">
 									<div class="form-group text-start">
 										<label for="text-email" style="margin-bottom: 0.5rem;">E-mail</label>
 										<input type="email" name="correo" class="form-control"
@@ -191,14 +195,14 @@
 								</div>
 								<div class="form-group text-start">
 									<label for="text-direccion" style="margin-bottom: 0.5rem;">Dirección</label>
-									<input type="text" name="direccion" class="form-control"
+									<input type="text" name="calle" class="form-control"
 										id="text-direccion" placeholder="Ingrese Dirección"
 										style="margin-top: 0.5rem; margin-bottom: 0.5rem; color: white; background: transparent;">
 								</div>
 								<div class="text-start">
 									<label for="form-select" style="margin-bottom: 0.5rem;">Región</label>
 									<select class="form-select" aria-label="lista de regiones"
-										name="regionSeleccionada" id="regionSeleccionada"
+										name="region" id="regionSeleccionada"
 										style="margin-top: 0.5rem; margin-bottom: 0.5rem; width: 100%;">
 										<option selected>Seleccione Región</option>
 										<c:forEach var="region" items="${listaSelRegion}">
@@ -206,107 +210,34 @@
 										</c:forEach>
 									</select>
 								</div>
-
-								<div class="form-check text-start">
-									<input class="form-check-input" type="checkbox" value=""
-										id="flexCheckDefault"> <label class="form-check-label"
-										for="flexCheckDefault"
-										style="font-size: 0.8rem; color: #6C757D;"> Dirección
-										de facturación igual a la de envío </label>
-								</div>
-
-
 							</div>
 							<div class="col-6">
 
 								<div class="form-group text-start">
 									<label for="text-apellidos" style="margin-bottom: 0.5rem;">Apellidos</label>
-									<input type="text" class="form-control" id="text-apellidos"
+									<input type="text" class="form-control" name="apellidos" id="text-apellidos"
 										placeholder="Ingrese Apellidos"
 										style="margin-top: 0.5rem; margin-bottom: 0.5rem; color: white; background: transparent;">
 								</div>
 								<div class="form-group text-start">
 									<label for="text-ciudad" style="margin-bottom: 0.5rem;">Ciudad</label>
-									<input type="text" class="form-control" id="text-ciudad"
+									<input type="text" class="form-control" name="ciudad" id="text-ciudad"
 										placeholder="Ingrese Ciudad"
 										style="margin-top: 0.5rem; margin-bottom: 0.5rem; color: white; background: transparent;">
 								</div>
 								<div class="text-start">
 									<label for="form-select" style="margin-bottom: 0.5rem;">Comuna</label>
 									<select class="form-select" aria-label="lista de comunas"
-										name="comunaSeleccionada" id="comunaSeleccionada"
+										 name="comuna" id="comunaSeleccionada"
 										style="margin-top: 0.5rem; margin-bottom: 0.5rem; width: 100%;">
 										<option selected>Seleccione Comuna</option>
-										<c:forEach var="comuna" items="${listaSelComuna}">
-											<option value="${comuna.id}">${comuna.comuna}</option>
-										</c:forEach>
+										
 									</select>
 								</div>
 
 							</div>
 						</div>
-						<hr>
-							<div class="row" id="facturacion">
-								<h5 style="text-align: left; margin-left: 1%; color: #92478C;"
-									class="card-title">Dirección de facturación</h5>
-								<div class="col-6">
-
-									<div class="form-group text-start">
-										<label for="formGroupExampleInput"
-											style="margin-bottom: 0.5rem;">Nombre</label> <input
-											type="text" class="form-control" id="text-nombre"
-											placeholder="Ingrese Nombre"
-											style="margin-top: 0.5rem; margin-bottom: 0.5rem; color: white; background: transparent;">
-									</div>
-									<div class="form-group text-start">
-										<label for="formGroupExampleInput2"
-											style="margin-bottom: 0.5rem;">Dirección</label> <input
-											type="text" class="form-control" id="text-direccion"
-											placeholder="Ingrese Dirección"
-											style="margin-top: 0.5rem; margin-bottom: 0.5rem; color: white; background: transparent;">
-									</div>
-									<div class="text-start">
-										<label for="form-select" style="margin-bottom: 0.5rem;">Región</label>
-										<select class="form-select" aria-label="lista de regiones"
-											name="regionSeleccionada" id="regionSeleccionada"
-											style="margin-top: 0.5rem; margin-bottom: 0.5rem; width: 100%;">
-											<option selected>Seleccione Región</option>
-											<c:forEach var="region" items="${listaSelRegion}">
-												<option value="${region.id}">${region.region}</option>
-											</c:forEach>
-										</select>
-									</div>
-								</div>
-								<div class="col-6">
-
-									<div class="form-group text-start">
-										<label for="formGroupExampleInput"
-											style="margin-bottom: 0.5rem;">Apellidos</label> <input
-											type="text" class="form-control" id="text-apellidos"
-											placeholder="Ingrese Apellidos"
-											style="margin-top: 0.5rem; margin-bottom: 0.5rem; color: white; background: transparent;">
-									</div>
-									<div class="form-group text-start">
-										<label for="formGroupExampleInput"
-											style="margin-bottom: 0.5rem;">Ciudad</label> <input
-											type="text" class="form-control" id="text-ciudad"
-											placeholder="Ingrese Ciudad"
-											style="margin-top: 0.5rem; margin-bottom: 0.5rem; color: white; background: transparent;">
-									</div>
-									<div class="text-start">
-										<label for="form-select" style="margin-bottom: 0.5rem;">Comuna</label>
-										<select class="form-select" aria-label="lista de comunas"
-											name="comunaSeleccionada" id="comunaSeleccionada"
-											style="margin-top: 0.5rem; margin-bottom: 0.5rem; width: 100%;">
-											<option selected>Seleccione Comuna</option>
-											<c:forEach var="comuna" items="${listaSelComuna}">
-												<option value="${comuna.id}">${comuna.comuna}</option>
-											</c:forEach>
-										</select>
-									</div>
-
-								</div>
-							</div>
+						
 							<hr>
 							<div class="row">
 								<h5 style="text-align: left; margin-left: 1%; color: #92478C;"
@@ -318,13 +249,14 @@
 											especiales para su pedido</label>
 										<textarea class="form-control"
 											style="color: white; background: transparent;"
-											id="exampleFormControlTextarea1" rows="3"></textarea>
+											id="exampleFormControlTextarea1" name="instrucciones" rows="3"></textarea>
 
 									</div>
 								</div>
 							</div>
-							<hr>
+							
 					</div>
+					
 
 				</div>
 				<div class="col-4">
@@ -432,10 +364,36 @@
 		<h6 class="noti">©2022 Squirr3l - Todos los derechos reservados</h6>
 	</div>
 	<!--Fin Footer-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.js" integrity="sha512-nO7wgHUoWPYGCNriyGzcFwPSF+bPDOR+NvtOYy2wMcWkrnCNPKBcFEkU80XIN14UVja0Gdnff9EmydyLlOL7mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
 		crossorigin="anonymous"></script>
-</body>
+		
+		<script>
+		$('select[name="region"]').on('change', function() {
+		    let regionId = $(this).val();
+		        $.ajax({
+		            method: "get",
+		            url: "obtenercomunas",
+		            dataType: 'json',
+		            data: { id : regionId },
+		            success: function (data) {
+		    
+		            	$("#comunaSeleccionada").find("option").remove();
+		            	$("#comunaSeleccionada").append('<option value="0">Seleccione Comuna</option>');  
+		           for (var i = 0; i < data.length; i++) {
+					
+					 $("#comunaSeleccionada").append('<option value='+data[i].id+'>'+data[i].comuna+'</option>');  
+				}
+		                
+		            }
+		        
+		      
+		        });
+		//cierre jquery
+		    });
 
+		   </script>		   
+</body>
 </html>
