@@ -16,8 +16,7 @@
 	
 	
 	import com.fasterxml.jackson.annotation.JsonIgnore;
-	import com.fasterxml.jackson.annotation.JsonManagedReference;
-	import com.fasterxml.jackson.annotation.JsonProperty;
+
 	
 	import lombok.AllArgsConstructor;
 	import lombok.Getter;
@@ -36,11 +35,7 @@
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) 
-	private Long id;
-
-	private String tipoVenta;
-	
-	private String regionEnvio;
+	private Long id;	
 	
 	private Integer costoEnvio;
 	
@@ -54,12 +49,16 @@
 	private DTE dte;
 
 	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name="medio_pago_id")
+	@JoinColumn(name="mediopago_id")
 	private MedioPago mediopago;
 
 	@ManyToOne(fetch=FetchType.EAGER)
 	@JoinColumn(name="estado_id")
 	private Estado estado;
+	
+	@ManyToOne(fetch=FetchType.EAGER)
+	@JoinColumn(name="envio_id")
+	private Envio envio;
 
 	//ManyToMany
 	@JsonIgnore

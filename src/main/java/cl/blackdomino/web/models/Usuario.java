@@ -18,7 +18,6 @@
 	import javax.persistence.PrePersist;
 	import javax.persistence.PreUpdate;
 	import javax.persistence.Table;
-	import javax.validation.constraints.NotNull;
 	
 	import org.springframework.format.annotation.DateTimeFormat;
 	
@@ -43,23 +42,23 @@
 	@GeneratedValue(strategy = GenerationType.IDENTITY) 
 	private Long id;
 	
-	@NotNull
+	
 	private String nombre;
 	
-	@NotNull
+	
 	private String apellidos;
 	
-	@NotNull
+	
 	private String rut;
 	
-	@NotNull
+	
 	private String correo;
 	
 
 	private String password;
 	
-	@NotNull
-	private Integer telefono;
+	
+	private String telefono;
 	
 	
 	//relación ManyToMany
@@ -76,7 +75,7 @@
 	@OneToMany(mappedBy = "usuario", cascade=CascadeType.ALL, fetch = FetchType.EAGER)
 	private List<Venta> venta;
 	
-	@NotNull
+	
 	@JsonIgnore
 	@OneToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="direccion_id")

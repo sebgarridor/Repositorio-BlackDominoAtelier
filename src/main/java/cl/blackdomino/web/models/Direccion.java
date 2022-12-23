@@ -10,7 +10,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;	
 import com.fasterxml.jackson.annotation.JsonIgnore;	
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -31,10 +30,10 @@ import lombok.ToString;
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@NotNull
-	private String direccion;
+	
+	private String calle;
 
-	@NotNull
+	
 	private String ciudad;
 
 	@JsonIgnore
@@ -42,7 +41,7 @@ import lombok.ToString;
 	@JoinColumn(name="comuna_id")
 	private Comuna comuna;
 
-	private String departamento;
+	private String instrucciones;
 
 
 	@OneToOne(mappedBy = "direccion", cascade = CascadeType.ALL, fetch = FetchType.LAZY)

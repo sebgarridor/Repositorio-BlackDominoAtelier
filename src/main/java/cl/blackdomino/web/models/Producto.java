@@ -30,6 +30,8 @@
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
+	private Integer cantidad;
+	
 	private Integer precio;
 	
 	@ManyToOne(fetch = FetchType.EAGER)
