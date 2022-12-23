@@ -46,5 +46,4 @@ public class RegionServiceImpl implements RegionService {
 		return regionRepository.findAll();
 	}
 
-
 }

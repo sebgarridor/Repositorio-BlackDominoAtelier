@@ -12,6 +12,7 @@ import cl.blackdomino.web.repositories.ComunaRepository;
 public class ComunaServiceImpl implements ComunaService {
 	@Autowired
 	private ComunaRepository comunaRepository;
+
 	
 	@Override
 	public Comuna guardarComuna(Comuna comuna) {
@@ -33,7 +34,10 @@ public class ComunaServiceImpl implements ComunaService {
 		return comunaRepository.findAll();
 	}
 
-	
+	@Override
+	public List<Comuna> findAllByRegion(Long id) {
+		return comunaRepository.findAllByRegion(id);
+	}
 	
 	
 }
