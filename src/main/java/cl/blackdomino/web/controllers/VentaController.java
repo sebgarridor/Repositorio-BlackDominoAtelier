@@ -63,12 +63,42 @@ public class VentaController {
 	@Autowired
 	VentaServiceImpl ventaServiceImpl;
 
-	@GetMapping("")
-	public String compraProducto() {
-		return "compra.jsp";
+	
+	@GetMapping("/descripcionproducto")
+	public String mostrarDescProd(Model model) {
+		List<Tallaje> listaSelTallaje = tallajeServiceImpl.obtenerListaTallaje();
+		model.addAttribute("listaSelTallaje", listaSelTallaje);
+		List<Categoria> listaSelCategoria = categoriaServiceImpl.obtenerListaCategorias();
+		model.addAttribute("listaSelCategoria", listaSelCategoria);
+		return "descripcionproducto.jsp";
 	}
-
-	// integrar anchor carro compras
+	
+	@PostMapping("/descripcionproducto")
+	public String capturarProductos(@RequestParam("tallaje") Long id_tallaje,
+			@RequestParam("categoria") Long id_categoria,
+			@RequestParam("cantidad") Integer cantidad,
+			Model model){
+		
+		Categoria categoria = categoriaServiceImpl.obtenerCategoria(id_categoria);
+		Tallaje tallaje = tallajeServiceImpl.obtenerTallaje(id_tallaje);
+		Producto producto = new Producto();
+		producto.setCategoria(categoria);
+		producto.setTallaje(tallaje);
+		producto.setCantidad(cantidad);
+		productoServiceImpl.guardarProducto(producto);
+		return "checkout.jsp";
+		
+	}
+	
+	@GetMapping("/productoscarrito")
+	public String mostrarCarrito() {
+		return "productoscarrito.jsp";
+	}
+	
+	@PostMapping("/productoscarrito")
+	public String guardarCarrito() {
+		return "productoscarrito.jsp";
+	}
 
 	
 	@GetMapping("/checkout")
@@ -131,37 +161,17 @@ public class VentaController {
 		venta.setEnvio(envio);
 		ventaServiceImpl.guardarVenta(venta);
 		
-		return "revisionpedido.jsp";
+		return "redirect:/revisionpedido";
 		 }
 
-	@GetMapping("/descripcionproducto")
-	public String mostrarDescProd(Model model) {
-		List<Tallaje> listaSelTallaje = tallajeServiceImpl.obtenerListaTallaje();
-		model.addAttribute("listaSelTallaje", listaSelTallaje);
-		List<Categoria> listaSelCategoria = categoriaServiceImpl.obtenerListaCategorias();
-		model.addAttribute("listaSelCategoria", listaSelCategoria);
-		return "descripcionproducto.jsp";
+	@GetMapping("/revisionpedido")
+	public String mostrarRevision() {
+		return "revisionpedido.jsp";
 	}
 	
-	@PostMapping("/descripcionproducto")
-	public String capturarProductos(@RequestParam("tallaje") Long id_tallaje,
-			@RequestParam("categoria") Long id_categoria,
-			@RequestParam("cantidad") Integer cantidad,
-			Model model){
-		
-		Categoria categoria = categoriaServiceImpl.obtenerCategoria(id_categoria);
-		Tallaje tallaje = tallajeServiceImpl.obtenerTallaje(id_tallaje);
-		Producto producto = new Producto();
-		producto.setCategoria(categoria);
-		producto.setTallaje(tallaje);
-		producto.setCantidad(cantidad);
-		return "descripcionproducto.jsp";
-		
-	}
-	
-	@PostMapping("/productoscarrito")
-	public String mostrarCarrito() {
-		return "productoscarrito.jsp";
+	@PostMapping("/revisionpedido")
+	public String guardarRevision() {
+		return "revisionpedido.jsp";
 	}
 
 	@GetMapping("/exitotarjeta")
@@ -174,9 +184,6 @@ public class VentaController {
 		return "exitotransferencia.jsp";
 	}
 
-	@PostMapping("/revisionpedido")
-	public String mostrarRevision() {
-		return "revisionpedido.jsp";
-	}
+	
 
 }
