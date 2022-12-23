@@ -66,3 +66,11 @@ h4 span {
     color:#92478C;
     font-family: Zen Kaku Gothic New;
 }
+
+#pagar-button {
+    padding: 0.5rem;
+    background-color: #92478C;
+    border: 1px solid #92478C;
+    border-radius: 10px;
+    width: 25%;
+}
