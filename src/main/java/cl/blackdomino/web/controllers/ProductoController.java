@@ -39,7 +39,7 @@ public class ProductoController {
 			return "producto.jsp";
 		}
 
-		@PostMapping("")
+		@PostMapping("/producto")
 		public String filtarProductos(@RequestParam("productoSeleccionado")Long id, Model model) {
 			List<Producto> listaProductos = new ArrayList<Producto>();
 			Producto producto = productoServiceImpl.obtenerProducto(id);
