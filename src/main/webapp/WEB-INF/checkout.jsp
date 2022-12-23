@@ -254,7 +254,51 @@
 									</div>
 								</div>
 							</div>
-							
+							<div class="row">
+              
+              <div class="col-6">
+                <h5 style="text-align:left; margin-left: 0%; color: #92478C;" class="card-title">Opciones de pago
+                </h5>
+                <label class="form-control" style="color: white;">
+                  <input type="radio" name="pago" />
+                  <img src="/assets/img/webpay.png" alt="" style="width: 6rem; margin-bottom: 1rem;">
+                  <p style="font-size: small; text-align: left; color: #6c757d;">Será re-direccionado a Webpay Webservices para realizar su pago seguro</p>
+                </label>
+                
+                <label class="form-control" style="color: white;">
+                  <input type="radio" name="pago" />
+                  <img src="/assets/img/khipu.png" alt="" style="width: 6rem;"> 
+                  
+
+
+                  <p style="font-size: small; text-align: left; color: #6c757d;">Será re-direccionado a Khipu Webservices para realizar su pago seguro</p>
+                </label>
+                <label class="form-control" style="color: white;" >
+                  <input type="radio" name="pago" value="${mediopago.id}"/> 
+                  <img src="/assets/img/transferenciaicon.png" alt="" style="width: 3rem; " >
+                  
+                  <p style="font-size: small; text-align: left; color: #6c757d;">Transferencia electrónica a Banco Estado</p>
+                </label>
+              </div>
+              <div class="col-6">
+                <h5 style="text-align:left; margin-left: 0%; color: #92478C;" class="card-title">Opciones de envío
+                </h5>
+                <label class="form-control" style="color: white;">
+                  <input type="radio" name="envio" />
+                  <p style="font-size: 0.8rem; text-align:left; margin-bottom: 4.2rem;">ENVIO POR PAGAR STARKEN<span> - Si es hacia agencia, poner en la dirección la agencia de destino.</span> </p> 
+                </label>
+                
+                <label class="form-control" style="color: white;">
+                  <input type="radio" name="envio" />
+                  
+                  <p style="font-size: 0.8rem; text-align:left; margin-bottom: 3.3rem">ENVIO POR PAGAR REGIONES POR STARKEN <span> - Si es hacia agencia, poner en la dirección la agencia de destino.</span></p> 
+                </label>
+                <label class="form-control" style="color: white;">
+                  <input type="radio" name="envio" />
+                  <p style="font-size: 0.8rem; text-align:left; margin-bottom: 2.8rem;">RETIRO EN ESTACIÓN CIUDAD DEL NIÑO <span>- Coordina con nosotros vía Instagram o Correo. </span> </p> 
+                </label>
+              </div>
+            </div>
 					</div>
 					
 
