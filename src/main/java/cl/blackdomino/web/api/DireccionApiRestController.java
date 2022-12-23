@@ -10,22 +10,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import cl.blackdomino.web.models.Comuna;
 import cl.blackdomino.web.models.Direccion;
+import cl.blackdomino.web.services.ComunaServiceImpl;
 import cl.blackdomino.web.services.DireccionServiceImpl;
 
 @RestController
 public class DireccionApiRestController {
 	@Autowired
 	private DireccionServiceImpl direccionServiceImpl;
+	@Autowired
+	private ComunaServiceImpl comunaServiceImpl;
 	
 	@RequestMapping ("/guardar/direccion")
-	public Direccion guardarDireccion(@RequestBody Direccion direccion) {
-		// http://localhost:9080/guardar/Direccion
-		
-		/*
-		 * "tallaje": "xl"
-		 */
-		
+	public Direccion guardarDireccion(@RequestBody Direccion direccion,
+		@RequestParam(value = "comunaId", required = true)Long id_comuna) {
+		Comuna comuna = comunaServiceImpl.obtenerComuna(id_comuna);
+		direccion.setComuna(comuna);
 		return direccionServiceImpl.guardarDireccion(direccion);
 		
 	}

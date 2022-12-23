@@ -10,10 +10,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import cl.blackdomino.web.models.Venta;
 import cl.blackdomino.web.models.DTE;
+import cl.blackdomino.web.models.Envio;
 import cl.blackdomino.web.models.Estado;
 import cl.blackdomino.web.models.MedioPago;
 import cl.blackdomino.web.models.Usuario;
 import cl.blackdomino.web.services.DTEServiceImpl;
+import cl.blackdomino.web.services.EnvioServiceImpl;
 import cl.blackdomino.web.services.EstadoServiceImpl;
 import cl.blackdomino.web.services.MedioPagoServiceImpl;
 import cl.blackdomino.web.services.UsuarioServiceImpl;
@@ -31,6 +33,8 @@ public class VentaApiRestController {
 	private MedioPagoServiceImpl medioPagoServiceImpl;
 	@Autowired
 	private UsuarioServiceImpl usuarioServiceImpl;
+	@Autowired
+	private EnvioServiceImpl envioServiceImpl;
 	
 	//Guardar
 	@RequestMapping("/guardar/venta")
@@ -38,7 +42,8 @@ public class VentaApiRestController {
 			@RequestParam(value = "dteId", required = true)Long DteId,
 			@RequestParam(value = "estadoId", required = true)Long EstadoId,
 			@RequestParam(value = "medioPagoId", required = true)Long MedioPagoId,
-			@RequestParam(value = "usuarioId", required = true)Long UsuarioId){
+			@RequestParam(value = "usuarioId", required = true)Long UsuarioId,
+			@RequestParam(value = "envioId", required = true)Long EnvioId){
 			DTE dte = dteServiceimpl.obtenerDTE(DteId);
 			venta.setDte(dte);
 			Estado estado = estadoServiceImpl.obtenerEstado(EstadoId);
@@ -47,6 +52,8 @@ public class VentaApiRestController {
 			venta.setMediopago(medioPago);
 			Usuario usuario = usuarioServiceImpl.obtenerUsuario(UsuarioId);
 			venta.setUsuario(usuario);
+			Envio envio = envioServiceImpl.obtenerEnvio(EnvioId);
+			venta.setEnvio(envio);
 		return ventaServiceImpl.guardarVenta(venta);
 	}
 	
