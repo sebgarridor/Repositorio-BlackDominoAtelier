@@ -1,12 +1,4 @@
-footer{
-    background-color: #161616;
-    display: flex;
-    justify-content: space-around;
-    padding-left: 12%;
-    padding-right: 12%;
-    padding-top: 3%;
-    padding-bottom: 1rem;
-}
+
 
 .FT{
     font-family: "Roboto", Bold;
@@ -55,7 +47,7 @@ footer{
 }
 
 #estadocompra{
-    margin-top: 5rem;
+    margin-top: 1rem;
     font-family: Zen Kaku Gothic New;
     text-align: center;
     font-size: 1.6em;    
@@ -67,10 +59,73 @@ h4 span {
     font-family: Zen Kaku Gothic New;
 }
 
+#divcentral{
+    padding-left: 5em;
+    padding-right: 5em;
+}
+
+#logoblanco{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 9.375em;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#fila1 {
+    border-bottom: 1px solid #FFFFFF;
+
+    
+}
+
+h4 span {
+    color: #92478C;
+    font-family: Zen Kaku Gothic New;
+}
+
 #pagar-button {
     padding: 0.5rem;
     background-color: #92478C;
     border: 1px solid #92478C;
     border-radius: 10px;
     width: 25%;
+    
+    
+}
+
+
+@media(max-width: 480px) {
+    #divcentral {
+        padding-left: 0em;
+        padding-right: 0em;
+    
+    }
+    #precio-unitario{
+        display:none !important;
+    }
+
+    #precio-unitario-pesos{
+        display: none !important;
+       
+    }
+
+    #info-contacto {
+        width: 100%;
+    }
+
+    #metodo-pago {
+        width: 100%;
+    }
+
+    #direccion-envio {
+        width: 100%;
+    }
+
+    #direccion-facturacion {
+        width: 100%;
+    }
+
+
+
+
 }

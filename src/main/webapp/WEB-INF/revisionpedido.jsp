@@ -19,14 +19,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Revisión</title>
-    <link rel="stylesheet" href="assets/css/navbarYfooter.css">
+    <title>Revisiï¿½n</title>
+    <link rel="stylesheet" href="assets/css/navbaryfooternew.css">
     <link rel="stylesheet" href="assets/css/revisionpedido.css">
 </head>
 
 <body>
     <!-- Esto es el inicio del navbar-->
-    <h6 class="noti">Envío delivery - Starken</h6>
+    <h6 class="noti">Envï¿½o delivery - Starken</h6>
     <header>
         <div>
             <img class="fotoprincipal" src="assets/img/Logo_Color_Png.png">
@@ -38,25 +38,51 @@
 
     <nav class="navbar navbar-expand-lg fontbokor" id="fontsize">
         <div class="container">
-            <button class="navbar-toggler" style="background-color: white;" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler" style="background-color: white;" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="nav">
-
+    
                     <li class="nav-item">
-                        <a class="margin_a" href="/home">Inicio</a>
+                        <a class="margin_a" href="home">Inicio</a>
                     </li>
-                    <li class="nav-item">
+    
+    
+    
+    
+                    <li class="nav-item" id="dropdown-productosresponsive">
+                        <p>
+                            <a class="margin_a" data-bs-toggle="collapse" href="#productos" role="button"
+                                aria-expanded="false" aria-controls="collapseExample">
+                                Productos
+                            </a>
+                        </p>
+                        <div class="collapse fontbokor" id="productos">
+                            <a href="poleras">Poleras</a>
+                            <hr>
+                            <a href="polerones_polo">Polerones polo</a>
+                            <hr>
+                            <a href="polerones_hoodie">Polerones canguro</a>
+                            <hr>
+                            <a href="totebags">Totebags</a>
+                            <hr>
+                            <a href="bandoleras">Bandoleras</a><br>
+    
+                        </div>
+                    </li>
+    
+                    <li class="nav-item" id="dropdown-productos">
                         <div>
-                            <a class="margin_a" href="" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
-
+                            <a class="margin_a" href="" data-bs-toggle="dropdown"
+                                aria-expanded="false">Productos</a>
+    
                             <ul class="dropdown-menu drop">
-
+    
                                 <div class="container">
-
+    
                                     <div class="row" style="padding: 2rem;">
                                         <div class="col-3">
                                             <div class="card"
@@ -70,55 +96,67 @@
                                                 </div>
                                             </div>
                                         </div>
-
-
+    
+    
                                         <div class="col-3">
                                             <div class="card"
                                                 style="width: 15rem; border-radius: 0%; border-color: #202020; ">
-                                                <a href="/polerones"> <img class="card-img-top "
-                                                        style="background-color: #202020;" src="assets/img/polerón Eren titán.png" alt="Card image cap">
-                                                    <div style="background-color:#2D2D2D;">
-                                                </a>
-                                                <h5 class="card-title fontZenKaku">Polerones</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-3">
-                                        <div class="card"
-                                            style="width: 15rem; border-radius: 0%; border-color: #202020; ">
-                                            <a href="/bandoleras"> <img class="card-img-top "
-                                                    style="background-color: #202020;"
-                                                    src="assets/img/Bandolera EVA-01.png" alt="Card image cap"></a>
-                                            <div style="background-color:#2D2D2D;">
-                                                <h5 class="card-title fontZenKaku">Bandoleras</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-3">
-                                        <div class="card"
-                                            style="width: 15rem; border-radius: 0%; border-color: #202020; ">
-                                            <a href="/totebag"><img class="card-img-top"
-                                                    style="background-color: #202020; "
-                                                    src="assets/img/JUNJI sin fondo figma.png" alt="Card image cap">
+                                                <div class="hovercontainer" style="position: relative;">
+                                                    <img class="card-img-top "
+                                                        style="background-color: #202020;  height: 21rem;"" src="
+                                                        assets/img/polerÃ³n Eren titÃ¡n.png" alt="Card image cap"
+                                                        id="poleronesphoto">
+                                                    <div id="botones">
+                                                        <button class="fontZenKaku" id="primerboton"
+                                                            onclick="location.href = '/polerones_polo';">Polerones
+                                                            polo</button>
+                                                        <button class="fontZenKaku" id="segundoboton"
+                                                            onclick="location.href = '/polerones_hoodie';">Polerones
+                                                            canguro</button>
+                                                    </div>
+    
+                                                </div>
+    
                                                 <div style="background-color:#2D2D2D;">
-                                            </a>
-                                            <h5 class="card-title fontZenKaku">Totebags</h5>
+                                                    <h5 class="card-title fontZenKaku">Polerones</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+    
+                                        <div class="col-3">
+                                            <div class="card"
+                                                style="width: 15rem; border-radius: 0%; border-color: #202020; ">
+                                                <img class="card-img-top "
+                                                    style="background-color: #202020; height: 21rem;"
+                                                    src="assets/img/Bandolera EVA-01.png" alt="Card image cap">
+                                                <div style="background-color:#2D2D2D;">
+                                                    <h5 class="card-title fontZenKaku">Bandoleras</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="card"
+                                                style="width: 15rem; border-radius: 0%; border-color: #202020; ">
+                                                <img class="card-img-top" style="background-color: #202020; "
+                                                    src="assets/img/JUNJI sin fondo figma.png"
+                                                    alt="Card image cap">
+                                                <div style="background-color:#2D2D2D;">
+                                                    <h5 class="card-title fontZenKaku">Totebags</h5>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                            </ul>
                         </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="margin_a" href="/colecciones">Colecciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="margin_a" href="/comocomprar">Como Comprar</a>
+                    </li>
             </div>
-            </ul>
-        </div>
-        </li>
-        <li class="nav-item">
-            <a class="margin_a" href="/colecciones">Colecciones</a>
-        </li>
-        <li class="nav-item">
-            <a class="margin_a" href="/comocomprar">Como Comprar</a>
-        </li>
-        </div>
         </div>
     </nav>
 
@@ -127,7 +165,7 @@
  <br><br><br><br><br>
     <div class="container" id="divcentral">
         <div class="container" id="estadocompra">
-            <h4><span>Carro > Proceso de pago ></span> <strong>Revisión del pedido > </strong> Éxito </h4>
+            <h4><span>Carro > Proceso de pago ></span> <strong>Revisiï¿½n del pedido > </strong> ï¿½xito </h4>
 
         </div>
         <div class="card" style="width: 100; margin-top: 3rem; margin-bottom: 4rem; padding: 2rem;">
@@ -179,7 +217,7 @@
                                 style="width: 5rem;">
                         </div>
                         <div class="col">
-                            <p style="margin-bottom: 0.05rem; margin-top: 1rem; color:#92478C ;">Polerón polo Naruto</p>
+                            <p style="margin-bottom: 0.05rem; margin-top: 1rem; color:#92478C ;">Polerï¿½n polo Naruto</p>
                             <p style="margin-bottom: 0.05rem;">Talla: XL</p>
 
 
@@ -199,18 +237,18 @@
             </div>
             <hr>
             <div class="container" id="envio" style="text-align: left;">
-                <h4 style="text-align: left; color: #92478C; margin-bottom: 2rem;">Envío</h4>
-                <p>Dirección:</p>
+                <h4 style="text-align: left; color: #92478C; margin-bottom: 2rem;">Envï¿½o</h4>
+                <p>Direcciï¿½n:</p>
                 <p>Ciudad:</p>
                 <p>Comuna:</p>
-                <p>Región:</p>
+                <p>Regiï¿½n:</p>
                 <p>Sucursal <small><i>(opcional)</i></small>:</p>
             </div>
             
             <hr>
             <div class="container" id="totalcompra">
                 <p>Total productos: $00.000CLP</p>
-                <p>Total envío: $00.000CLP</p>
+                <p>Total envï¿½o: $00.000CLP</p>
                 <h4>Total compra: $30.000CLP</h4>
                 <br>
                 <button type="submit" id="pagar-button" onclick="location.href = '/exitotarjeta';">Pagar</button>
@@ -226,54 +264,64 @@
     </div>
 	
     <!--Inicio Footer-->
-    <footer class="escritorio">
-        <div class="logo footer_bloques">
-            <img class="imgconfig" src="./assets/img/Symbol_White_135px.png" alt="">
-            <div class="rrss">
-                <a href=""><img class="imgconfig" src="./assets/img/iconmail.png" alt=""></a>
-                <a href="https://www.instagram.com/blackdomino.atelier/"><img class="imgconfig"
-                        src="./assets/img/instagramIcon.png" alt="ig logo"></a>
-                <a href="https://www.facebook.com/people/Blacky-Domino/100079510762644/"><img class="imgconfig"
-                        src="./assets/img/facebookicon.png" alt="fb logo"></a>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col" id="logofooter">
+                    <img class="imgconfig" src="./assets/img/Symbol_White_135px.png" alt="">
+                    <div class="rrss">
+                        <a href=""><img class="imgconfig" src="./assets/img/iconmail.png" alt=""></a>
+                        <a href="https://www.instagram.com/blackdomino.atelier/"><img class="imgconfig"
+                                src="./assets/img/instagramIcon.png" alt="ig logo"></a>
+                        <a href="https://www.facebook.com/people/Blacky-Domino/100079510762644/"><img
+                                class="imgconfig" src="./assets/img/facebookicon.png" alt="fb logo"></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h5 class="FT">Sobre Nosotros</h5>
+                    <p>Las mejores serigrafÃ­as <br> desde 2013.</p>
+                </div>
+                <div class="footer-col">
+                    <h5>Ayuda</h5>
+                    <p>
+                        <a href="/preguntasfrecuentes">Preguntas frecuentes</a><br>
+                        <a href="/comocomprar">CÃ³mo comprar</a><br>
+                        <a href="/Tallaje">Tallaje</a><br>
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h5 class="FT">Horario</h5>
+                    <p><b>Lunes a Viernes</b> <br> 11:30 hrs.<br>
+                        <b>SÃ¡bado</b> <br> 11:00 a 16:00 hrs.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h5 class="FT">Productos</h5>
+                    <p>
+                        <a href="/bandoleras"> Bandoleras</a><br>
+                        <a href="/totebag"> Totebags</a><br>
+                        <a href="/poleras"> Poleras</a><br>
+                        <a href="/polerones"> Polerones</a><br>
+                        <a href="/colecciones"> Colecciones</a>
+                    </p>
+                </div>
+                <div class="footer-col" id="metodosdepago">
+                    <img class="imgconfig" src="./assets/img/webpay.png" alt="webpay" style="width: 9rem;"> <br>
+                    <img class="imgconfig" src="./assets/img/khipu.png" alt="khipu">
+                </div>
+                <div class="footer-col" id="logofooter2">
+                    <div class="rrss">
+                        <a href=""><img class="imgconfig" src="./assets/img/iconmail.png" alt=""></a>
+                        <a href="https://www.instagram.com/blackdomino.atelier/"><img class="imgconfig"
+                                src="./assets/img/instagramIcon.png" alt="ig logo"></a>
+                        <a href="https://www.facebook.com/people/Blacky-Domino/100079510762644/"><img
+                                class="imgconfig" src="./assets/img/facebookicon.png" alt="fb logo"></a>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="footer_bloques">
-            <h5 class="FT">Sobre Nosotros</h5>
-            <p>Las mejores serigrafías <br> desde 2013.</p>
-        </div>
-        <div class="footer_bloques">
-            <h5>Ayuda</h5>
-            <p>
-                <a href="/preguntasfrecuentes.html">Preguntas frecuentes</a><br>
-                <a href="/comocomprar.html">Cómo comprar</a><br>
-                <a href="/Tallaje.html">Tallaje</a><br>
-            </p>
-        </div>
-        <div class="footer_bloques">
-            <h5 class="FT">Horario</h5>
-            <p><b>Lunes a Viernes</b> <br> 11:30 hrs.<br>
-                <b>Sábado</b> <br> 11:00 a 16:00 hrs.
-            </p>
-        </div>
-        <div class="footer_bloques">
-            <h5 class="FT">Productos</h5>
-            <p>
-                <a href="/Bandoleras.html"> Bandoleras</a><br>
-                <a href="/Totebag.html"> Totebags</a><br>
-                <a href="/poleras.html"> Poleras</a><br>
-                <a href="polerones.html"> Polerones</a><br>
-                <a href="/colecciones.html"> Colecciones</a>
-            </p>
-        </div>
-        <div class="footer_bloques">
-            <img class="imgconfig" src="./assets/img/webpay.png" alt="webpay"> <br>
-            <img class="imgconfig" src="./assets/img/khipu.png" alt="khipu">
-        </div>
+    
     </footer>
-    <div>
-        <h6 class="noti">©2022 Squirr3l - Todos los derechos reservados </h6>
-    </div>
 
     <!--Fin Footer-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"

@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %> 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -21,16 +21,12 @@ pageEncoding="ISO-8859-1"%>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Black Domino Atelier</title>
     <link rel="stylesheet" href="assets/css/navbaryfooternew.css">
-    <link rel="stylesheet" href="assets/css/colecciones.css">
- 
-
+    <link rel="stylesheet" href="assets/css/exitotarjeta.css">
 </head>
 
 <body>
-
-
     <!-- Esto es el inicio del navbar-->
-    <h6 class="noti">Envío delivery - Starken</h6>
+    <h6 class="noti">Env�o delivery - Starken</h6>
     <header>
         <div>
             <img class="fotoprincipal" src="assets/img/Logo_Color_Png.png">
@@ -165,89 +161,156 @@ pageEncoding="ISO-8859-1"%>
     </nav>
 
     <!-- Esto es el fin del navbar-->
+	<br><br><br><br><br>
+    <div class="container" id="divcentral">
+        <div class="container" id="estadocompra">
+            <h4><span>Carro > Proceso de pago > Revisi�n del pedido > </span><strong> �xito</strong>  </h4>
+        
+        </div>
+        <div class="container" id="gracias" style="margin-top: 3rem;">
+            <p style="text-align: left;">Pedido #xxxxx</p>
+            <h4 style="text-align: left; margin-top: -1rem;">Gracias {nombrecliente} por tu compra!</h4>
+        </div>
+        <div class="card" style="width: 100; margin-top: 3rem; margin-bottom: 4rem;">
+            <div class="card-body">
+                <h5 class="card-text" style="text-align: left;">�Estamos muy contentos de que hayas comprado en Black
+                    Domino Atelier!</h5>
+                <p style="text-align: left;">Una vez tu compra sea procesada y confirmadapor nosotros comenzaremos con el proceso de
+                    confecci�n de tu pedido. Debes tener en cuenta de que este periodo puede tomar hasta una semana
+                    dependiendo de qu� tan grande sea el pedido. Dado que elegiste un m�todo de transferencia electr�nica,
+                    tus productos ser�n confeccionados una vez hayas enviado el comprobante de dep�sito a alguno de nuestros medios digitales
+                    , ya sea Instagram (@blackdomino.atelier) o correo (blackdominoatelier@gmail.com).
+                </p>
+                <h5 style="color: #92478C;">Datos de dep�sito</h5>
+                <p><strong>Banco:</strong> Banco Estado</p>
+                <p><strong>N�mero de cuenta:</strong> 1234 56789</p>
+                <p><strong>Tipo de cuenta:</strong> Cuenta Rut</p>
+                <p><strong>Nombre:</strong> asd123</p>
+                <p><strong>Rut</strong> 123456-7</p>
+                <p>Comprobante a <strong>blackdominoatelier@gmail.com</strong> </p>
+                <p></p>
+                <p style="text-align: left;">Con respeto al env�o: si elegiste un m�todo de env�o a domicilio o sucursal
+                    de retiro, te enviaremos a tu mail un c�digo de seguimiento cuando hayamos enviado el pedido.</p>
+                <p style="text-align: left;">Si elegiste el m�todo de retiro en metro Ciudad del Ni�o, nos pondremos en
+                    contacto contigo para coordinar el d�a y el horario para que puedas pasar a retirar tu(s)
+                    productos(s).</p>
+            </div>
+            <div class="card-body">
+                <h4 style="text-align: left; color: #92478C; margin-bottom: 2rem;">Resumen de tu compra</h4>
+                <div class="container text-center">
+                    <div class="row" id="fila1">
+                        <div class="col">
+                            <p>Producto</p>
+                        </div>
+                        <div class="col">
 
-    <div class="container ">
-        <div class="row">
+                        </div>
+                        <div class="col">
+                            <p>Cantidad</p>
+                        </div>
+                        <div class="col">
+                            <p>Precio unitario</p>
+                        </div>
+                        <div class="col">
+                            <p>Subtotal</p>
+                        </div>
 
-            <div class="col-sm-12 col-md-6 col-lg-4 my-5">
-                <div class="card">
-                    <a class="imagenLink" href="/descripcionproducto.html"><img class="card-img-top card_color"
-                            src="assets/img/producto no disponible.jpg" alt="Card image cap"></a>
-                </div>
-                <div class="product_card_body my-3">
-                    <h5 class="card-title product_title">Tote Akira</h5>
-                    <h6 class="product_price my-2">$28.990</h6>
-                    <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
+                    </div>
+                    <div class="row" id="fila2">
+                        <div class="col">
+                            <img src="/assets/img/Poleras sin fondo/AKIRA sin fondo1.png" alt="Card image cap"
+                                style="width: 5rem;">
+                        </div>
+                        <div class="col">
+                            <p style="margin-bottom: 0.05rem; margin-top: 1rem; color:#92478C ;">Akira Tee</p>
+                            <p style="margin-bottom: 0.05rem;">Talla: M</p>
+                            <p>Manga corta</p>
+
+                        </div>
+                        <div class="col">
+                            <p style="margin-top:2.5rem;">1</p>
+                        </div>
+                        <div class="col">
+                            <p style="margin-top:2.5rem;">$10.000CLP</p>
+                        </div>
+                        <div class="col">
+                            <p style="margin-top:2.5rem;">$10.000CLP</p>
+                        </div>
+                    </div>
+                    <div class="row" id="fila2">
+                        <div class="col">
+                            <img src="/assets/img/Polerones polo/Poleron Naruto.png" alt="Card image cap"
+                                style="width: 5rem;">
+                        </div>
+                        <div class="col">
+                            <p style="margin-bottom: 0.05rem; margin-top: 1rem; color:#92478C ;">Poler�n polo Naruto</p>
+                            <p style="margin-bottom: 0.05rem;">Talla: XL</p>
+                            
+
+                        </div>
+                        <div class="col">
+                            <p style="margin-top:2.5rem;">2</p>
+                        </div>
+                        <div class="col">
+                            <p style="margin-top:2.5rem;">$10.000CLP</p>
+                        </div>
+                        <div class="col">
+                            <p style="margin-top:2.5rem;">$20.000CLP</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-
-            <div class="col-sm-12 col-md-6 col-lg-4 my-5">
-                <div class="card">
-                    <a class="imagenLink" href="/descripcionproducto.html"><img class="card-img-top card_color"
-                            src="assets/img/producto no disponible.jpg" alt="Card image cap"></a>
-                </div>
-                <div class="product_card_body my-3">
-                    <h5 class="card-title product_title">Tote Berserk</h5>
-                    <h6 class="product_price my-2">$28.990</h6>
-                    <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
-                </div>
+            <hr>
+            <div class="container" id="totalcompra">
+                <h4>Total de tu compra incluyendo env�o</h4>
+                <p>$30.000CLP</p>
             </div>
+            <hr>
+            <div class="card-body">
+                <h4 style="text-align: left; color: #92478C; margin-bottom: 2rem;">Informaci�n del cliente</h4>
+                <div class="container">
+                    <div class="row">
+                      <div class="col" style="text-align: left;">
+                        <h5>Informaci�n de contacto</h5>
+                        <p>sebgarridor@gmail.com</p>
+                      </div>
+                      <div class="col" style="text-align: left;">
+                        <h5>M�todo de pago</h5>
+                        <p>Transferencia Electr�nica - <b>$30.000CLP</b></p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col" style="text-align: left;">
+                        <h5>Direcci�n de env�o</h5>
+                        <p>Sebasti�n Garrido</p>
+                        <p  style="margin-top: -0.8rem;">Alameda 123</p>
+                        <p style="margin-top: -0.8rem;">Santiago, RM</p>
+                        <p style="margin-top: -0.8rem;">9 3531 7521</p>
+                      </div>
+                      <div class="col" style="text-align: left;">
+                        <h5>Direcci�n de facturaci�n</h5>
+                        <p>Sebasti�n Garrido</p>
+                        <p style="margin-top: -0.8rem;">Alameda 123</p>
+                        <p style="margin-top: -0.8rem;">Santiago, RM</p>
+                        <p style="margin-top: -0.8rem;">9 3531 7521</p>
 
-            <div class="col-sm-12 col-md-6 col-lg-4 my-5">
-                <div class="card">
-                    <a class="imagenLink" href="/descripcionproducto.html"><img class="card-img-top card_color"
-                            src="assets/img/producto no disponible.jpg" alt="Card image cap"></a>
-                </div>
-                <div class="product_card_body my-3">
-                    <h5 class="card-title product_title">Tote EVA-01</h5>
-                    <h6 class="product_price my-2">$28.990</h6>
-                    <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
-                </div>
+                      </div>
+
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <h5>M�todo de env�o</h5>
+                        <p>Retiro en Metro Ciudad del Ni�o</p>
+                      </div>
+                    </div>
+                  </div>
+                
             </div>
-
-            <div class="col-sm-12 col-md-6 col-lg-4 my-5">
-                <div class="card">
-                    <a class="imagenLink" href="/descripcionproducto.html"><img class="card-img-top card_color"
-                            src="assets/img/producto no disponible.jpg" alt="Card image cap"></a>
-                </div>
-                <div class="product_card_body my-3">
-                    <h5 class="card-title product_title">Tote Misato</h5>
-                    <h6 class="product_price my-2">$28.990</h6>
-                    <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
-                </div>
-            </div>
-
-            <div class="col-sm-12 col-md-6 col-lg-4 my-5">
-                <div class="card">
-                    <a class="imagenLink" href="/descripcionproducto.html"><img class="card-img-top card_color"
-                            src="assets/img/producto no disponible.jpg" alt="Card image cap"></a>
-                </div>
-                <div class="product_card_body my-3">
-                    <h5 class="card-title product_title">Tote Sakura Card Raptor</h5>
-                    <h6 class="product_price my-2">$28.990</h6>
-                    <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
-                </div>
-            </div>
-
-            <div class="col-sm-12 col-md-6 col-lg-4 my-5">
-                <div class="card">
-                    <a class="imagenLink" href="/descripcionproducto.html"><img class="card-img-top card_color"
-                            src="assets/img/producto no disponible.jpg" alt="Card image cap"></a>
-                </div>
-                <div class="product_card_body my-3">
-                    <h5 class="card-title product_title">Tote Sailor Moon</h5>
-                    <h6 class="product_price my-2">$28.990</h6>
-                    <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
-                </div>
-            </div>
-
+            
 
         </div>
+
     </div>
-    <br>
-    <br>
-    </div>
-    <br>
 
     <!--Inicio Footer-->
     <footer class="footer">
@@ -308,7 +371,7 @@ pageEncoding="ISO-8859-1"%>
         </div>
     
     </footer>
-
+    <!--Fin Footer-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>

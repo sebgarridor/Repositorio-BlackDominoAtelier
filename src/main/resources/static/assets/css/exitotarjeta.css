@@ -1,9 +1,9 @@
-#divcentral{
+#divcentral {
     padding-left: 5em;
     padding-right: 5em;
 }
 
-#logoblanco{
+#logoblanco {
     margin-top: 1rem;
     margin-bottom: 1rem;
     width: 9.375em;
@@ -14,10 +14,56 @@
 #fila1 {
     border-bottom: 1px solid #FFFFFF;
 
-    
+
 }
 
 h4 span {
     color: #92478C;
     font-family: Zen Kaku Gothic New;
+}
+
+
+/*responsive*/
+@media(min-width:481px) and (max-width:1023px) {
+
+    #divcentral {
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+
+}
+
+
+
+
+@media(max-width: 480px) {
+
+    #precio-unitario{
+        display:none !important;
+    }
+
+    #precio-unitario-pesos{
+        display: none !important;
+       
+    }
+
+    #info-contacto {
+        width: 100%;
+    }
+
+    #metodo-pago {
+        width: 100%;
+    }
+
+    #direccion-envio {
+        width: 100%;
+    }
+
+    #direccion-facturacion {
+        width: 100%;
+    }
+
+
+
+
 }

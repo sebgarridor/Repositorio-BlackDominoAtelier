@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %> 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -21,16 +21,12 @@ pageEncoding="ISO-8859-1"%>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Black Domino Atelier</title>
     <link rel="stylesheet" href="assets/css/navbaryfooternew.css">
-    <link rel="stylesheet" href="assets/css/colecciones.css">
- 
-
+     <link rel="stylesheet" href="assets/css/colecciones.css">
 </head>
 
 <body>
-
-
     <!-- Esto es el inicio del navbar-->
-    <h6 class="noti">Envío delivery - Starken</h6>
+    <h6 class="noti">Env�o delivery - Starken</h6>
     <header>
         <div>
             <img class="fotoprincipal" src="assets/img/Logo_Color_Png.png">
@@ -42,21 +38,21 @@ pageEncoding="ISO-8859-1"%>
 
     <nav class="navbar navbar-expand-lg fontbokor" id="fontsize">
         <div class="container">
-            <button class="navbar-toggler" style="background-color: white;" type="button"
-                data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" style="background-color: white;" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="nav">
-    
+
                     <li class="nav-item">
                         <a class="margin_a" href="home">Inicio</a>
                     </li>
-    
-    
-    
-    
+
+                    
+
+
                     <li class="nav-item" id="dropdown-productosresponsive">
                         <p>
                             <a class="margin_a" data-bs-toggle="collapse" href="#productos" role="button"
@@ -65,28 +61,23 @@ pageEncoding="ISO-8859-1"%>
                             </a>
                         </p>
                         <div class="collapse fontbokor" id="productos">
-                            <a href="poleras">Poleras</a>
-                            <hr>
-                            <a href="polerones_polo">Polerones polo</a>
-                            <hr>
-                            <a href="polerones_hoodie">Polerones canguro</a>
-                            <hr>
-                            <a href="totebags">Totebags</a>
-                            <hr>
+                            <a href="poleras">Poleras</a><hr>
+                            <a href="polerones_polo">Polerones polo</a><hr>
+                            <a href="polerones_hoodie">Polerones canguro</a><hr>
+                            <a href="totebags">Totebags</a><hr>
                             <a href="bandoleras">Bandoleras</a><br>
-    
+                            
                         </div>
                     </li>
-    
+
                     <li class="nav-item" id="dropdown-productos">
                         <div>
-                            <a class="margin_a" href="" data-bs-toggle="dropdown"
-                                aria-expanded="false">Productos</a>
-    
+                            <a class="margin_a" href="" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
+
                             <ul class="dropdown-menu drop">
-    
+
                                 <div class="container">
-    
+
                                     <div class="row" style="padding: 2rem;">
                                         <div class="col-3">
                                             <div class="card"
@@ -100,33 +91,28 @@ pageEncoding="ISO-8859-1"%>
                                                 </div>
                                             </div>
                                         </div>
-    
-    
+
+
                                         <div class="col-3">
                                             <div class="card"
                                                 style="width: 15rem; border-radius: 0%; border-color: #202020; ">
                                                 <div class="hovercontainer" style="position: relative;">
                                                     <img class="card-img-top "
-                                                        style="background-color: #202020;  height: 21rem;"" src="
-                                                        assets/img/polerón Eren titán.png" alt="Card image cap"
-                                                        id="poleronesphoto">
+                                                    style="background-color: #202020;  height: 21rem;"" src="
+                                                    assets/img/polerón Eren titán.png" alt="Card image cap" id="poleronesphoto">
                                                     <div id="botones">
-                                                        <button class="fontZenKaku" id="primerboton"
-                                                            onclick="location.href = '/polerones_polo';">Polerones
-                                                            polo</button>
-                                                        <button class="fontZenKaku" id="segundoboton"
-                                                            onclick="location.href = '/polerones_hoodie';">Polerones
-                                                            canguro</button>
+                                                        <button class="fontZenKaku" id="primerboton" onclick="location.href = '/polerones_polo';">Polerones polo</button>
+                                                        <button class="fontZenKaku" id="segundoboton" onclick="location.href = '/polerones_hoodie';">Polerones canguro</button>
                                                     </div>
-    
+
                                                 </div>
-    
+
                                                 <div style="background-color:#2D2D2D;">
                                                     <h5 class="card-title fontZenKaku">Polerones</h5>
                                                 </div>
                                             </div>
                                         </div>
-    
+
                                         <div class="col-3">
                                             <div class="card"
                                                 style="width: 15rem; border-radius: 0%; border-color: #202020; ">
@@ -142,8 +128,7 @@ pageEncoding="ISO-8859-1"%>
                                             <div class="card"
                                                 style="width: 15rem; border-radius: 0%; border-color: #202020; ">
                                                 <img class="card-img-top" style="background-color: #202020; "
-                                                    src="assets/img/JUNJI sin fondo figma.png"
-                                                    alt="Card image cap">
+                                                    src="assets/img/JUNJI sin fondo figma.png" alt="Card image cap">
                                                 <div style="background-color:#2D2D2D;">
                                                     <h5 class="card-title fontZenKaku">Totebags</h5>
                                                 </div>
@@ -165,89 +150,48 @@ pageEncoding="ISO-8859-1"%>
     </nav>
 
     <!-- Esto es el fin del navbar-->
-
-    <div class="container ">
-        <div class="row">
-
-            <div class="col-sm-12 col-md-6 col-lg-4 my-5">
-                <div class="card">
-                    <a class="imagenLink" href="/descripcionproducto.html"><img class="card-img-top card_color"
-                            src="assets/img/producto no disponible.jpg" alt="Card image cap"></a>
+ <div class="seccionmedio">
+        <h1 class="encabezado">Coleccion Dead Dead Demon's Dedede Destruction</h1>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-4 my-5">
+                    <div class="card">
+                        <img class="card-img-top card_color" src="assets/img/Poleras sin fondo/DEDE SF.png"
+                            alt="Card image cap">
+                    </div>
+                    <div class="product_card_body my-3">
+                        <h5 class="card-title product_title">Dedede Tee</h5>
+                        <h6 class="product_price my-2">$28.990</h6>
+                        <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
+                    </div>
                 </div>
-                <div class="product_card_body my-3">
-                    <h5 class="card-title product_title">Tote Akira</h5>
-                    <h6 class="product_price my-2">$28.990</h6>
-                    <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
+                <div class="col-sm-12 col-md-6 col-lg-4 my-5">
+                    <div class="card">
+                        <img class="card-img-top card_color" src="assets/img/Hoodies/poler�n Canguro DEDEDE.png"
+                            alt="Card image cap">
+                    </div>
+                    <div class="product_card_body my-3">
+                        <h5 class="card-title product_title">Dedede Hoodie</h5>
+                        <h6 class="product_price my-2">$28.990</h6>
+                        <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
+                    </div>
                 </div>
-            </div>
-
-            <div class="col-sm-12 col-md-6 col-lg-4 my-5">
-                <div class="card">
-                    <a class="imagenLink" href="/descripcionproducto.html"><img class="card-img-top card_color"
-                            src="assets/img/producto no disponible.jpg" alt="Card image cap"></a>
-                </div>
-                <div class="product_card_body my-3">
-                    <h5 class="card-title product_title">Tote Berserk</h5>
-                    <h6 class="product_price my-2">$28.990</h6>
-                    <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
-                </div>
-            </div>
-
-            <div class="col-sm-12 col-md-6 col-lg-4 my-5">
-                <div class="card">
-                    <a class="imagenLink" href="/descripcionproducto.html"><img class="card-img-top card_color"
-                            src="assets/img/producto no disponible.jpg" alt="Card image cap"></a>
-                </div>
-                <div class="product_card_body my-3">
-                    <h5 class="card-title product_title">Tote EVA-01</h5>
-                    <h6 class="product_price my-2">$28.990</h6>
-                    <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
-                </div>
-            </div>
-
-            <div class="col-sm-12 col-md-6 col-lg-4 my-5">
-                <div class="card">
-                    <a class="imagenLink" href="/descripcionproducto.html"><img class="card-img-top card_color"
-                            src="assets/img/producto no disponible.jpg" alt="Card image cap"></a>
-                </div>
-                <div class="product_card_body my-3">
-                    <h5 class="card-title product_title">Tote Misato</h5>
-                    <h6 class="product_price my-2">$28.990</h6>
-                    <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
+                <div class="col-sm-12 col-md-6 col-lg-4 my-5">
+                    <div class="card">
+                        <img class="card-img-top card_color" src="assets/img/Polerones polo/Poleron DEDEDE.png"
+                            alt="Card image cap">
+                    </div>
+                    <div class="product_card_body my-3">
+                        <h5 class="card-title product_title">Dedede Crewneck</h5>
+                        <h6 class="product_price my-2">$28.990</h6>
+                        <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
+                    </div>
                 </div>
             </div>
-
-            <div class="col-sm-12 col-md-6 col-lg-4 my-5">
-                <div class="card">
-                    <a class="imagenLink" href="/descripcionproducto.html"><img class="card-img-top card_color"
-                            src="assets/img/producto no disponible.jpg" alt="Card image cap"></a>
-                </div>
-                <div class="product_card_body my-3">
-                    <h5 class="card-title product_title">Tote Sakura Card Raptor</h5>
-                    <h6 class="product_price my-2">$28.990</h6>
-                    <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
-                </div>
-            </div>
-
-            <div class="col-sm-12 col-md-6 col-lg-4 my-5">
-                <div class="card">
-                    <a class="imagenLink" href="/descripcionproducto.html"><img class="card-img-top card_color"
-                            src="assets/img/producto no disponible.jpg" alt="Card image cap"></a>
-                </div>
-                <div class="product_card_body my-3">
-                    <h5 class="card-title product_title">Tote Sailor Moon</h5>
-                    <h6 class="product_price my-2">$28.990</h6>
-                    <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
-                </div>
-            </div>
-
-
         </div>
     </div>
-    <br>
-    <br>
-    </div>
-    <br>
+
 
     <!--Inicio Footer-->
     <footer class="footer">
@@ -306,9 +250,9 @@ pageEncoding="ISO-8859-1"%>
                 </div>
             </div>
         </div>
-    
-    </footer>
 
+    </footer>
+    <!--Fin Footer-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>

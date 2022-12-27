@@ -1,0 +1,273 @@
+/* todo  toda la página*/
+* {
+    margin: 0px;
+    padding: 0px;
+    color: white;
+}
+
+body {
+    background: #202020;
+}
+
+div {
+    text-align: center;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+/* todo termina arreglos generales */
+
+.noti {
+    text-align: center;
+    background-color: #92478C;
+    margin: 0;
+    padding: 0.3rem;
+    font-size: medium;
+}
+
+.fontbokor {
+    font-family: Bokor;
+}
+
+.fontZenKaku {
+    font-family: Zen Kaku Gothic New;
+}
+
+
+/* inicio navbar */
+
+#logofooter2 {
+    display: none;
+}
+
+.fotoprincipal {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    width: 25rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#navbarSupportedContent {
+    justify-content: center;
+    width: 100%;
+}
+
+.dropdown-menu.show {
+    width: 100%;
+    background-color: #2D2D2D;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    border: none;
+    border-radius: 0%;
+}
+
+.card {
+    background-color: #2D2D2D;
+    border-color: #202020;
+    border-radius: 0%;
+}
+
+#fontsize {
+    font-size: 230%;
+}
+
+.margin_a {
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+#dropdown-productos {
+    display: inline-block;
+
+}
+
+
+#dropdown-productosresponsive {
+    display: none;
+}
+
+#productos {
+    font-size: 1.5rem;
+    text-align: start;
+    margin-left:35%;
+    margin-bottom: 10%;
+    
+}
+
+#primerboton {
+    display: none;
+}
+
+#segundoboton {
+    display: none;
+
+}
+
+.hovercontainer:hover #primerboton {
+    width: 80%;
+    display: inline-block;
+    font-size: large;
+    position: absolute;
+    bottom:30%;
+    left: 10%;
+    background-color: black;
+    padding: 0.8rem;
+    border-radius:10px;
+
+}
+
+
+
+.hovercontainer:hover #segundoboton {
+    width: 80%;
+    font-size: large;
+    display: inline-block;
+    position: absolute;
+    bottom: 60%;
+    left: 10%;
+    background-color: black;
+    padding: 0.8rem;
+    border-radius:10px;
+    
+
+}
+
+.hovercontainer:hover #poleronesphoto {
+    opacity: 0.1;
+    transition: 0.8s;
+    -webkit-transition: 0.8s;
+}
+
+/* footer */
+
+footer {
+    background-color: #161616;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-top: 3%;
+    padding-bottom: 1%;
+    margin-top: 5%;
+}
+
+.FT {
+    font-family: "Roboto", Bold;
+    text-align: start;
+}
+
+.rrss {
+    text-align: center;
+    margin-top: 1rem;
+    margin-right: 30%;
+
+}
+
+a:hover {
+
+    color: #92478C;
+    transition: 0.5s;
+}
+
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+.footer-col {
+    width: 16.6%;
+    margin: 0%;
+    font-size: medium;
+    text-align: start;
+    font-family: "Roboto", Light;
+    text-decoration: none;
+    color: rgb(255, 255, 255)
+}
+
+#logofooter {
+    text-align: left;
+
+}
+
+
+
+
+
+
+
+/*responsive*/
+@media(min-width:481px) and (max-width:1023px) {
+    .footer-col {
+        width: 45%;
+        margin: 2%;
+
+    }
+
+    .rrss {
+        text-align: left;
+    }
+
+    #dropdown-productos {
+        display: none;
+        
+    
+    }
+    
+    
+    #dropdown-productosresponsive {
+        display: block;
+        text-align: start;
+    }
+
+    #logofooter {
+        display: none;
+    }
+
+    #logofooter2 {
+        display: block;
+    }
+}
+
+@media(max-width: 480px) {
+    .footer-col {
+        width: 100%;
+        margin-left: 2%;
+        margin-bottom: 5%;
+
+        font-size: medium;
+        text-align: start;
+        font-family: "Roboto", Light;
+        text-decoration: none;
+        color: rgb(255, 255, 255)
+    }
+
+    .rrss {
+        text-align: left;
+    }
+
+    #dropdown-productos {
+        display: none;
+    
+    }
+    
+    
+    #dropdown-productosresponsive {
+        display: block;
+        text-align: start;
+    }
+
+    #logofooter {
+        display: none;
+    }
+
+    #logofooter2 {
+        display: block;
+    }
+}

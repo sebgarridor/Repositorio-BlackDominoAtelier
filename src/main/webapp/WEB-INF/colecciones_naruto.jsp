@@ -1,7 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-    
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" %>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     <!DOCTYPE html>
     <html lang="en">
     
@@ -23,7 +21,6 @@
         <title>Black Domino Atelier</title>
         <link rel="stylesheet" href="assets/css/navbaryfooternew.css">
         <link rel="stylesheet" href="assets/css/colecciones.css">
-    
     </head>
     
     <body>
@@ -40,21 +37,21 @@
     
         <nav class="navbar navbar-expand-lg fontbokor" id="fontsize">
             <div class="container">
-                <button class="navbar-toggler" style="background-color: white;" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <button class="navbar-toggler" style="background-color: white;" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="nav">
-    
+
                         <li class="nav-item">
                             <a class="margin_a" href="home">Inicio</a>
                         </li>
-    
-                        
-    
-    
+
+
+
+
                         <li class="nav-item" id="dropdown-productosresponsive">
                             <p>
                                 <a class="margin_a" data-bs-toggle="collapse" href="#productos" role="button"
@@ -63,23 +60,28 @@
                                 </a>
                             </p>
                             <div class="collapse fontbokor" id="productos">
-                                <a href="poleras">Poleras</a><hr>
-                                <a href="polerones_polo">Polerones polo</a><hr>
-                                <a href="polerones_hoodie">Polerones canguro</a><hr>
-                                <a href="totebags">Totebags</a><hr>
+                                <a href="poleras">Poleras</a>
+                                <hr>
+                                <a href="polerones_polo">Polerones polo</a>
+                                <hr>
+                                <a href="polerones_hoodie">Polerones canguro</a>
+                                <hr>
+                                <a href="totebags">Totebags</a>
+                                <hr>
                                 <a href="bandoleras">Bandoleras</a><br>
-                                
+
                             </div>
                         </li>
-    
+
                         <li class="nav-item" id="dropdown-productos">
                             <div>
-                                <a class="margin_a" href="" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
-    
+                                <a class="margin_a" href="" data-bs-toggle="dropdown"
+                                    aria-expanded="false">Productos</a>
+
                                 <ul class="dropdown-menu drop">
-    
+
                                     <div class="container">
-    
+
                                         <div class="row" style="padding: 2rem;">
                                             <div class="col-3">
                                                 <div class="card"
@@ -93,28 +95,33 @@
                                                     </div>
                                                 </div>
                                             </div>
-    
-    
+
+
                                             <div class="col-3">
                                                 <div class="card"
                                                     style="width: 15rem; border-radius: 0%; border-color: #202020; ">
                                                     <div class="hovercontainer" style="position: relative;">
                                                         <img class="card-img-top "
-                                                        style="background-color: #202020;  height: 21rem;"" src="
-                                                        assets/img/polerón Eren titán.png" alt="Card image cap" id="poleronesphoto">
+                                                            style="background-color: #202020;  height: 21rem;"" src="
+                                                            assets/img/polerón Eren titán.png" alt="Card image cap"
+                                                            id="poleronesphoto">
                                                         <div id="botones">
-                                                            <button class="fontZenKaku" id="primerboton" onclick="location.href = '/polerones_polo';">Polerones polo</button>
-                                                            <button class="fontZenKaku" id="segundoboton" onclick="location.href = '/polerones_hoodie';">Polerones canguro</button>
+                                                            <button class="fontZenKaku" id="primerboton"
+                                                                onclick="location.href = '/polerones_polo';">Polerones
+                                                                polo</button>
+                                                            <button class="fontZenKaku" id="segundoboton"
+                                                                onclick="location.href = '/polerones_hoodie';">Polerones
+                                                                canguro</button>
                                                         </div>
-    
+
                                                     </div>
-    
+
                                                     <div style="background-color:#2D2D2D;">
                                                         <h5 class="card-title fontZenKaku">Polerones</h5>
                                                     </div>
                                                 </div>
                                             </div>
-    
+
                                             <div class="col-3">
                                                 <div class="card"
                                                     style="width: 15rem; border-radius: 0%; border-color: #202020; ">
@@ -130,7 +137,8 @@
                                                 <div class="card"
                                                     style="width: 15rem; border-radius: 0%; border-color: #202020; ">
                                                     <img class="card-img-top" style="background-color: #202020; "
-                                                        src="assets/img/JUNJI sin fondo figma.png" alt="Card image cap">
+                                                        src="assets/img/JUNJI sin fondo figma.png"
+                                                        alt="Card image cap">
                                                     <div style="background-color:#2D2D2D;">
                                                         <h5 class="card-title fontZenKaku">Totebags</h5>
                                                     </div>
@@ -152,66 +160,74 @@
         </nav>
     
         <!-- Esto es el fin del navbar-->
-    
-        <div class="container ">
-            <div class="row">
-    
-                <div class="col-sm-12 col-md-6 col-lg-4 my-5">
-                    <div class="card">
-                        <a class="imagenLink" href="/descripcionproducto"><img class="card-img-top card_color"
-                                src="assets/img/producto no disponible.jpg" alt="Card image cap"></a>
+        <div class="seccionmedio">
+            <h1 class="encabezado">Coleccion Naruto</h1>
+            <br>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-4 my-5">
+                        <div class="card">
+                            <img class="card-img-top card_color" src="assets/img/Poleras sin fondo/Naruto SF.png" alt="Polera Naruto">
+                        </div>
+                        <div class="product_card_body my-3">
+                            <h5 class="card-title product_title">Naruto Tee</h5>
+                            <h6 class="product_price my-2">$10.000 CLP</h6>
+                            <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
+                        </div>
                     </div>
-                    <div class="product_card_body my-3">
-                        <h5 class="card-title product_title">Bandolera Akira</h5>
-                        <h6 class="product_price my-2">$28.990</h6>
-                        <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
+                    <div class="col-sm-12 col-md-6 col-lg-4 my-5">
+                        <div class="card">
+                            <img class="card-img-top card_color" src="assets/img/Poleras sin fondo/Obito SF.png" alt="Polera Obito">
+                        </div>
+                        <div class="product_card_body my-3">
+                            <h5 class="card-title product_title">Obito Tee</h5>
+                            <h6 class="product_price my-2">$10.000 CLP</h6>
+                            <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
+                        </div>
                     </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 my-5">
+                        <div class="card">
+                            <img class="card-img-top card_color" src="assets/img/Polerones polo/Poleron Naruto.png" alt="Card image cap">
+                        </div>
+                        <div class="product_card_body my-3">
+                            <h5 class="card-title product_title">Polerón Polo Naruto</h5>
+                            <h6 class="product_price my-2">$20.000 CLP</h6>
+                            <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 my-5">
+                        <div class="card">
+                            <img class="card-img-top card_color" src="assets/img/Polerones polo/polerón Obito.png" alt="Card image cap">
+                        </div>
+                        <div class="product_card_body my-3">
+                            <h5 class="card-title product_title">Polerón Polo Obito</h5>
+                            <h6 class="product_price my-2">$20.000 CLP</h6>
+                            <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 my-5">
+                        <div class="card">
+                            <img class="card-img-top card_color" src="assets/img/Hoodies/polerón Canguro Naruto.png" alt="Card image cap">
+                        </div>
+                        <div class="product_card_body my-3">
+                            <h5 class="card-title product_title">Polerón Canguro Naruto</h5>
+                            <h6 class="product_price my-2">$23.000 CLP</h6>
+                            <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 my-5">
+                        <div class="card">
+                            <img class="card-img-top card_color" src="assets/img/Hoodies/polerón Canguro Obito.png" alt="Card image cap">
+                        </div>
+                        <div class="product_card_body my-3">
+                            <h5 class="card-title product_title">Polerón Canguro Obito</h5>
+                            <h6 class="product_price my-2">$23.000 CLP</h6>
+                            <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
+                        </div>
+                    </div>
+                    
                 </div>
-    
-                <div class="col-sm-12 col-md-6 col-lg-4 my-5">
-                    <div class="card">
-                        <a class="imagenLink" href="/descripcionproducto"><img class="card-img-top card_color"
-                                src="assets/img/producto no disponible.jpg" alt="Card image cap"></a>
-                    </div>
-                    <div class="product_card_body my-3">
-                        <h5 class="card-title product_title">Bandolera EVA-01</h5>
-                        <h6 class="product_price my-2">$28.990</h6>
-                        <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
-                    </div>
-                </div>
-    
-                <div class="col-sm-12 col-md-6 col-lg-4 my-5">
-                    <div class="card">
-                        <a class="imagenLink" href="/descripcionproducto"><img class="card-img-top card_color"
-                                src="assets/img/producto no disponible.jpg" alt="Card image cap"></a>
-                    </div>
-                    <div class="product_card_body my-3">
-                        <h5 class="card-title product_title">Bandolera Eclipse</h5>
-                        <h6 class="product_price my-2">$28.990</h6>
-                        <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
-                    </div>
-                </div>
-    
-                <div class="col-sm-12 col-md-6 col-lg-4 my-5">
-                    <div class="card">
-                        <a class="imagenLink" href="/descripcionproducto"><img class="card-img-top card_color"
-                                src="assets/img/producto no disponible.jpg" alt="Card image cap"></a>
-                    </div>
-                    <div class="product_card_body my-3">
-                        <h5 class="card-title product_title">Bandolera Sailor Moon</h5>
-                        <h6 class="product_price my-2">$28.990</h6>
-                        <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
-                    </div>
-                </div>
-    
-    
-    
             </div>
-        </div>
-        <br>
-        <br>
-        </div>
-        <br>
     
         <!--Inicio Footer-->
         <footer class="footer">
@@ -223,8 +239,8 @@
                             <a href=""><img class="imgconfig" src="./assets/img/iconmail.png" alt=""></a>
                             <a href="https://www.instagram.com/blackdomino.atelier/"><img class="imgconfig"
                                     src="./assets/img/instagramIcon.png" alt="ig logo"></a>
-                            <a href="https://www.facebook.com/people/Blacky-Domino/100079510762644/"><img class="imgconfig"
-                                    src="./assets/img/facebookicon.png" alt="fb logo"></a>
+                            <a href="https://www.facebook.com/people/Blacky-Domino/100079510762644/"><img
+                                    class="imgconfig" src="./assets/img/facebookicon.png" alt="fb logo"></a>
                         </div>
                     </div>
                     <div class="footer-col">
@@ -236,7 +252,7 @@
                         <p>
                             <a href="/preguntasfrecuentes">Preguntas frecuentes</a><br>
                             <a href="/comocomprar">Cómo comprar</a><br>
-                            <a href="/tallaje">Tallaje</a><br>
+                            <a href="/Tallaje">Tallaje</a><br>
                         </p>
                     </div>
                     <div class="footer-col">
@@ -264,13 +280,13 @@
                             <a href=""><img class="imgconfig" src="./assets/img/iconmail.png" alt=""></a>
                             <a href="https://www.instagram.com/blackdomino.atelier/"><img class="imgconfig"
                                     src="./assets/img/instagramIcon.png" alt="ig logo"></a>
-                            <a href="https://www.facebook.com/people/Blacky-Domino/100079510762644/"><img class="imgconfig"
-                                    src="./assets/img/facebookicon.png" alt="fb logo"></a>
+                            <a href="https://www.facebook.com/people/Blacky-Domino/100079510762644/"><img
+                                    class="imgconfig" src="./assets/img/facebookicon.png" alt="fb logo"></a>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
         </footer>
     
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
@@ -278,4 +294,4 @@
             crossorigin="anonymous"></script>
     </body>
     
-    </html>
+    </html>    

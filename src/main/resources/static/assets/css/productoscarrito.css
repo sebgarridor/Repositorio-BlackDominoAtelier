@@ -16,6 +16,10 @@ body {
     margin-bottom: 0px;
 }
 
+.form-select {
+    background: #202020 url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='white' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right .75rem center/8px 10px !important;
+}
+
 
 footer {
     background-color: #161616;
@@ -30,11 +34,11 @@ div {
     text-align: center;
 }
 
-.textofooter{
+.textofooter {
     margin-top: 50px;
 }
 
-.fotoprincipal{
+.fotoprincipal {
     margin-top: 70px;
     margin-bottom: 70px;
     width: 400px;
@@ -42,30 +46,31 @@ div {
     margin-left: auto;
 }
 
-h1{
+h1 {
     font-family: Bokor;
 }
 
-h2{
-    font-family: Zen Kaku Gothic New;
-}
-h5{
+h2 {
     font-family: Zen Kaku Gothic New;
 }
 
-.containerprincipal {
-    margin-top: 15rem;
+h5 {
+    font-family: Zen Kaku Gothic New;
 }
 
-#estadocompra{
+#containerprincipal {
+    margin-top: 0rem;
+}
+
+#estadocompra {
     margin-top: 5rem;
     font-family: Zen Kaku Gothic New;
     text-align: center;
-    font-size: 1.6em;    
+    font-size: 1.6em;
     justify-content: center;
 }
 
-#carrodecompras{
+#carrodecompras {
     text-align: start;
     margin-top: 5rem;
 
@@ -73,7 +78,7 @@ h5{
 }
 
 #titulocarro {
-    display:block;
+    display: block;
     text-align: start;
 }
 
@@ -85,16 +90,17 @@ h5{
 #card-costoestimado {
     background-color: transparent;
     border: 1px solid #FFFFFF;
-    border-radius:10px;
+    border-radius: 10px;
     margin-bottom: 3rem;
 
 }
+
 #costo-estimado {
     color: #92478C;
     text-align: left;
     margin-left: 0rem;
     padding: 1rem;
-    
+
 }
 
 #card-productos {
@@ -108,7 +114,7 @@ h5{
     width: 92%;
     margin-top: 1rem;
     background-color: transparent;
-    color:#FFFFFF;
+    color: #FFFFFF;
     border: 1px solid #FFFFFF;
     border-radius: 10px;
 }
@@ -126,10 +132,11 @@ h5{
     border: 1px solid #92478C;
     border-radius: 10px;
 }
-#calcular-envio-button:hover{
+
+#calcular-envio-button:hover {
     font-family: Zen Kaku Gothic New;
     background-color: #92478C;
-    color: #161616;
+    color: wwhite;
     cursor: pointer;
     display: inline-block;
     position: relative;
@@ -139,7 +146,7 @@ h5{
 #card-revisionpedido {
     background-color: transparent;
     border: 1px solid #FFFFFF;
-    border-radius:10px;
+    border-radius: 10px;
 
 }
 
@@ -157,13 +164,14 @@ p {
     width: 4rem;
     margin-top: 2rem;
     background-color: transparent;
-    color:#FFFFFF;
+    color: #FFFFFF;
     border: 1px solid #FFFFFF;
     border-radius: 10px;
 }
 
-#continuarpago-buttons{
-    background-color: transparent;;
+#continuarpago-buttons {
+    background-color: transparent;
+    ;
 }
 
 #continuarpago {
@@ -174,7 +182,7 @@ p {
     border-radius: 10px;
     width: 100%;
     margin-top: 3rem;
-    
+
 
 
 }
@@ -185,13 +193,13 @@ p {
     margin-top: 2rem;
     margin-bottom: 1rem;
     padding-top: 0.3rem;
-    padding-bottom: 0.3rem;    
+    padding-bottom: 0.3rem;
     background-color: transparent;
     border: 1px solid #92478C;
     border-radius: 10px;
 }
 
-footer{
+footer {
     background-color: #161616;
     display: flex;
     justify-content: space-around;
@@ -201,7 +209,7 @@ footer{
     padding-bottom: 1rem;
 }
 
-.FT{
+.FT {
     font-family: "Roboto", Bold;
     text-align: start;
 }
@@ -211,7 +219,7 @@ footer{
 
 }
 
-.rrss{
+.rrss {
     justify-content: space-around;
     margin-top: 1rem;
 }
@@ -245,4 +253,21 @@ footer{
     margin: 0;
     padding: 0.3rem;
     font-size: medium;
+}
+
+/*responsive*/
+@media(min-width:481px) and (max-width:1023px) {
+
+}
+
+
+
+
+@media(max-width: 480px) {
+    #card-productos {
+        width: 100%;
+    }
+ 
+
+
 }

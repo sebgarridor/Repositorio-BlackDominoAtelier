@@ -1,7 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" %>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -22,13 +21,9 @@ pageEncoding="ISO-8859-1"%>
     <title>Black Domino Atelier</title>
     <link rel="stylesheet" href="assets/css/navbaryfooternew.css">
     <link rel="stylesheet" href="assets/css/colecciones.css">
- 
-
 </head>
 
 <body>
-
-
     <!-- Esto es el inicio del navbar-->
     <h6 class="noti">Envío delivery - Starken</h6>
     <header>
@@ -166,152 +161,111 @@ pageEncoding="ISO-8859-1"%>
 
     <!-- Esto es el fin del navbar-->
 
-    <div class="container ">
-        <div class="row">
-
-            <div class="col-sm-12 col-md-6 col-lg-4 my-5">
-                <div class="card">
-                    <a class="imagenLink" href="/descripcionproducto.html"><img class="card-img-top card_color"
-                            src="assets/img/producto no disponible.jpg" alt="Card image cap"></a>
-                </div>
-                <div class="product_card_body my-3">
-                    <h5 class="card-title product_title">Tote Akira</h5>
-                    <h6 class="product_price my-2">$28.990</h6>
-                    <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
-                </div>
-            </div>
-
-            <div class="col-sm-12 col-md-6 col-lg-4 my-5">
-                <div class="card">
-                    <a class="imagenLink" href="/descripcionproducto.html"><img class="card-img-top card_color"
-                            src="assets/img/producto no disponible.jpg" alt="Card image cap"></a>
-                </div>
-                <div class="product_card_body my-3">
-                    <h5 class="card-title product_title">Tote Berserk</h5>
-                    <h6 class="product_price my-2">$28.990</h6>
-                    <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
-                </div>
-            </div>
-
-            <div class="col-sm-12 col-md-6 col-lg-4 my-5">
-                <div class="card">
-                    <a class="imagenLink" href="/descripcionproducto.html"><img class="card-img-top card_color"
-                            src="assets/img/producto no disponible.jpg" alt="Card image cap"></a>
-                </div>
-                <div class="product_card_body my-3">
-                    <h5 class="card-title product_title">Tote EVA-01</h5>
-                    <h6 class="product_price my-2">$28.990</h6>
-                    <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
-                </div>
-            </div>
-
-            <div class="col-sm-12 col-md-6 col-lg-4 my-5">
-                <div class="card">
-                    <a class="imagenLink" href="/descripcionproducto.html"><img class="card-img-top card_color"
-                            src="assets/img/producto no disponible.jpg" alt="Card image cap"></a>
-                </div>
-                <div class="product_card_body my-3">
-                    <h5 class="card-title product_title">Tote Misato</h5>
-                    <h6 class="product_price my-2">$28.990</h6>
-                    <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
-                </div>
-            </div>
-
-            <div class="col-sm-12 col-md-6 col-lg-4 my-5">
-                <div class="card">
-                    <a class="imagenLink" href="/descripcionproducto.html"><img class="card-img-top card_color"
-                            src="assets/img/producto no disponible.jpg" alt="Card image cap"></a>
-                </div>
-                <div class="product_card_body my-3">
-                    <h5 class="card-title product_title">Tote Sakura Card Raptor</h5>
-                    <h6 class="product_price my-2">$28.990</h6>
-                    <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
-                </div>
-            </div>
-
-            <div class="col-sm-12 col-md-6 col-lg-4 my-5">
-                <div class="card">
-                    <a class="imagenLink" href="/descripcionproducto.html"><img class="card-img-top card_color"
-                            src="assets/img/producto no disponible.jpg" alt="Card image cap"></a>
-                </div>
-                <div class="product_card_body my-3">
-                    <h5 class="card-title product_title">Tote Sailor Moon</h5>
-                    <h6 class="product_price my-2">$28.990</h6>
-                    <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
-                </div>
-            </div>
-
-
-        </div>
-    </div>
-    <br>
-    <br>
-    </div>
-    <br>
-
-    <!--Inicio Footer-->
-    <footer class="footer">
+    <div class="seccionmedio">
+        <h1 class="encabezado">Coleccion Tokyo Ghul</h1>
+        <br>
         <div class="container">
             <div class="row">
-                <div class="footer-col" id="logofooter">
-                    <img class="imgconfig" src="./assets/img/Symbol_White_135px.png" alt="">
-                    <div class="rrss">
-                        <a href=""><img class="imgconfig" src="./assets/img/iconmail.png" alt=""></a>
-                        <a href="https://www.instagram.com/blackdomino.atelier/"><img class="imgconfig"
-                                src="./assets/img/instagramIcon.png" alt="ig logo"></a>
-                        <a href="https://www.facebook.com/people/Blacky-Domino/100079510762644/"><img
-                                class="imgconfig" src="./assets/img/facebookicon.png" alt="fb logo"></a>
+                <div class="col-sm-12 col-md-6 col-lg-4 my-5">
+                    <div class="card">
+                        <img class="card-img-top card_color" src="assets/img/Poleras sin fondo/Kaneki SF.png"
+                            alt="Card image cap">
+                    </div>
+                    <div class="product_card_body my-3">
+                        <h5 class="card-title product_title">Kaneki Tee</h5>
+                        <h6 class="product_price my-2">$28.990</h6>
+                        <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
                     </div>
                 </div>
-                <div class="footer-col">
-                    <h5 class="FT">Sobre Nosotros</h5>
-                    <p>Las mejores serigrafías <br> desde 2013.</p>
+                <div class="col-sm-12 col-md-6 col-lg-4 my-5">
+                    <div class="card">
+                        <img class="card-img-top card_color" src="assets/img/Hoodies/polerón Canguro Kaneki.png"
+                            alt="Card image cap">
+                    </div>
+                    <div class="product_card_body my-3">
+                        <h5 class="card-title product_title">Kaneki Hoodie</h5>
+                        <h6 class="product_price my-2">$28.990</h6>
+                        <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
+                    </div>
                 </div>
-                <div class="footer-col">
-                    <h5>Ayuda</h5>
-                    <p>
-                        <a href="/preguntasfrecuentes">Preguntas frecuentes</a><br>
-                        <a href="/comocomprar">Cómo comprar</a><br>
-                        <a href="/Tallaje">Tallaje</a><br>
-                    </p>
-                </div>
-                <div class="footer-col">
-                    <h5 class="FT">Horario</h5>
-                    <p><b>Lunes a Viernes</b> <br> 11:30 hrs.<br>
-                        <b>Sábado</b> <br> 11:00 a 16:00 hrs.
-                    </p>
-                </div>
-                <div class="footer-col">
-                    <h5 class="FT">Productos</h5>
-                    <p>
-                        <a href="/bandoleras"> Bandoleras</a><br>
-                        <a href="/totebag"> Totebags</a><br>
-                        <a href="/poleras"> Poleras</a><br>
-                        <a href="/polerones"> Polerones</a><br>
-                        <a href="/colecciones"> Colecciones</a>
-                    </p>
-                </div>
-                <div class="footer-col" id="metodosdepago">
-                    <img class="imgconfig" src="./assets/img/webpay.png" alt="webpay" style="width: 9rem;"> <br>
-                    <img class="imgconfig" src="./assets/img/khipu.png" alt="khipu">
-                </div>
-                <div class="footer-col" id="logofooter2">
-                    <div class="rrss">
-                        <a href=""><img class="imgconfig" src="./assets/img/iconmail.png" alt=""></a>
-                        <a href="https://www.instagram.com/blackdomino.atelier/"><img class="imgconfig"
-                                src="./assets/img/instagramIcon.png" alt="ig logo"></a>
-                        <a href="https://www.facebook.com/people/Blacky-Domino/100079510762644/"><img
-                                class="imgconfig" src="./assets/img/facebookicon.png" alt="fb logo"></a>
+                <div class="col-sm-12 col-md-6 col-lg-4 my-5">
+                    <div class="card">
+                        <img class="card-img-top card_color" src="assets/img/Polerones polo/polerón Kaneki.png"
+                            alt="Card image cap">
+                    </div>
+                    <div class="product_card_body my-3">
+                        <h5 class="card-title product_title">Kaneki Crewneck</h5>
+                        <h6 class="product_price my-2">$28.990</h6>
+                        <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+
+        <!--Inicio Footer-->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col" id="logofooter">
+                        <img class="imgconfig" src="./assets/img/Symbol_White_135px.png" alt="">
+                        <div class="rrss">
+                            <a href=""><img class="imgconfig" src="./assets/img/iconmail.png" alt=""></a>
+                            <a href="https://www.instagram.com/blackdomino.atelier/"><img class="imgconfig"
+                                    src="./assets/img/instagramIcon.png" alt="ig logo"></a>
+                            <a href="https://www.facebook.com/people/Blacky-Domino/100079510762644/"><img
+                                    class="imgconfig" src="./assets/img/facebookicon.png" alt="fb logo"></a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h5 class="FT">Sobre Nosotros</h5>
+                        <p>Las mejores serigrafías <br> desde 2013.</p>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Ayuda</h5>
+                        <p>
+                            <a href="/preguntasfrecuentes">Preguntas frecuentes</a><br>
+                            <a href="/comocomprar">Cómo comprar</a><br>
+                            <a href="/Tallaje">Tallaje</a><br>
+                        </p>
+                    </div>
+                    <div class="footer-col">
+                        <h5 class="FT">Horario</h5>
+                        <p><b>Lunes a Viernes</b> <br> 11:30 hrs.<br>
+                            <b>Sábado</b> <br> 11:00 a 16:00 hrs.
+                        </p>
+                    </div>
+                    <div class="footer-col">
+                        <h5 class="FT">Productos</h5>
+                        <p>
+                            <a href="/bandoleras"> Bandoleras</a><br>
+                            <a href="/totebag"> Totebags</a><br>
+                            <a href="/poleras"> Poleras</a><br>
+                            <a href="/polerones"> Polerones</a><br>
+                            <a href="/colecciones"> Colecciones</a>
+                        </p>
+                    </div>
+                    <div class="footer-col" id="metodosdepago">
+                        <img class="imgconfig" src="./assets/img/webpay.png" alt="webpay" style="width: 9rem;"> <br>
+                        <img class="imgconfig" src="./assets/img/khipu.png" alt="khipu">
+                    </div>
+                    <div class="footer-col" id="logofooter2">
+                        <div class="rrss">
+                            <a href=""><img class="imgconfig" src="./assets/img/iconmail.png" alt=""></a>
+                            <a href="https://www.instagram.com/blackdomino.atelier/"><img class="imgconfig"
+                                    src="./assets/img/instagramIcon.png" alt="ig logo"></a>
+                            <a href="https://www.facebook.com/people/Blacky-Domino/100079510762644/"><img
+                                    class="imgconfig" src="./assets/img/facebookicon.png" alt="fb logo"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </footer>
     
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
-</body>
-
-</html>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+            crossorigin="anonymous"></script>
+    </body>
+    
+    </html>

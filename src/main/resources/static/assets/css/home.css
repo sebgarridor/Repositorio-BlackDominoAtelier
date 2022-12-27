@@ -61,11 +61,13 @@ h1{
 }
 h5{
     font-family: Zen Kaku Gothic New;
+    
 }
 
 .card{
     background-color: #2D2D2D;
     border-color: #202020;
+    
 }
 .card-body{
     background-color: #2D2D2D;
@@ -84,7 +86,7 @@ nav{
     height: 425px;
 }
 .show{
-    background-color: #161616;
+    
     padding-bottom: 30px;
     padding-top: 30px;
 }

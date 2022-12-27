@@ -1,21 +1,13 @@
-/* *Aplicado a la página en general */
-
-* {
-    color: white;
-    margin: 0px;
-    padding: 0px;
-}
-
-body {
-    background: #202020;
-}
-
 /* *Primer div con imagen y descripción */
 #imagenproducto {
-    width: 400px;
+    width: 22rem;
     margin: auto;
     display: block;
 
+}
+
+p {
+    text-align: left;
 }
 
 /* *Select */
@@ -23,7 +15,7 @@ body {
 
     color: white;
     background: #202020 url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='white' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right .75rem center/8px 10px !important;
-    width: 350px;
+    width: 20rem;
 }
 
 /* *contador */
@@ -111,15 +103,28 @@ button.plus {
     background-color: #92478C;
     border: none;
     border-radius: 5px;
-    width: 258px;
+    width: 15rem;
     height: 36px;
+    
+
+
+}
+
+#carroboton-real {
+    background-color: #92478C;
+    border: none;
+    border-radius: 5px;
+    width: 15rem;
+    height: 36px;
+    margin-left: 1.3rem;
+    
+
 
 }
 
 /* *carrusel */
 .carruselimg {
-    width: 300px;
-    height: 350px;
+    width: 20rem;
     margin-left: 20px;
     margin-right: 20px;
 }
@@ -143,4 +148,63 @@ button.plus {
 
 .destacado {
     color: #92478C;
+}
+
+
+
+/*responsive*/
+@media(min-width:481px) and (max-width:1023px) {
+
+    #carouselExampleControls-desktop {
+        display: none;
+
+    }
+
+    #carouselExampleControls-mobile {
+        display: none;
+    }
+
+    #carouselExampleControls-tablet {
+
+        display: block;
+    }
+
+
+}
+
+@media(max-width: 480px) {
+
+    #carouselExampleControls-desktop {
+        display: none;
+    }
+
+    #carouselExampleControls-mobile {
+        display: block;
+    }
+
+    #carouselExampleControls-tablet {
+
+        display: none;
+    }
+
+
+}
+
+@media(min-width: 1024px) {
+    #carouselExampleControls-desktop {
+        display: block;
+
+    }
+
+    #carouselExampleControls-mobile {
+        display: none;
+    }
+
+    #carouselExampleControls-tablet {
+
+        display: none;
+
+    }
+
+
 }
