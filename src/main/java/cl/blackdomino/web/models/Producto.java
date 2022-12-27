@@ -29,10 +29,12 @@
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-
-	private Integer cantidad;
 	
 	private Integer precio;
+	
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name="cantidad_id")
+	private Cantidad cantidad;
 	
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name="categoria_id")
@@ -49,7 +51,8 @@
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name="coleccion_id")
 	private Coleccion coleccion;
-
+	
+	
 	//ManyToMany
 	@JsonIgnore
 	@ManyToMany(fetch = FetchType.LAZY)
