@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import cl.blackdomino.web.models.Cantidad;
 import cl.blackdomino.web.models.Categoria;
 import cl.blackdomino.web.models.Comuna;
 import cl.blackdomino.web.models.Direccion;
@@ -19,6 +20,7 @@ import cl.blackdomino.web.models.Region;
 import cl.blackdomino.web.models.Tallaje;
 import cl.blackdomino.web.models.Usuario;
 import cl.blackdomino.web.models.Venta;
+import cl.blackdomino.web.services.CantidadServiceImpl;
 import cl.blackdomino.web.services.CategoriaServiceImpl;
 import cl.blackdomino.web.services.ComunaServiceImpl;
 import cl.blackdomino.web.services.DireccionServiceImpl;
@@ -62,42 +64,60 @@ public class VentaController {
 	
 	@Autowired
 	VentaServiceImpl ventaServiceImpl;
+	
+	@Autowired
+	CantidadServiceImpl cantidadServiceImpl;
 
 	
 	@GetMapping("/descripcionproducto")
 	public String mostrarDescProd(Model model) {
 		List<Tallaje> listaSelTallaje = tallajeServiceImpl.obtenerListaTallaje();
-		model.addAttribute("listaSelTallaje", listaSelTallaje);
 		List<Categoria> listaSelCategoria = categoriaServiceImpl.obtenerListaCategorias();
+		List<Cantidad> listaCantidad = cantidadServiceImpl.listaCantidad();
+		
+		model.addAttribute("listaSelTallaje", listaSelTallaje);
 		model.addAttribute("listaSelCategoria", listaSelCategoria);
+		model.addAttribute("listaCantidad", listaCantidad);
 		return "descripcionproducto.jsp";
 	}
 	
 	@PostMapping("/descripcionproducto")
 	public String capturarProductos(@RequestParam("tallaje") Long id_tallaje,
+			@RequestParam("cantidad") Long id_cantidad,
 			@RequestParam("categoria") Long id_categoria,
-			@RequestParam("cantidad") Integer cantidad,
 			Model model){
 		
 		Categoria categoria = categoriaServiceImpl.obtenerCategoria(id_categoria);
 		Tallaje tallaje = tallajeServiceImpl.obtenerTallaje(id_tallaje);
+		Cantidad cantidad = cantidadServiceImpl.obtenerCantidad(id_cantidad);
 		Producto producto = new Producto();
 		producto.setCategoria(categoria);
-		producto.setTallaje(tallaje);
 		producto.setCantidad(cantidad);
+		producto.setTallaje(tallaje);
 		productoServiceImpl.guardarProducto(producto);
-		return "checkout.jsp";
+		return "redirect:/productoscarrito";
 		
 	}
 	
 	@GetMapping("/productoscarrito")
-	public String mostrarCarrito() {
+	public String mostrarCarrito(Model model, Long id) {
+		List<Cantidad> listaCantidad = cantidadServiceImpl.listaCantidad();
+		List<Region> listaSelRegion = regionServiceImpl.obtenerRegiones();
+		List<Comuna> listaSelComuna = comunaServiceImpl.findAllByRegion(id);
+		
+		model.addAttribute("listaCantidad", listaCantidad);
+		model.addAttribute("listaSelRegion", listaSelRegion);
+		model.addAttribute("listaSelComuna", listaSelComuna);
 		return "productoscarrito.jsp";
 	}
 	
 	@PostMapping("/productoscarrito")
-	public String guardarCarrito() {
-		return "productoscarrito.jsp";
+	public String guardarCarrito(@RequestParam("cantidad") Long id_cantidad, 
+			Model model) {
+		Cantidad cantidad = cantidadServiceImpl.obtenerCantidad(id_cantidad);
+		Producto producto = new Producto();
+		producto.setCantidad(cantidad);
+		return "redirect:/checkout";
 	}
 
 	
@@ -106,9 +126,13 @@ public class VentaController {
 		// lista para el selector
 		List<Region> listaSelRegion = regionServiceImpl.obtenerRegiones();
 		List<Comuna> listaSelComuna = comunaServiceImpl.findAllByRegion(id);
+		List<Envio> envio = envioServiceImpl.listadoEnvios();
+		List<MedioPago> pago = medioPagoServiceImpl.listaMedioPago();
 		
 		model.addAttribute("listaSelRegion", listaSelRegion);
-		model.addAttribute("listaSelComuna", listaSelComuna);	
+		model.addAttribute("listaSelComuna", listaSelComuna);
+		model.addAttribute("envio", envio);
+		model.addAttribute("pago", pago);
 		return "checkout.jsp";
 	}
 
