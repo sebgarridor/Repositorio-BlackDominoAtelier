@@ -1,7 +1,8 @@
 package cl.blackdomino.web.models;
 
 import javax.persistence.*;
-import javax.validation.constraints.*;
+
+
 
 @Entity
 @Table(name = "roles")
@@ -11,17 +12,15 @@ public class Rol {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@NotNull
-	//se indica que va a ser un enum de tipo String
 	@Enumerated(EnumType.STRING)
-	private NombreRol nombre;
+	@Column(length = 20)
+	private ERole nombre;
 
-	//constructores
 	public Rol() {
 		super();
 	}
 
-	public Rol(@NotNull NombreRol nombre) {
+	public Rol(ERole nombre) {
 		super();
 		this.nombre = nombre;
 	}
@@ -34,11 +33,11 @@ public class Rol {
 		this.id = id;
 	}
 
-	public NombreRol getNombre() {
+	public ERole getNombre() {
 		return nombre;
 	}
 
-	public void setNombre(NombreRol nombre) {
+	public void setNombre(ERole nombre) {
 		this.nombre = nombre;
 	}
 	

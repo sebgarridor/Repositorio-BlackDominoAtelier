@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class DataSourceConfig {
-/*
+
 	@Bean
 	public DataSource getDataSource() {
 		return DataSourceBuilder.create()
@@ -18,5 +18,5 @@ public class DataSourceConfig {
 				.password("secret")
 				.build();
 	}
-*/
+
 }

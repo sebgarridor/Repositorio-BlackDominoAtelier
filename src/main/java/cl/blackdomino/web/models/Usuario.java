@@ -1,76 +1,181 @@
 package cl.blackdomino.web.models;
 
-import java.util.*;
+
+
+import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.persistence.*;
-import javax.validation.constraints.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
-import org.springframework.data.annotation.Transient;
+import org.springframework.format.annotation.DateTimeFormat;
 
-/*Una entidad es un objeto, elemento o 'cosa'
- *  con atributos particulares que lo distinguen. 
- *  
- * UniqueConstraint se aplica en una sola columna (o columnas) 
- * para asegurarse de que un valor de clave principal es único.*/
 @Entity
-@Table(name = "usuarios"
-//,uniqueConstraints = @UniqueConstraint(columnNames = "correo")
-)
+@Table(name = "usuarios", 
+    uniqueConstraints = { 
+      @UniqueConstraint(columnNames = "correo"),
+      @UniqueConstraint(columnNames = "rut") 
+    })
 public class Usuario {
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-	
-	@NotNull
-	private String nombre;
-	
-	@NotNull
-	private String apellido;
-	
-	@Size(min = 6)
-	@NotNull
-	private String password;
-	
-	//campo o propiedad que no será serializada
-	//no se agregará como columna
-	@Transient
-	private String password2;
-	
-	//especifica que debe tener la estructura de un correo (semántica)
-	//es lo mismo que uniqueConstraints, puedes usar uno de los dos
-	//se usa este cuando son pocos
-	@Email
-	@NotNull
-	@Column(unique = true)
-	private String correo;
-	
-	//relación many to many
-	//un usuario-->muchos roles
-	//un rol-->muchos usuarios
-	//tabla intermedia que tiene dos campos
-	//joinColumns hace referencia a la columna que hace referencia a los campos
-	@ManyToMany(fetch = FetchType.LAZY)
-	@JoinTable(name = "roles_usuarios",
-	joinColumns = @JoinColumn(name = "rol_id"),
-	inverseJoinColumns = @JoinColumn(name = "usuario_id"))
-	private Set<Rol> roles = new HashSet<>();
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
 
-	//constructores
-		public Usuario() {
-		super();
-	}
+  @NotBlank
+  private String nombre;
+  
+  @NotBlank
+  private String apellidos;
 
-		public Usuario(@NotNull String nombre, @NotNull String apellido, @Size(min = 6) @NotNull String password,
-				String password2, @Email String correo) {
-			super();
-			this.nombre = nombre;
-			this.apellido = apellido;
-			this.password = password;
-			this.password2 = password2;
-			this.correo = correo;
-		}
+  @NotBlank
+  private String correo;
+
+  private String password;
+  
+  @NotBlank
+  private String rut;
+  
+  @NotBlank
+  private String telefono;
+
+  @ManyToMany(fetch = FetchType.LAZY)
+  @JoinTable(  name = "usuarios_roles", 
+        joinColumns = @JoinColumn(name = "usuario_id"), 
+        inverseJoinColumns = @JoinColumn(name = "rol_id"))
+  private Set<Rol> roles = new HashSet<>();
+  
+	@Column(updatable=false)
+	@DateTimeFormat(pattern="yyyy-MM-dd")
+	private Date createdAt; //inserción de un registro
 	
+	@DateTimeFormat(pattern="yyyy-MM-dd")
+	private Date updatedAt; //update de un registro
 	
+	@PrePersist
+  protected void onCreate(){
+      this.createdAt = new Date();
+  }
+  @PreUpdate
+  protected void onUpdate(){
+      this.updatedAt = new Date();
+  }
+
+  public Usuario() {
+  }
+
+
+
+  public Usuario(@NotBlank String nombre, @NotBlank String apellidos,
+		@NotBlank @Email String correo, String password,
+		@NotBlank String rut, @NotBlank String telefono) {
+	super();
+	this.nombre = nombre;
+	this.apellidos = apellidos;
+	this.correo = correo;
+	this.password = password;
+	this.rut = rut;
+	this.telefono = telefono;
+}
+
+
+public Long getId() {
+	return id;
+}
+
+
+
+public void setId(Long id) {
+	this.id = id;
+}
+
+
+
+public String getNombre() {
+	return nombre;
+}
+
+
+
+public void setNombre(String nombre) {
+	this.nombre = nombre;
+}
+
+
+
+public String getApellidos() {
+	return apellidos;
+}
+
+
+
+public void setApellidos(String apellidos) {
+	this.apellidos = apellidos;
+}
+
+
+
+public String getCorreo() {
+	return correo;
+}
+
+
+
+public void setCorreo(String correo) {
+	this.correo = correo;
+}
+
+
+
+public String getPassword() {
+	return password;
+}
+
+
+
+public void setPassword(String password) {
+	this.password = password;
+}
+
+
+
+public String getRut() {
+	return rut;
+}
+
+
+
+public void setRut(String rut) {
+	this.rut = rut;
+}
+
+
+
+public String getTelefono() {
+	return telefono;
+}
+
+
+
+public void setTelefono(String telefono) {
+	this.telefono = telefono;
+}
+
+
+
+public Set<Rol> getRoles() {
+	return roles;
+}
+
+
+
+public void setRoles(Set<Rol> roles) {
+	this.roles = roles;
+}
+
+
+
 
 }
