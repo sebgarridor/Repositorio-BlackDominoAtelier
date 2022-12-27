@@ -33,10 +33,6 @@
 	private Integer precio;
 	
 	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name="cantidad_id")
-	private Cantidad cantidad;
-	
-	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name="categoria_id")
 	private Categoria categoria;
 	
@@ -51,7 +47,6 @@
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name="coleccion_id")
 	private Coleccion coleccion;
-	
 	
 	//ManyToMany
 	@JsonIgnore
