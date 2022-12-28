@@ -31,7 +31,7 @@
 <!-- action: ruta donde enviaremos los parámetros(atributos/información)
 method: forma de cómo se envían los parámetros
 post: enviamos parametros ocultos para la url -->
-<form action="/admin/registro" method="post">
+<form action="/formulario/signup" method="post">
 
 <label for="nombre" class="form-label">Nombre:</label>
 <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingresa tu nombre">
@@ -42,8 +42,11 @@ id: nombre para identificar
 placeholder: lo que se muestra como sugerencia de texto
  -->
  <br>
- <label for="apellido" class="form-label">Apellido:</label>
-<input type="text" class="form-control" id="apellido" name="apellido" placeholder="Ingresa tu apellido" required>
+  <label for="rut" class="form-label">Rut:</label>
+<input type="text" class="form-control" id="rut" name="rut" placeholder="Ingresa tu rut" required>
+<br>
+ <label for="apellidos" class="form-label">Apellidos:</label>
+<input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="Ingresa tu apellidos" required>
 <br>
  <label for="correo" class="form-label">E-mail:</label>
 <input type="text" class="form-control" id="correo" name="correo" placeholder="Ingresa tu correo" required>
