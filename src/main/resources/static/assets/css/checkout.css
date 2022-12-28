@@ -80,6 +80,15 @@ h5 {
     width: 100%
 }
 
+#revisarcompra-button:hover {
+    background-color: #a46e9f;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
 #editarcarrito-button {
     margin-top: 0.8rem;
     padding: 0.3rem;
@@ -89,6 +98,16 @@ h5 {
     width: 100%
 }
 
+#editarcarrito-button:hover {
+    background-color: #2d2d2d;
+    color: #ffffff;
+    cursor: pointer;
+    border: 1px solid #2d2d2d;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
 #seguircomprando-button {
     margin-top: 0.8rem;
     padding: 0.3rem;
@@ -96,6 +115,16 @@ h5 {
     border: 1px solid #92478C;
     border-radius: 10px;
     width: 100%
+}
+
+#seguircomprando-button:hover {
+    background-color: #2d2d2d;
+    color: #ffffff;
+    cursor: pointer;
+    border: 1px solid #2d2d2d;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
 }
 
 #subtotal {
@@ -132,7 +161,7 @@ h5 {
 input[type="radio"] {
     appearance: none;
     background-color: rgb(250, 250, 250);
-    margin-top: 5%;
+    margin-top: 2%;
     font: inherit;
     color: currentColor;
     width: 1.15em;
@@ -179,26 +208,3 @@ input[type="radio"] {
   p {
     font-family: Zen Kaku Gothic New;
   }
-
-  /*responsive*/
-@media(min-width:481px) and (max-width:1023px) {
-
-    #infocomprador {
-        width: 100%;
-    }
-
-    #revisionpedido {
-        width: 100%;
-    }
-
-}
-
-@media(max-width: 480px) {
-    #infocomprador {
-        width: 100%;
-    }
-
-    #revisionpedido {
-        width: 100%;
-    }
-}
