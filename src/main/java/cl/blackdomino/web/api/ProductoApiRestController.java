@@ -34,7 +34,7 @@ public class ProductoApiRestController {
 
 // -----------------------Guardar--------------------------------------------------------------------------
 	@RequestMapping("/guardar/producto")
-	public Producto guardarProducto(@RequestBody Producto producto,
+	public String guardarProducto(@RequestBody Producto producto,
 			@RequestParam(value = "categoriaId", required = true) Long CategoriaId,
 			@RequestParam(value = "tallajeId", required = true) Long TallajeId,
 			@RequestParam(value = "disenoId", required = true)Long DisenoId,
@@ -52,7 +52,12 @@ public class ProductoApiRestController {
 		 * nombre: "Totebag evangelion negra" precio: "10000"
 		 *
 		 */
-		return productoServiceImpl.guardarProducto(producto);
+		Boolean resultado = productoServiceImpl.guardarProducto(producto);
+		if(resultado) {
+			return "Se guardo correctamente";
+		}else {
+			return "Error al crear el producto";
+		}
 		
 		//
 
