@@ -14,7 +14,6 @@ import cl.blackdomino.web.models.Comuna;
 import cl.blackdomino.web.models.Direccion;
 import cl.blackdomino.web.models.Envio;
 import cl.blackdomino.web.models.MedioPago;
-import cl.blackdomino.web.models.Producto;
 import cl.blackdomino.web.models.Region;
 import cl.blackdomino.web.models.Tallaje;
 import cl.blackdomino.web.models.Usuario;
@@ -81,13 +80,6 @@ public class VentaController {
 			@RequestParam("cantidad") Long id_cantidad,
 			@RequestParam("categoria") Long id_categoria,
 			Model model){
-		
-		Categoria categoria = categoriaServiceImpl.obtenerCategoria(id_categoria);
-		Tallaje tallaje = tallajeServiceImpl.obtenerTallaje(id_tallaje);
-		Producto producto = new Producto();
-		producto.setCategoria(categoria);
-		producto.setTallaje(tallaje);
-		productoServiceImpl.guardarProducto(producto);
 		return "redirect:/productoscarrito";
 		
 	}
@@ -106,7 +98,7 @@ public class VentaController {
 	
 	@PostMapping("/productoscarrito")
 	public String guardarCarrito() {
-		return null;
+		return "productoscarrito.jsp";
 	} 
 
 	
@@ -126,29 +118,20 @@ public class VentaController {
 	}
 
 	@PostMapping("/checkout")
-	public String checkout(@RequestParam("rut") String rut, 
-			@RequestParam("correo") String correo,
-			@RequestParam("telefono") String telefono, 
-			@RequestParam("nombre") String nombre,
-			@RequestParam("calle") String calle,
-			@RequestParam("apellidos") String apellidos,
-			@RequestParam("ciudad") String ciudad,
-			@RequestParam("region") Long id_region,
-			@RequestParam("comuna") Long id_comuna,
-			@RequestParam("instrucciones") String instrucciones,
-			@RequestParam("mediopago") Long id_mediopago,
-			@RequestParam("envio") Long id_envio,
+	public String checkout(@RequestParam(value="rut", required=true) String rut, 
+			@RequestParam(value="correo", required=true) String correo,
+			@RequestParam(value="telefono", required=true) String telefono, 
+			@RequestParam(value="nombre", required=true) String nombre,
+			@RequestParam(value="calle", required=true) String calle,
+			@RequestParam(value="apellidos", required=true) String apellidos,
+			@RequestParam(value="ciudad", required=true) String ciudad,
+			@RequestParam(value="region", required=true) Long id_region,
+			@RequestParam(value="comuna", required=true) Long id_comuna,
+			@RequestParam(value="instrucciones", required=true) String instrucciones,
+			@RequestParam(value="mediopago", required=true) Long id_mediopago,
+			@RequestParam(value="envio", required=true) Long id_envio,
 			Model model) {
-		
-		if(rut.equals(null) || correo.equals(null) || telefono.equals(null) || nombre.equals(null) ||
-				apellidos.equals(null) || ciudad.equals(null)|| calle.equals(null)|| id_region == 0 || id_comuna == 0 )
-		{
-			model.addAttribute("msgError","llene todos los campos");
-			
-			return "checkout.jsp";
-		}
-		
-		
+
 		Comuna comuna = comunaServiceImpl.obtenerComuna(id_comuna);
 		Direccion direccion = new Direccion();
 		direccion.setCalle(calle);
@@ -166,7 +149,7 @@ public class VentaController {
 		usuario.setDireccion(direccion);
 		usuarioServiceImpl.guardarUsuario(usuario);
 		
-		MedioPago medioPago = medioPagoServiceImpl.obtenerMedioPago(id_envio);
+		MedioPago medioPago = medioPagoServiceImpl.obtenerMedioPago(id_mediopago);
 		Envio envio = envioServiceImpl.obtenerEnvio(id_envio);
 		Venta venta = new Venta();
 		venta.setUsuario(usuario);
@@ -179,11 +162,15 @@ public class VentaController {
 
 	@GetMapping("/revisionpedido")
 	public String mostrarRevision() {
+		//mostrar venta
+		//mostrar los datos del usuario y el precio total de la compra más envío
 		return "revisionpedido.jsp";
 	}
 	
 	@PostMapping("/revisionpedido")
 	public String guardarRevision() {
+		//guardar en la base de datos
+		//redirección a método de pago
 		return "revisionpedido.jsp";
 	}
 
