@@ -14,8 +14,13 @@ public class ProductoServiceImpl implements ProductoService{
 	
 //--------------------Guardar----------------------------------
 	@Override
-	public Producto guardarProducto(Producto producto) {
-		return productoRepository.save(producto);
+	public Boolean guardarProducto(Producto producto) {
+		Producto retornoProducto = productoRepository.findByProducto(producto.getProducto());
+		if(retornoProducto == null) {
+			productoRepository.save(producto);
+			return true;
+		}else {
+		return false;}
 	}
 //--------------------Eliminar----------------------------------
 	@Override

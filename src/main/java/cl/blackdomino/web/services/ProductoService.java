@@ -4,7 +4,7 @@ import java.util.List;
 import cl.blackdomino.web.models.Producto;
 
 public interface ProductoService {
-	public Producto guardarProducto(Producto producto);
+	public Boolean guardarProducto(Producto producto);
 	public String eliminarProducto(Long id);
 	public String actualizarProducto(Producto producto);
 	public Producto obtenerProducto(Long id);

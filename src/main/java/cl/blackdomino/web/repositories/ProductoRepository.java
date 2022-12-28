@@ -7,5 +7,6 @@ import cl.blackdomino.web.models.Producto;
 
 @Repository
 public interface ProductoRepository extends JpaRepository<Producto, Long> {
+	Producto findByProducto(String producto);
 	
 }

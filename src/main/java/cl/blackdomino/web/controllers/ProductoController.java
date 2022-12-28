@@ -1,5 +1,6 @@
 package cl.blackdomino.web.controllers;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,10 +11,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
+
+import cl.blackdomino.web.models.Categoria;
+import cl.blackdomino.web.models.Coleccion;
+import cl.blackdomino.web.models.Diseno;
 import cl.blackdomino.web.models.Producto;
+import cl.blackdomino.web.models.Tallaje;
 import cl.blackdomino.web.services.CategoriaServiceImpl;
+import cl.blackdomino.web.services.ColeccionServiceImpl;
 import cl.blackdomino.web.services.DisenoServiceImpl;
 import cl.blackdomino.web.services.ProductoServiceImpl;
+import cl.blackdomino.web.services.TallajeServiceImpl;
 
 
 @Controller
@@ -25,6 +34,49 @@ public class ProductoController {
 	CategoriaServiceImpl categoriaServiceImpl;
 	@Autowired
 	DisenoServiceImpl disenoServiceImpl;
+	@Autowired
+	TallajeServiceImpl tallajeServiceImpl;
+	@Autowired
+	ColeccionServiceImpl coleccionServiceImpl;
+	
+	
+	@GetMapping("/formulario/producto")
+	public String formularioProducto (Model model) {
+		
+		return "producto.jsp";
+	}
+	
+	@PostMapping("/formulario/producto")
+	public String guardarProducto(@RequestParam("precio")Integer precio,
+			@RequestParam("producto")String producto,
+			@RequestParam("categoria") Long id_categoria,
+			@RequestParam("diseño") Long id_diseno,
+			@RequestParam("talla") Long id_tallaje,
+			@RequestParam("coleccion") Long id_coleccion,
+			final @RequestParam("foto") MultipartFile foto,
+			Model model
+			) throws IOException {
+		Categoria categoria = categoriaServiceImpl.obtenerCategoria(id_categoria);
+		Diseno diseno = disenoServiceImpl.obtenerDiseno(id_diseno);
+		Tallaje tallaje = tallajeServiceImpl.obtenerTallaje(id_tallaje);
+		Coleccion coleccion = coleccionServiceImpl.obtenerColeccion(id_coleccion);
+		byte[] imagenProducto = foto.getBytes();
+		Producto productoNuevo = new Producto();
+		productoNuevo.setCategoria(categoria);
+		productoNuevo.setColeccion(coleccion);
+		productoNuevo.setDiseno(diseno);
+		productoNuevo.setFoto(imagenProducto);
+		productoNuevo.setProducto(producto);
+		productoNuevo.setPrecio(precio);
+		productoNuevo.setTallaje(tallaje);
+		
+		Boolean resultado = productoServiceImpl.guardarProducto(productoNuevo);
+		if(resultado) {
+			model.addAttribute("msgOk", "Producto registrado con éxito");
+			}
+				model.addAttribute("msgError", "Producto en existencia");
+				return "producto";			
+	}
 	
 	
 	// http://localhost:8080/producto

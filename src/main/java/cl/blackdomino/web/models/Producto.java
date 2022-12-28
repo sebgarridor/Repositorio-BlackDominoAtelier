@@ -1,8 +1,9 @@
 	package cl.blackdomino.web.models;
 	
 	import java.util.List;
-	
-	import javax.persistence.Entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
 	import javax.persistence.FetchType;
 	import javax.persistence.GeneratedValue;
 	import javax.persistence.GenerationType;
@@ -30,7 +31,12 @@
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
+	private String producto;
+	
 	private Integer precio;
+	
+	@Column(name="foto", length= Integer.MAX_VALUE,nullable= true)
+	private byte[] foto;
 	
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name="categoria_id")
