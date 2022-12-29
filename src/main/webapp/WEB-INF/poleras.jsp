@@ -26,7 +26,7 @@
 
 <body>
     <!-- Esto es el inicio del navbar-->
-    <h6 class="noti">Envï¿½o delivery - Starken</h6>
+    <h6 class="noti">Envío delivery - Starken</h6>
     <header>
         <div>
             <img class="fotoprincipal" src="assets/img/Logo_Color_Png.png">
@@ -171,8 +171,8 @@
         </div>
         <div class="product_card_body my-3">
           <h5 class="card-title product_title">Akira Tee</h5>
-          <h6 class="product_price my-2">$28.990</h6>
-          <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
+          <h6 class="product_price my-2">$10.000CLP</h6>
+          <a class="btn btn-primary px-5 option_btn" href="/descripcionproducto">Ver Opciones</a>
         </div>
       </div>
 
@@ -183,7 +183,7 @@
         </div>
         <div class="product_card_body my-3">
           <h5 class="card-title product_title">Chrollo Lucifer Tee</h5>
-          <h6 class="product_price my-2">$28.990</h6>
+          <h6 class="product_price my-2">$10.000CLP</h6>
           <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
         </div>
       </div>
@@ -195,7 +195,7 @@
         </div>
         <div class="product_card_body my-3">
           <h5 class="card-title product_title">Dazai Osamu</h5>
-          <h6 class="product_price my-2">$28.990</h6>
+          <h6 class="product_price my-2">$10.000CLP</h6>
           <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
         </div>
       </div>
@@ -210,7 +210,7 @@
         </div>
         <div class="product_card_body my-3">
           <h5 class="card-title product_title">DEDEDE Tee</h5>
-          <h6 class="product_price my-2">$28.990</h6>
+          <h6 class="product_price my-2">$10.000CLP</h6>
           <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
         </div>
       </div>
@@ -222,7 +222,7 @@
         </div>
         <div class="product_card_body my-3">
           <h5 class="card-title product_title">Dragon Ball Z Tee</h5>
-          <h6 class="product_price my-2">$28.990</h6>
+          <h6 class="product_price my-2">$10.000CLP</h6>
           <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
         </div>
       </div>
@@ -234,7 +234,7 @@
         </div>
         <div class="product_card_body my-3">
           <h5 class="card-title product_title">EVA-01 Tee</h5>
-          <h6 class="product_price my-2">$28.990</h6>
+          <h6 class="product_price my-2">$10.000CLP</h6>
           <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
         </div>
       </div>
@@ -249,7 +249,7 @@
         </div>
         <div class="product_card_body my-3">
           <h5 class="card-title product_title">Eren Titï¿½n Tee</h5>
-          <h6 class="product_price my-2">$28.990</h6>
+          <h6 class="product_price my-2">$10.000CLP</h6>
           <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
         </div>
       </div>
@@ -261,7 +261,7 @@
         </div>
         <div class="product_card_body my-3">
           <h5 class="card-title product_title">Femto Tee</h5>
-          <h6 class="product_price my-2">$28.990</h6>
+          <h6 class="product_price my-2">$10.000CLP</h6>
           <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
         </div>
       </div>
@@ -273,7 +273,7 @@
         </div>
         <div class="product_card_body my-3">
           <h5 class="card-title product_title">Fire Force Tee</h5>
-          <h6 class="product_price my-2">$28.990</h6>
+          <h6 class="product_price my-2">$10.000CLP</h6>
           <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
         </div>
       </div>
@@ -290,7 +290,7 @@
         </div>
         <div class="product_card_body my-3">
           <h5 class="card-title product_title">Fushiguro Tee</h5>
-          <h6 class="product_price my-2">$28.990</h6>
+          <h6 class="product_price my-2">$10.000CLP</h6>
           <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
         </div>
       </div>
@@ -302,7 +302,7 @@
         </div>
         <div class="product_card_body my-3">
           <h5 class="card-title product_title">FMA Gate Tee</h5>
-          <h6 class="product_price my-2">$28.990</h6>
+          <h6 class="product_price my-2">$10.000CLP</h6>
           <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
         </div>
       </div>
@@ -314,7 +314,7 @@
         </div>
         <div class="product_card_body my-3">
           <h5 class="card-title product_title">Gen'ei Ryoda Tee</h5>
-          <h6 class="product_price my-2">$28.990</h6>
+          <h6 class="product_price my-2">$10.000CLP</h6>
           <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
         </div>
       </div>
@@ -329,7 +329,7 @@
         </div>
         <div class="product_card_body my-3">
           <h5 class="card-title product_title">Griffith Tee</h5>
-          <h6 class="product_price my-2">$28.990</h6>
+          <h6 class="product_price my-2">$10.000CLP</h6>
           <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
         </div>
       </div>
@@ -341,7 +341,7 @@
         </div>
         <div class="product_card_body my-3">
           <h5 class="card-title product_title">Hisoka Tee</h5>
-          <h6 class="product_price my-2">$28.990</h6>
+          <h6 class="product_price my-2">$10.000CLP</h6>
           <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
         </div>
       </div>
@@ -353,7 +353,7 @@
         </div>
         <div class="product_card_body my-3">
           <h5 class="card-title product_title">Junji Ito Tee</h5>
-          <h6 class="product_price my-2">$28.990</h6>
+          <h6 class="product_price my-2">$10.000CLP</h6>
           <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
         </div>
       </div>
@@ -369,7 +369,7 @@
         </div>
         <div class="product_card_body my-3">
           <h5 class="card-title product_title">Kaneda Tee</h5>
-          <h6 class="product_price my-2">$28.990</h6>
+          <h6 class="product_price my-2">$10.000CLP</h6>
           <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
         </div>
       </div>
@@ -381,7 +381,7 @@
         </div>
         <div class="product_card_body my-3">
           <h5 class="card-title product_title">Kaneki Tee</h5>
-          <h6 class="product_price my-2">$28.990</h6>
+          <h6 class="product_price my-2">$10.000CLP</h6>
           <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
         </div>
       </div>
@@ -393,7 +393,7 @@
         </div>
         <div class="product_card_body my-3">
           <h5 class="card-title product_title">Killua Tee</h5>
-          <h6 class="product_price my-2">$28.990</h6>
+          <h6 class="product_price my-2">$10.000CLP</h6>
           <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
         </div>
       </div>
@@ -408,7 +408,7 @@
         </div>
         <div class="product_card_body my-3">
           <h5 class="card-title product_title">Mikasa Tee</h5>
-          <h6 class="product_price my-2">$28.990</h6>
+          <h6 class="product_price my-2">$10.000CLP</h6>
           <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
         </div>
       </div>
@@ -420,7 +420,7 @@
         </div>
         <div class="product_card_body my-3">
           <h5 class="card-title product_title">Maka Tee</h5>
-          <h6 class="product_price my-2">$28.990</h6>
+          <h6 class="product_price my-2">$10.000CLP</h6>
           <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
         </div>
       </div>
@@ -432,7 +432,7 @@
         </div>
         <div class="product_card_body my-3">
           <h5 class="card-title product_title">Marin Tee</h5>
-          <h6 class="product_price my-2">$28.990</h6>
+          <h6 class="product_price my-2">$10.000CLP</h6>
           <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
         </div>
       </div>
@@ -447,7 +447,7 @@
         </div>
         <div class="product_card_body my-3">
           <h5 class="card-title product_title">Mieruko Tee</h5>
-          <h6 class="product_price my-2">$28.990</h6>
+          <h6 class="product_price my-2">$10.000CLP</h6>
           <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
         </div>
       </div>
@@ -459,7 +459,7 @@
         </div>
         <div class="product_card_body my-3">
           <h5 class="card-title product_title">Misato Tee</h5>
-          <h6 class="product_price my-2">$28.990</h6>
+          <h6 class="product_price my-2">$10.000CLP</h6>
           <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
         </div>
       </div>
@@ -471,7 +471,7 @@
         </div>
         <div class="product_card_body my-3">
           <h5 class="card-title product_title">Mob Psycho 100 Tee</h5>
-          <h6 class="product_price my-2">$28.990</h6>
+          <h6 class="product_price my-2">$10.000CLP</h6>
           <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
         </div>
       </div>
@@ -486,7 +486,7 @@
         </div>
         <div class="product_card_body my-3">
           <h5 class="card-title product_title">Naruto Tee</h5>
-          <h6 class="product_price my-2">$28.990</h6>
+          <h6 class="product_price my-2">$10.000CLP</h6>
           <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
         </div>
       </div>
@@ -498,7 +498,7 @@
         </div>
         <div class="product_card_body my-3">
           <h5 class="card-title product_title">Obito Tee</h5>
-          <h6 class="product_price my-2">$28.990</h6>
+          <h6 class="product_price my-2">$10.000CLP</h6>
           <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
         </div>
       </div>
@@ -510,7 +510,7 @@
         </div>
         <div class="product_card_body my-3">
           <h5 class="card-title product_title">Punpun Tee</h5>
-          <h6 class="product_price my-2">$28.990</h6>
+          <h6 class="product_price my-2">$10.000CLP</h6>
           <a class="btn btn-primary px-5 option_btn">Ver Opciones</a>
         </div>
       </div>

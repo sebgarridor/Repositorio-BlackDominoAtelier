@@ -19,7 +19,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Descripciï¿½n producto</title>
+    <title>Descripción producto</title>
     <link rel="stylesheet" href="assets/css/navbaryfooternew.css">
     <link rel="stylesheet" href="assets/css/descripcionproducto.css">
     <!--  <link rel="stylesheet" href="assets/js/jquery.js">-->
@@ -27,7 +27,7 @@
 
 <body>
     <!-- Esto es el inicio del navbar-->
-    <h6 class="noti">Envï¿½o delivery - Starken</h6>
+    <h6 class="noti">Envío delivery - Starken</h6>
     <header>
         <div>
             <img class="fotoprincipal" src="assets/img/Logo_Color_Png.png">
@@ -171,9 +171,9 @@
       <div class="texto">
         <h1 class="textleft destacado">Akira Tee</h1>
         <h4 class="textleft">$10.000 CLP</h4>
-        <h5 class="textleft">Descripciï¿½n</h5>
-        <p class="textleft">Polera negra talla a elecciï¿½n, estampada a travï¿½s de los mï¿½todos artesanales
-          serigrafï¿½a.
+        <h5 class="textleft">Descripción</h5>
+        <p class="textleft">Polera negra talla a elección, estampada a través de los métodos artesanales
+          serigrafía.
         <p>Manga larga +$3.000 CLP</p>
         <p>Tallas 2XL - 3XL: +$2000 CLP</p>
 
@@ -214,14 +214,15 @@
 
         <!-- * BOTON Aï¿½ADIR AL CARRO -->
         <div>
-         <button type="submit" id="carroboton">Aï¿½adir al carro</button>
-          </form>
-          
-          <div class="number-input texto">
+        <div class="number-input texto">
           <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
           <input class="quantity" id="bordecontador" min="1" name="quantity" value="1" type="number">
           <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
         </div>
+         <button type="submit" id="carroboton">Añadir al carro</button>
+          </form>
+          
+          
         </div>
       </div>
 
@@ -229,7 +230,7 @@
   </div>
   <br><br><br><br><br>
   <!-- *SECCIï¿½N DESTACADOS -->
-  <h3 class="destacado text-center">Tambiï¿½n te puede interesar</h3>
+  <h3 class="destacado text-center">También te puede interesar</h3>
 
   <!-- *CARRUSEL -->
   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -273,7 +274,7 @@
             <button id="carroboton">Ver opciones</button>
           </div>
           <div class="text-center">
-            <img class="carruselimg d-block" src="assets/img/polerï¿½n Eren titï¿½n.png" alt="foto">
+            <img class="carruselimg d-block" src="assets/img/polerón Eren titán.png" alt="foto">
             <h3 class="destacado">Eren</h3>
             <h5>$10.000 CLP</h5>
             <button id="carroboton">Ver opciones</button>
@@ -338,7 +339,7 @@
                   <h5>Ayuda</h5>
                   <p>
                       <a href="/preguntasfrecuentes">Preguntas frecuentes</a><br>
-                      <a href="/comocomprar">CÃ³mo comprar</a><br>
+                      <a href="/comocomprar">Cómo comprar</a><br>
                       <a href="/Tallaje">Tallaje</a><br>
                   </p>
               </div>
