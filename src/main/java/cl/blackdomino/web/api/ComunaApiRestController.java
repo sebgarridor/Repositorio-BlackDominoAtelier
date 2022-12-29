@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,20 +13,29 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import cl.blackdomino.web.models.Comuna;
+import cl.blackdomino.web.models.Region;
 import cl.blackdomino.web.repositories.ComunaRepository;
 import cl.blackdomino.web.services.ComunaServiceImpl;
+import cl.blackdomino.web.services.RegionServiceImpl;
 
 @RestController
+@CrossOrigin(origins = "*", methods= {RequestMethod.GET,RequestMethod.POST})
 public class ComunaApiRestController {
 	
 	@Autowired
 	private ComunaRepository comunaRepository;
 	@Autowired
 	private ComunaServiceImpl comunaServiceImpl;
+	@Autowired
+	private RegionServiceImpl regionServiceImpl;
 	
 	@RequestMapping("/guardar/comuna")
-	public Comuna guardarRegion(@RequestBody Comuna comuna) {
-		// http://localhost:8080/guardar/comuna
+	public Comuna guardarRegion(@RequestBody Comuna comuna,
+			@RequestParam(value="regionId",required = false) Long regionId) {
+		
+		Region region = regionServiceImpl.obtenerRegion(regionId);
+		comuna.setRegion(region);
+		
 		return comunaServiceImpl.guardarComuna(comuna);
 	}
 

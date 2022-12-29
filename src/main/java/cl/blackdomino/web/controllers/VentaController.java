@@ -1,6 +1,8 @@
 package cl.blackdomino.web.controllers;
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -103,7 +105,7 @@ public class VentaController {
 
 	
 	@GetMapping("/checkout")
-	public String mostrarChekout(Model model, Long id) {
+	public String mostrarChekout(Model model, Long id, HttpSession session ) {
 		// lista para el selector
 		List<Region> listaSelRegion = regionServiceImpl.obtenerRegiones();
 		List<Comuna> listaSelComuna = comunaServiceImpl.findAllByRegion(id);
@@ -128,9 +130,10 @@ public class VentaController {
 			@RequestParam(value="region", required=true) Long id_region,
 			@RequestParam(value="comuna", required=true) Long id_comuna,
 			@RequestParam(value="instrucciones", required=true) String instrucciones,
-			@RequestParam(value="mediopago", required=true) Long id_mediopago,
-			@RequestParam(value="envio", required=true) Long id_envio,
-			Model model) {
+			//@RequestParam(value="mediopago", required=true) Long id_mediopago,
+			//@RequestParam(value="envio", required=true) Long id_envio,
+			Model model,
+			HttpSession session) {
 
 		Comuna comuna = comunaServiceImpl.obtenerComuna(id_comuna);
 		Direccion direccion = new Direccion();
@@ -149,22 +152,44 @@ public class VentaController {
 		usuario.setDireccion(direccion);
 		usuarioServiceImpl.guardarUsuario(usuario);
 		
-		MedioPago medioPago = medioPagoServiceImpl.obtenerMedioPago(id_mediopago);
-		Envio envio = envioServiceImpl.obtenerEnvio(id_envio);
+		//MedioPago medioPago = medioPagoServiceImpl.obtenerMedioPago(id_mediopago);
+		//Envio envio = envioServiceImpl.obtenerEnvio(id_envio);
 		Venta venta = new Venta();
 		venta.setUsuario(usuario);
-		venta.setMediopago(medioPago);
-		venta.setEnvio(envio);
+		//venta.setMediopago(medioPago);
+		//venta.setEnvio(envio);
 		ventaServiceImpl.guardarVenta(venta);
+		 
+		session.setAttribute("usuarioId", usuario.getId());
+		session.setAttribute("ventaId", venta.getId());
 		
 		return "redirect:/revisionpedido";
 		 }
 
 	@GetMapping("/revisionpedido")
-	public String mostrarRevision() {
+	public String mostrarRevision(Model model, HttpSession session) {
+		
+		if (session.getAttribute("ventaId")!=null) {
+		Long ventaId = (Long) session.getAttribute("ventaId");
+		Long usuarioId = (Long) session.getAttribute("usuarioId");
 		//mostrar venta
+		Venta venta = ventaServiceImpl.obtenerVenta(ventaId);
+		model.addAttribute("Cantidad", venta.getCantidad());
+		model.addAttribute("Productos", venta.getProductos());
+		model.addAttribute("Total", venta.getTotalVenta());
+		model.addAttribute("Envio", venta.getEnvio());
+		
+		Usuario usuario = usuarioServiceImpl.obtenerUsuario(usuarioId);
+		model.addAttribute("Region", usuario.getDireccion().getComuna().getRegion().getRegion());
+		model.addAttribute("Calle", usuario.getDireccion().getCalle());
+		model.addAttribute("Ciudad", usuario.getDireccion().getCiudad());
+		model.addAttribute("Comuna", usuario.getDireccion().getComuna().getComuna());
+		
 		//mostrar los datos del usuario y el precio total de la compra más envío
-		return "revisionpedido.jsp";
+		return "revisionpedido.jsp"; } 
+		else {
+			return "redirect:/home";
+		}
 	}
 	
 	@PostMapping("/revisionpedido")
@@ -175,7 +200,30 @@ public class VentaController {
 	}
 
 	@GetMapping("/exitotarjeta")
-	public String mostrarExito() {
+	public String mostrarExito(Model model, HttpSession session) {
+		Long ventaId = (Long) session.getAttribute("ventaId");
+		Long usuarioId = (Long) session.getAttribute("usuarioId");
+		//mostrar venta
+		Venta venta = ventaServiceImpl.obtenerVenta(ventaId);
+		model.addAttribute("Cantidad", venta.getCantidad());
+		model.addAttribute("Productos", venta.getProductos());
+		model.addAttribute("Total", venta.getTotalVenta());
+		model.addAttribute("Envio", venta.getEnvio());
+		
+		Usuario usuario = usuarioServiceImpl.obtenerUsuario(usuarioId);
+		model.addAttribute("Region", usuario.getDireccion().getComuna().getRegion().getRegion());
+		model.addAttribute("Calle", usuario.getDireccion().getCalle());
+		model.addAttribute("Ciudad", usuario.getDireccion().getCiudad());
+		model.addAttribute("Comuna", usuario.getDireccion().getComuna().getComuna());
+		model.addAttribute("Correo", usuario.getCorreo());
+		model.addAttribute("Apellidos", usuario.getApellidos());
+		model.addAttribute("Rut", usuario.getRut());
+		model.addAttribute("Telefono", usuario.getTelefono());
+		model.addAttribute("Nombre", usuario.getNombre());
+		
+		
+		//mostrar los datos del usuario y el precio total de la compra más envío
+
 		return "exitotarjeta.jsp";
 	}
 

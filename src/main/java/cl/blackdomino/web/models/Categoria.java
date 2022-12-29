@@ -34,7 +34,7 @@ public class Categoria {
 	private Long id;
 	
 
-	private String Producto;
+	private String producto;
 	
 	
 	private String descripcion;
