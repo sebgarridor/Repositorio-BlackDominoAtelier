@@ -20,16 +20,16 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Colecciones Akira</title>
-    <link rel="stylesheet" href="assets/css/navbaryfooternew.css">
-     <link rel="stylesheet" href="assets/css/colecciones.css">
+    <link rel="stylesheet" href="../assets/css/navbaryfooternew.css">
+     <link rel="stylesheet" href="../assets/css/colecciones.css">
 </head>
 
 <body>
     <!-- Esto es el inicio del navbar-->
-    <h6 class="noti">Envï¿½o delivery - Starken</h6>
+    <h6 class="noti">Envío delivery - Starken</h6>
     <header>
         <div>
-            <img class="fotoprincipal" src="assets/img/Logo_Color_Png.png">
+            <img class="fotoprincipal" src="../assets/img/Logo_Color_Png.png">
         </div>
     </header>
     <br>
@@ -98,7 +98,7 @@
                                               <div class="hovercontainer" style="position: relative;">
                                                   <img class="card-img-top "
                                                   style="background-color: #202020;  height: 21rem;"" src="
-                                                  assets/img/polerÃ³n Eren titÃ¡n.png" alt="Card image cap" id="poleronesphoto">
+                                                  assets/img/polerón Eren titán.png" alt="Card image cap" id="poleronesphoto">
                                                   <div id="botones">
                                                       <button class="fontZenKaku" id="primerboton" onclick="location.href = '/polerones_polo';">Polerones polo</button>
                                                       <button class="fontZenKaku" id="segundoboton" onclick="location.href = '/polerones_hoodie';">Polerones canguro</button>
@@ -265,13 +265,13 @@
             </div>
             <div class="footer-col">
               <h5 class="FT">Sobre Nosotros</h5>
-              <p>Las mejores serigrafÃ­as <br> desde 2013.</p>
+              <p>Las mejores serigrafías <br> desde 2013.</p>
             </div>
             <div class="footer-col">
               <h5>Ayuda</h5>
               <p>
                 <a href="/preguntasfrecuentes">Preguntas frecuentes</a><br>
-                <a href="/comocomprar">CÃ³mo comprar</a><br>
+                <a href="/comocomprar">Cómo comprar</a><br>
                 <a href="/Tallaje">Tallaje</a><br>
               </p>
             </div>

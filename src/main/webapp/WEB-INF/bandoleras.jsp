@@ -28,7 +28,7 @@
     
     <body>
         <!-- Esto es el inicio del navbar-->
-        <h6 class="noti">EnvÃ­o delivery - Starken</h6>
+        <h6 class="noti">Envío delivery - Starken</h6>
         <header>
             <div>
                 <img class="fotoprincipal" src="assets/img/Logo_Color_Png.png">
@@ -101,7 +101,7 @@
                                                     <div class="hovercontainer" style="position: relative;">
                                                         <img class="card-img-top "
                                                         style="background-color: #202020;  height: 21rem;"" src="
-                                                        assets/img/polerÃ³n Eren titÃ¡n.png" alt="Card image cap" id="poleronesphoto">
+                                                        assets/img/polerón Eren titán.png" alt="Card image cap" id="poleronesphoto">
                                                         <div id="botones">
                                                             <button class="fontZenKaku" id="primerboton" onclick="location.href = '/polerones_polo';">Polerones polo</button>
                                                             <button class="fontZenKaku" id="segundoboton" onclick="location.href = '/polerones_hoodie';">Polerones canguro</button>

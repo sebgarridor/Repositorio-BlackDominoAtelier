@@ -37,129 +37,118 @@
 
 
 
-    <nav class="navbar navbar-expand-lg fontbokor" id="fontsize">
-        <div class="container">
-            <button class="navbar-toggler" style="background-color: white;" type="button"
-                data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="nav">
+         <nav class="navbar navbar-expand-lg fontbokor" id="fontsize">
+            <div class="container">
+                <button class="navbar-toggler" style="background-color: white;" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav">
     
-                    <li class="nav-item">
-                        <a class="margin_a" href="home">Inicio</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="margin_a" href="home">Inicio</a>
+                        </li>
+    
+                        
     
     
+                        <li class="nav-item" id="dropdown-productosresponsive">
+                            <p>
+                                <a class="margin_a" data-bs-toggle="collapse" href="#productos" role="button"
+                                    aria-expanded="false" aria-controls="collapseExample">
+                                    Productos
+                                </a>
+                            </p>
+                            <div class="collapse fontbokor" id="productos">
+                                <a href="poleras">Poleras</a><hr>
+                                <a href="polerones_polo">Polerones polo</a><hr>
+                                <a href="polerones_hoodie">Polerones canguro</a><hr>
+                                <a href="totebags">Totebags</a><hr>
+                                <a href="bandoleras">Bandoleras</a><br>
+                                
+                            </div>
+                        </li>
     
+                        <li class="nav-item" id="dropdown-productos">
+                            <div>
+                                <a class="margin_a" href="" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
     
-                    <li class="nav-item" id="dropdown-productosresponsive">
-                        <p>
-                            <a class="margin_a" data-bs-toggle="collapse" href="#productos" role="button"
-                                aria-expanded="false" aria-controls="collapseExample">
-                                Productos
-                            </a>
-                        </p>
-                        <div class="collapse fontbokor" id="productos">
-                            <a href="poleras">Poleras</a>
-                            <hr>
-                            <a href="polerones_polo">Polerones polo</a>
-                            <hr>
-                            <a href="polerones_hoodie">Polerones canguro</a>
-                            <hr>
-                            <a href="totebags">Totebags</a>
-                            <hr>
-                            <a href="bandoleras">Bandoleras</a><br>
+                                <ul class="dropdown-menu drop">
     
-                        </div>
-                    </li>
+                                    <div class="container">
     
-                    <li class="nav-item" id="dropdown-productos">
-                        <div>
-                            <a class="margin_a" href="" data-bs-toggle="dropdown"
-                                aria-expanded="false">Productos</a>
-    
-                            <ul class="dropdown-menu drop">
-    
-                                <div class="container">
-    
-                                    <div class="row" style="padding: 2rem;">
-                                        <div class="col-3">
-                                            <div class="card"
-                                                style="width: 15rem; border-radius: 0%; border-color: #202020;  ">
-                                                <a href="/poleras"><img class="card-img-top "
-                                                        style="background-color: #202020;"
-                                                        src="assets/img/JUNJI sin fondo figma.png"
-                                                        alt="Card image cap"></a>
-                                                <div style="background-color:#2D2D2D;">
-                                                    <h5 class="card-title fontZenKaku">Poleras<h5>
+                                        <div class="row" style="padding: 2rem;">
+                                            <div class="col-3">
+                                                <div class="card"
+                                                    style="width: 15rem; border-radius: 0%; border-color: #202020;  ">
+                                                    <a href="/poleras"><img class="card-img-top "
+                                                            style="background-color: #202020;"
+                                                            src="assets/img/JUNJI sin fondo figma.png"
+                                                            alt="Card image cap"></a>
+                                                    <div style="background-color:#2D2D2D;">
+                                                        <h5 class="card-title fontZenKaku">Poleras<h5>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
     
     
-                                        <div class="col-3">
-                                            <div class="card"
-                                                style="width: 15rem; border-radius: 0%; border-color: #202020; ">
-                                                <div class="hovercontainer" style="position: relative;">
-                                                    <img class="card-img-top "
+                                            <div class="col-3">
+                                                <div class="card"
+                                                    style="width: 15rem; border-radius: 0%; border-color: #202020; ">
+                                                    <div class="hovercontainer" style="position: relative;">
+                                                        <img class="card-img-top "
                                                         style="background-color: #202020;  height: 21rem;"" src="
-                                                        assets/img/polerÃ³n Eren titÃ¡n.png" alt="Card image cap"
-                                                        id="poleronesphoto">
-                                                    <div id="botones">
-                                                        <button class="fontZenKaku" id="primerboton"
-                                                            onclick="location.href = '/polerones_polo';">Polerones
-                                                            polo</button>
-                                                        <button class="fontZenKaku" id="segundoboton"
-                                                            onclick="location.href = '/polerones_hoodie';">Polerones
-                                                            canguro</button>
+                                                        assets/img/polerón Eren titán.png" alt="Card image cap" id="poleronesphoto">
+                                                        <div id="botones">
+                                                            <button class="fontZenKaku" id="primerboton" onclick="location.href = '/polerones_polo';">Polerones polo</button>
+                                                            <button class="fontZenKaku" id="segundoboton" onclick="location.href = '/polerones_hoodie';">Polerones canguro</button>
+                                                        </div>
+    
                                                     </div>
     
-                                                </div>
-    
-                                                <div style="background-color:#2D2D2D;">
-                                                    <h5 class="card-title fontZenKaku">Polerones</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-    
-                                        <div class="col-3">
-                                            <div class="card"
-                                                style="width: 15rem; border-radius: 0%; border-color: #202020; ">
-                                                <img class="card-img-top "
-                                                    style="background-color: #202020; height: 21rem;"
-                                                    src="assets/img/Bandolera EVA-01.png" alt="Card image cap">
-                                                <div style="background-color:#2D2D2D;">
-                                                    <h5 class="card-title fontZenKaku">Bandoleras</h5>
+                                                    <div style="background-color:#2D2D2D;">
+                                                        <h5 class="card-title fontZenKaku">Polerones</h5>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-3">
-                                            <div class="card"
-                                                style="width: 15rem; border-radius: 0%; border-color: #202020; ">
-                                                <img class="card-img-top" style="background-color: #202020; "
-                                                    src="assets/img/JUNJI sin fondo figma.png"
-                                                    alt="Card image cap">
-                                                <div style="background-color:#2D2D2D;">
-                                                    <h5 class="card-title fontZenKaku">Totebags</h5>
+    
+                                            <div class="col-3">
+                                                <div class="card"
+                                                    style="width: 15rem; border-radius: 0%; border-color: #202020; ">
+                                                    <img class="card-img-top "
+                                                        style="background-color: #202020; height: 21rem;"
+                                                        src="assets/img/Bandolera EVA-01.png" alt="Card image cap">
+                                                    <div style="background-color:#2D2D2D;">
+                                                        <h5 class="card-title fontZenKaku">Bandoleras</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="card"
+                                                    style="width: 15rem; border-radius: 0%; border-color: #202020; ">
+                                                    <img class="card-img-top" style="background-color: #202020; "
+                                                        src="assets/img/JUNJI sin fondo figma.png" alt="Card image cap">
+                                                    <div style="background-color:#2D2D2D;">
+                                                        <h5 class="card-title fontZenKaku">Totebags</h5>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="margin_a" href="/colecciones">Colecciones</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="margin_a" href="/comocomprar">Como Comprar</a>
-                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="margin_a" href="/colecciones">Colecciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="margin_a" href="/comocomprar">Como Comprar</a>
+                        </li>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
     <!-- Esto es el fin del navbar-->
  <br><br><br><br><br>

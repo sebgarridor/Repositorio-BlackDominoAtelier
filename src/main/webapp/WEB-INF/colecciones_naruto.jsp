@@ -35,23 +35,23 @@
     
     
     
-        <nav class="navbar navbar-expand-lg fontbokor" id="fontsize">
+         <nav class="navbar navbar-expand-lg fontbokor" id="fontsize">
             <div class="container">
-                <button class="navbar-toggler" style="background-color: white;" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" style="background-color: white;" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="nav">
-
+    
                         <li class="nav-item">
                             <a class="margin_a" href="home">Inicio</a>
                         </li>
-
-
-
-
+    
+                        
+    
+    
                         <li class="nav-item" id="dropdown-productosresponsive">
                             <p>
                                 <a class="margin_a" data-bs-toggle="collapse" href="#productos" role="button"
@@ -60,28 +60,23 @@
                                 </a>
                             </p>
                             <div class="collapse fontbokor" id="productos">
-                                <a href="poleras">Poleras</a>
-                                <hr>
-                                <a href="polerones_polo">Polerones polo</a>
-                                <hr>
-                                <a href="polerones_hoodie">Polerones canguro</a>
-                                <hr>
-                                <a href="totebags">Totebags</a>
-                                <hr>
+                                <a href="poleras">Poleras</a><hr>
+                                <a href="polerones_polo">Polerones polo</a><hr>
+                                <a href="polerones_hoodie">Polerones canguro</a><hr>
+                                <a href="totebags">Totebags</a><hr>
                                 <a href="bandoleras">Bandoleras</a><br>
-
+                                
                             </div>
                         </li>
-
+    
                         <li class="nav-item" id="dropdown-productos">
                             <div>
-                                <a class="margin_a" href="" data-bs-toggle="dropdown"
-                                    aria-expanded="false">Productos</a>
-
+                                <a class="margin_a" href="" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
+    
                                 <ul class="dropdown-menu drop">
-
+    
                                     <div class="container">
-
+    
                                         <div class="row" style="padding: 2rem;">
                                             <div class="col-3">
                                                 <div class="card"
@@ -95,33 +90,28 @@
                                                     </div>
                                                 </div>
                                             </div>
-
-
+    
+    
                                             <div class="col-3">
                                                 <div class="card"
                                                     style="width: 15rem; border-radius: 0%; border-color: #202020; ">
                                                     <div class="hovercontainer" style="position: relative;">
                                                         <img class="card-img-top "
-                                                            style="background-color: #202020;  height: 21rem;"" src="
-                                                            assets/img/polerÃ³n Eren titÃ¡n.png" alt="Card image cap"
-                                                            id="poleronesphoto">
+                                                        style="background-color: #202020;  height: 21rem;"" src="
+                                                        assets/img/polerón Eren titán.png" alt="Card image cap" id="poleronesphoto">
                                                         <div id="botones">
-                                                            <button class="fontZenKaku" id="primerboton"
-                                                                onclick="location.href = '/polerones_polo';">Polerones
-                                                                polo</button>
-                                                            <button class="fontZenKaku" id="segundoboton"
-                                                                onclick="location.href = '/polerones_hoodie';">Polerones
-                                                                canguro</button>
+                                                            <button class="fontZenKaku" id="primerboton" onclick="location.href = '/polerones_polo';">Polerones polo</button>
+                                                            <button class="fontZenKaku" id="segundoboton" onclick="location.href = '/polerones_hoodie';">Polerones canguro</button>
                                                         </div>
-
+    
                                                     </div>
-
+    
                                                     <div style="background-color:#2D2D2D;">
                                                         <h5 class="card-title fontZenKaku">Polerones</h5>
                                                     </div>
                                                 </div>
                                             </div>
-
+    
                                             <div class="col-3">
                                                 <div class="card"
                                                     style="width: 15rem; border-radius: 0%; border-color: #202020; ">
@@ -137,8 +127,7 @@
                                                 <div class="card"
                                                     style="width: 15rem; border-radius: 0%; border-color: #202020; ">
                                                     <img class="card-img-top" style="background-color: #202020; "
-                                                        src="assets/img/JUNJI sin fondo figma.png"
-                                                        alt="Card image cap">
+                                                        src="assets/img/JUNJI sin fondo figma.png" alt="Card image cap">
                                                     <div style="background-color:#2D2D2D;">
                                                         <h5 class="card-title fontZenKaku">Totebags</h5>
                                                     </div>
