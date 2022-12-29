@@ -19,14 +19,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Revisiï¿½n</title>
+    <title>Revisión</title>
     <link rel="stylesheet" href="assets/css/navbaryfooternew.css">
     <link rel="stylesheet" href="assets/css/revisionpedido.css">
 </head>
 
 <body>
     <!-- Esto es el inicio del navbar-->
-    <h6 class="noti">Envï¿½o delivery - Starken</h6>
+    <h6 class="noti">Envío delivery - Starken</h6>
     <header>
         <div>
             <img class="fotoprincipal" src="assets/img/Logo_Color_Png.png">
@@ -165,7 +165,7 @@
  <br><br><br><br><br>
     <div class="container" id="divcentral">
         <div class="container" id="estadocompra">
-            <h4><span>Carro > Proceso de pago ></span> <strong>Revisiï¿½n del pedido > </strong> ï¿½xito </h4>
+            <h4><span>Carro > Proceso de pago ></span> <strong>Revisión del pedido > </strong> Éxito </h4>
 
         </div>
         <div class="card" style="width: 100; margin-top: 3rem; margin-bottom: 4rem; padding: 2rem;">
@@ -217,13 +217,13 @@
                                 style="width: 5rem;">
                         </div>
                         <div class="col">
-                            <p style="margin-bottom: 0.05rem; margin-top: 1rem; color:#92478C ;">Polerï¿½n polo Naruto</p>
+                            <p style="margin-bottom: 0.05rem; margin-top: 1rem; color:#92478C ;">Polerón polo Naruto</p>
                             <p style="margin-bottom: 0.05rem;">Talla: XL</p>
 
 
                         </div>
                         <div class="col">
-                            <p style="margin-top:2.5rem;">2</p>
+                            <p style="margin-top:2.5rem;">1</p>
                         </div>
                         <div class="col">
                             <p style="margin-top:2.5rem;">$10.000CLP</p>
@@ -237,19 +237,19 @@
             </div>
             <hr>
             <div class="container" id="envio" style="text-align: left;">
-                <h4 style="text-align: left; color: #92478C; margin-bottom: 2rem;">Envï¿½o</h4>
-                <p>Direcciï¿½n:</p>
-                <p>Ciudad:</p>
-                <p>Comuna:</p>
-                <p>Regiï¿½n:</p>
-                <p>Sucursal <small><i>(opcional)</i></small>:</p>
+                <h4 style="text-align: left; color: #92478C; margin-bottom: 2rem;">Envío</h4>
+               	<p>Ciudad: <c:out value="${Ciudad}"></c:out></p>
+              	<p>Calle:  <c:out value="${Calle}"></c:out></p>
+               	<p>Comuna: <c:out value="${Comuna}"></c:out></p> 
+                <p>Región: <c:out value="${Region}"></c:out></p>
+                <p>Sucursal <small><i>(opcional)</i></small>: no</p>
             </div>
             
             <hr>
             <div class="container" id="totalcompra">
-                <p>Total productos: $00.000CLP</p>
-                <p>Total envï¿½o: $00.000CLP</p>
-                <h4>Total compra: $30.000CLP</h4>
+                <p>Total productos: $30.000CLP</p>
+                <p>Total envío: $1.500CLP</p>
+                <h4>Total compra: $31.500CLP</h4>
                 <br>
                 <button type="submit" id="pagar-button" onclick="location.href = '/exitotarjeta';">Pagar</button>
             </div>
@@ -279,13 +279,13 @@
                 </div>
                 <div class="footer-col">
                     <h5 class="FT">Sobre Nosotros</h5>
-                    <p>Las mejores serigrafÃ­as <br> desde 2013.</p>
+                    <p>Las mejores serigrafías <br> desde 2013.</p>
                 </div>
                 <div class="footer-col">
                     <h5>Ayuda</h5>
                     <p>
                         <a href="/preguntasfrecuentes">Preguntas frecuentes</a><br>
-                        <a href="/comocomprar">CÃ³mo comprar</a><br>
+                        <a href="/comocomprar">Cómo comprar</a><br>
                         <a href="/Tallaje">Tallaje</a><br>
                     </p>
                 </div>

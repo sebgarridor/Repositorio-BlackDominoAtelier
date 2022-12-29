@@ -26,7 +26,7 @@
 
 <body>
     <!-- Esto es el inicio del navbar-->
-    <h6 class="noti">Envï¿½o delivery - Starken</h6>
+    <h6 class="noti">Envío delivery - Starken</h6>
     <header>
         <div>
             <img class="fotoprincipal" src="assets/img/Logo_Color_Png.png">
@@ -164,28 +164,20 @@
 	  <br><br><br><br><br>
     <div class="container" id="divcentral">
         <div class="container" id="estadocompra">
-            <h4><span>Carro > Proceso de pago > Revisiï¿½n del pedido > </span><strong> ï¿½xito</strong>  </h4>
+            <h4><span>Carro > Proceso de pago > Revisión del pedido > </span><strong> Éxito</strong>  </h4>
         
         </div>
         <div class="container" id="gracias" style="margin-top: 3rem;">
-            <p style="text-align: left;">Pedido #xxxxx</p>
-            <h4 style="text-align: left; margin-top: -1rem;">Gracias {nombrecliente} por tu compra!</h4>
+            <p style="text-align: left;">Pedido #123</p>
+            <h4 style="text-align: left; margin-top: -1rem;">Gracias <c:out value="${Nombre}"></c:out> por tu compra!</h4>
         </div>
         <div class="card" style="width: 100; margin-top: 3rem; margin-bottom: 4rem;">
             <div class="card-body">
-                <h5 class="card-text" style="text-align: left;">ï¿½Estamos muy contentos de que hayas comprado en Black
+                <h5 class="card-text" style="text-align: left;">¡Estamos muy contentos de que hayas comprado en Black
                     Domino Atelier!</h5>
                 <p style="text-align: left;">Una vez tu compra sea procesada por nosotros comenzaremos con el proceso de
-                    confecciï¿½n de tu pedido. Debes tener en cuenta de que este periodo puede tomar hasta una semana
-                    dependiendo de quï¿½ tan grande sea el pedido. Si tienes alguna duda con respecto al tiempo de
-                    confecciï¿½n no dudes en escribirnos a nuestro Instagram (@blackdominoatelier)
-                    o a nuestro mail (blackdominoatlier@gmail.com).
+                    confección de tu pedido. Más información en nuestro instagram.
                 </p>
-                <p style="text-align: left;">Con respeto al envï¿½o: si elegiste un mï¿½todo de envï¿½o a domicilio o sucursal
-                    de retiro, te enviaremos a tu mail un cï¿½digo de seguimiento cuando hayamos enviado el pedido.</p>
-                <p style="text-align: left;">Si elegiste el mï¿½todo de retiro en metro Ciudad del Niï¿½o, nos pondremos en
-                    contacto contigo para coordinar el dï¿½a y el horario para que puedas pasar a retirar tu(s)
-                    productos(s).</p>
             </div>
             <div class="card-body">
                 <h4 style="text-align: left; color: #92478C; margin-bottom: 2rem;">Resumen de tu compra</h4>
@@ -235,13 +227,13 @@
                                 style="width: 5rem;">
                         </div>
                         <div class="col">
-                            <p style="margin-bottom: 0.05rem; margin-top: 1rem; color:#92478C ;">Polerï¿½n polo Naruto</p>
+                            <p style="margin-bottom: 0.05rem; margin-top: 1rem; color:#92478C ;">Polerón polo Naruto</p>
                             <p style="margin-bottom: 0.05rem;">Talla: XL</p>
                             
 
                         </div>
                         <div class="col">
-                            <p style="margin-top:2.5rem;">2</p>
+                            <p style="margin-top:2.5rem;">1</p>
                         </div>
                         <div class="col">
                             <p style="margin-top:2.5rem;">$10.000CLP</p>
@@ -255,44 +247,44 @@
             </div>
             <hr>
             <div class="container" id="totalcompra">
-                <h4>Total de tu compra incluyendo envï¿½o</h4>
-                <p>$30.000CLP</p>
+                <h4>Total de tu compra incluyendo envío</h4>
+                <p>$31.500CLP</p>
             </div>
             <hr>
             <div class="card-body">
-                <h4 style="text-align: left; color: #92478C; margin-bottom: 2rem;">Informaciï¿½n del cliente</h4>
+                <h4 style="text-align: left; color: #92478C; margin-bottom: 2rem;">Información del cliente</h4>
                 <div class="container">
                     <div class="row">
                       <div class="col" style="text-align: left;">
-                        <h5>Informaciï¿½n de contacto</h5>
-                        <p>sebgarridor@gmail.com</p>
+                        <h5>Información de contacto</h5>
+                        <p><c:out value="${Correo}"></c:out></p>
                       </div>
                       <div class="col" style="text-align: left;">
-                        <h5>Mï¿½todo de pago</h5>
-                        <p>Pago Webpay - <b>$30.000CLP</b></p>
+                        <h5>Método de pago</h5>
+                        <p>Pago Webpay - <b>$31.500CLP</b></p>
                       </div>
                     </div>
                     <div class="row">
                       <div class="col" style="text-align: left;">
-                        <h5>Direcciï¿½n de envï¿½o</h5>
-                        <p>Sebastiï¿½n Garrido</p>
-                        <p  style="margin-top: -0.8rem;">Alameda 123</p>
-                        <p style="margin-top: -0.8rem;">Santiago, RM</p>
-                        <p style="margin-top: -0.8rem;">9 3531 7521</p>
+                        <h5>Dirección de envío</h5>
+                        <p><c:out value="${Nombre} ${Apellidos}"></c:out></p>
+                        <p  style="margin-top: -0.8rem;"><c:out value="${Calle}"></c:out></p>
+                        <p style="margin-top: -0.8rem;"><c:out value="${Region} ${Comuna}"></c:out></p>
+                        <p style="margin-top: -0.8rem;"><c:out value="${Telefono}"></c:out></p>
                       </div>
                       <div class="col" style="text-align: left;">
-                        <h5>Direcciï¿½n de facturaciï¿½n</h5>
-                        <p>Sebastiï¿½n Garrido</p>
-                        <p style="margin-top: -0.8rem;">Alameda 123</p>
-                        <p style="margin-top: -0.8rem;">Santiago, RM</p>
-                        <p style="margin-top: -0.8rem;">9 3531 7521</p>
+                        <h5>Dirección de facturación</h5>
+                        <p><c:out value="${Nombre} ${Apellidos}"></c:out></p>
+                        <p style="margin-top: -0.8rem;"><c:out value="${Calle}"></c:out></p>
+                        <p style="margin-top: -0.8rem;"><c:out value="${Region} ${Comuna}"></c:out></p>
+                        <p style="margin-top: -0.8rem;"><c:out value="${Telefono}"></c:out></p>
 
                       </div>
 
                     </div>
                     <div class="col" style="text-align: left;">
-                        <h5>Mï¿½todo de envï¿½o</h5>
-                        <p>Retiro en Metro Ciudad del Niï¿½o</p>
+                        <h5>Método de envío</h5>
+                        <p>Starken</p>
                       </div>
                     </div>
                   </div>
@@ -322,20 +314,20 @@
                 </div>
                 <div class="footer-col">
                     <h5 class="FT">Sobre Nosotros</h5>
-                    <p>Las mejores serigrafÃ­as <br> desde 2013.</p>
+                    <p>Las mejores serigrafías <br> desde 2013.</p>
                 </div>
                 <div class="footer-col">
                     <h5>Ayuda</h5>
                     <p>
                         <a href="/preguntasfrecuentes">Preguntas frecuentes</a><br>
-                        <a href="/comocomprar">CÃ³mo comprar</a><br>
+                        <a href="/comocomprar">Cómo comprar</a><br>
                         <a href="/Tallaje">Tallaje</a><br>
                     </p>
                 </div>
                 <div class="footer-col">
                     <h5 class="FT">Horario</h5>
                     <p><b>Lunes a Viernes</b> <br> 11:30 hrs.<br>
-                        <b>SÃ¡bado</b> <br> 11:00 a 16:00 hrs.
+                        <b>Sábado</b> <br> 11:00 a 16:00 hrs.
                     </p>
                 </div>
                 <div class="footer-col">

@@ -204,8 +204,9 @@
 									<select class="form-select" aria-label="lista de regiones"
 										name="region" id="regionSeleccionada"
 										style="margin-top: 0.5rem; margin-bottom: 0.5rem; width: 100%;">
-										<option selected>Seleccione Región</option>
+										<option class="form-control" value=0>Seleccione Región</option>
 										<c:forEach var="region" items="${listaSelRegion}">
+											
 											<option value="${region.id}">${region.region}</option>
 										</c:forEach>
 									</select>
@@ -230,14 +231,13 @@
 									<select class="form-select" aria-label="lista de comunas"
 										 name="comuna" id="comunaSeleccionada"
 										style="margin-top: 0.5rem; margin-bottom: 0.5rem; width: 100%;">
-										<option selected>Seleccione Comuna</option>
+										<option class="form-control" value=0>Seleccione Comuna</option>
 										
 									</select>
 								</div>
 
 							</div>
 						</div>
-						
 							<hr>
 							<div class="row">
 								<h5 style="text-align: left; margin-left: 1%; color: #92478C;"
@@ -260,13 +260,13 @@
                 <h5 style="text-align:left; margin-left: 0%; color: #92478C;" class="card-title">Opciones de pago
                 </h5>
                 <label class="form-control" style="color: white;">
-                  <input type="radio" name="pago" />
+                  <input type="radio" name="pago" id="mediopago" value="${mediopago.id}" />
                   <img src="/assets/img/webpay.png" alt="" style="width: 6rem; margin-bottom: 1rem;">
                   <p style="font-size: small; text-align: left; color: #6c757d;">Será re-direccionado a Webpay Webservices para realizar su pago seguro</p>
                 </label>
                 
                 <label class="form-control" style="color: white;">
-                  <input type="radio" name="pago" />
+                  <input type="radio" name="pago" id="mediopago" value="${mediopago.id}" />
                   <img src="/assets/img/khipu.png" alt="" style="width: 6rem;"> 
                   
 
@@ -274,7 +274,7 @@
                   <p style="font-size: small; text-align: left; color: #6c757d;">Será re-direccionado a Khipu Webservices para realizar su pago seguro</p>
                 </label>
                 <label class="form-control" style="color: white;" >
-                  <input type="radio" name="pago" value="${mediopago.id}"/> 
+                  <input type="radio" name="pago" id="mediopago" value="${mediopago.id}"/> 
                   <img src="/assets/img/transferenciaicon.png" alt="" style="width: 3rem; " >
                   
                   <p style="font-size: small; text-align: left; color: #6c757d;">Transferencia electrónica a Banco Estado</p>
@@ -356,11 +356,11 @@
 	<!--Inicio Footer-->
 	<footer class="escritorio">
 		<div class="logo footer_bloques">
-			<img class="imgconfig" src="./assets/img/Symbol_White_135px.png"
+			<img class="imgconfig" src="../assets/img/Symbol_White_135px.png"
 				alt="">
 			<div class="rrss">
 				<a href=""><img class="imgconfig"
-					src="./assets/img/iconmail.png" alt=""></a> <a
+					src="../assets/img/iconmail.png" alt=""></a> <a
 					href="https://www.instagram.com/blackdomino.atelier/"><img
 					class="imgconfig" src="./assets/img/instagramIcon.png"
 					alt="ig logo"></a> <a
@@ -435,6 +435,7 @@
 		        
 		      
 		        });
+		        
 		//cierre jquery
 		    });
 
